@@ -7,11 +7,12 @@
 <meta name="description" content="Polaris Center offers transformative energy healing, life activation, spiritual training and personal development through the ancient wisdom of the Modern Mystery School lineage. Led by Dr. Sean Carey and Kasia Mikolajczyk.">
 <meta name="keywords" content="energy healing, life activation, spiritual training, personal development, empower thyself, mystery school, chakra balancing, soul retrieval, ensofic reiki, sacred geometry, astral travel, self mastery, know thyself, King Salomon lineage, energy healer, spiritual growth, consciousness, meditation, inner transformation">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Jost:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 :root{
   --gold:#C9A84C;--gold-light:#E8D5A0;--gold-pale:#f5ecd4;--gold-dark:#8B6914;
-  --deep-navy:#060912;--navy:#0d1422;--navy-mid:#162035;--navy-card:rgba(22,32,53,0.9);
+  --deep-navy:#071b3e;--navy:#0d2657;--navy-mid:#1a3a7a;--navy-card:rgba(10,30,75,0.92);
+  --cream:#F0EBE0;--text-light:#8faad4;--text-mid:#b8cce8;
   --cream:#F5F0E8;--text-light:#9aa8bc;--text-mid:#c8d0dc;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -29,8 +30,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 4rem;height:72px;
   background:linear-gradient(to bottom,rgba(6,9,18,0.97),rgba(6,9,18,0));
   backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.08);transition:background 0.4s;}
 nav.scrolled{background:rgba(6,9,18,0.97);border-bottom-color:rgba(201,168,76,0.2);}
-.nav-logo{font-family:'Cinzel',serif;font-size:1.15rem;letter-spacing:0.3em;color:var(--gold);
-  display:flex;align-items:center;gap:0.8rem;cursor:pointer;}
+.nav-logo{display:flex;align-items:center;gap:0.8rem;cursor:pointer;}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1;}
+.nav-logo-name{font-family:'Great Vibes',cursive;font-size:1.55rem;color:var(--gold);line-height:1;}
+.nav-logo-sub{font-family:'Jost',sans-serif;font-size:0.52rem;letter-spacing:0.35em;text-transform:uppercase;color:rgba(201,168,76,0.7);margin-top:0.15rem;}
 .nav-logo-star{animation:spin 20s linear infinite;display:inline-block;}
 @keyframes spin{to{transform:rotate(360deg);}}
 .nav-links{display:flex;gap:0;list-style:none;}
@@ -100,6 +103,7 @@ nav.scrolled{background:rgba(6,9,18,0.97);border-bottom-color:rgba(201,168,76,0.
   margin-bottom:1.8rem;animation:fadeUp 1s ease 0.3s both;
   display:flex;align-items:center;justify-content:center;gap:1rem;}
 .hero-eyebrow::before,.hero-eyebrow::after{content:'';width:40px;height:1px;background:var(--gold);opacity:0.5;}
+.star-icon{display:inline-block;width:14px;height:14px;vertical-align:middle;}
 .hero-title{font-family:'Cinzel Decorative',serif;font-size:clamp(4.5rem,10vw,9.5rem);
   font-weight:700;line-height:0.88;
   background:linear-gradient(135deg,#f0e0b0 0%,#C9A84C 25%,#f5ecd4 48%,#C9A84C 72%,#7a5a10 100%);
@@ -127,7 +131,7 @@ nav.scrolled{background:rgba(6,9,18,0.97);border-bottom-color:rgba(201,168,76,0.
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
 
 /* STATS BAND */
-.stats-band{background:rgba(201,168,76,0.06);
+.stats-band{background:rgba(10,40,100,0.5);
   border-top:1px solid rgba(201,168,76,0.18);border-bottom:1px solid rgba(201,168,76,0.18);
   padding:2.5rem 4rem;display:grid;grid-template-columns:repeat(4,1fr);text-align:center;}
 .stat-num{font-family:'Cinzel',serif;font-size:2.3rem;color:var(--gold);display:block;margin-bottom:0.3rem;}
@@ -148,7 +152,7 @@ nav.scrolled{background:rgba(6,9,18,0.97);border-bottom-color:rgba(201,168,76,0.
 .pillar p{font-size:0.85rem;color:var(--text-light);line-height:1.65;}
 
 /* FEATURED CARDS */
-.featured-band{background:rgba(0,0,0,0.3);
+.featured-band{background:rgba(5,20,60,0.5);
   border-top:1px solid rgba(201,168,76,0.1);border-bottom:1px solid rgba(201,168,76,0.1);
   padding:6rem 4rem;}
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1260px;margin:0 auto 3rem;}
@@ -185,7 +189,7 @@ nav.scrolled{background:rgba(6,9,18,0.97);border-bottom-color:rgba(201,168,76,0.
 .about-bio{font-family:'Cormorant Garamond',serif;font-size:0.98rem;color:var(--text-light);line-height:1.7;}
 
 /* TESTIMONIALS */
-.test-band{background:rgba(0,0,0,0.25);border-top:1px solid rgba(201,168,76,0.1);padding:6rem 4rem;}
+.test-band{background:rgba(5,20,60,0.4);border-top:1px solid rgba(201,168,76,0.1);padding:6rem 4rem;}
 .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1260px;margin:0 auto;}
 .test-card{padding:2.8rem;border:1px solid rgba(201,168,76,0.12);background:var(--navy-card);
   position:relative;overflow:hidden;transition:all 0.4s;}
@@ -427,7 +431,21 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-logo" onclick="showPage('home')">
-    <span class="nav-logo-star">✦</span> POLARIS CENTER
+    <svg class="nav-logo-star" width="28" height="28" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="navglow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+          <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3"
+        fill="#C9A84C" filter="url(#navglow)"/>
+      <circle cx="70" cy="70" r="4" fill="#fff" opacity="0.95"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Polaris Centre</span>
+      <span class="nav-logo-sub">UK &amp; USA</span>
+    </div>
   </div>
   <ul class="nav-links">
     <li><button class="nav-btn" onclick="showPage('home')">Home</button></li>
@@ -453,14 +471,45 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
   <div class="hero-emblem">
     <div class="e-ring"></div><div class="e-ring2"></div>
     <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="70" cy="70" r="67" stroke="#C9A84C" stroke-width="0.8" opacity="0.4"/>
-      <path d="M70 10 L76 62 L128 70 L76 78 L70 130 L64 78 L12 70 L64 62 Z" fill="url(#sg)" opacity="0.95"/>
-      <path d="M70 35 L73.5 63.5 L102 70 L73.5 76.5 L70 105 L66.5 76.5 L38 70 L66.5 63.5 Z" fill="#C9A84C" opacity="0.22"/>
-      <circle cx="70" cy="70" r="8" fill="#C9A84C" opacity="0.9"/>
-      <circle cx="70" cy="70" r="3.5" fill="#f5ecd4"/>
-      <defs><linearGradient id="sg" x1="12" y1="10" x2="128" y2="130" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#f0e0b0"/><stop offset="40%" stop-color="#C9A84C"/>
-        <stop offset="100%" stop-color="#7a5a10"/></linearGradient></defs>
+      <defs>
+        <linearGradient id="starGrad2" x1="18" y1="18" x2="122" y2="122" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#f5e8b8"/>
+          <stop offset="35%" stop-color="#C9A84C"/>
+          <stop offset="65%" stop-color="#f0d882"/>
+          <stop offset="100%" stop-color="#9a7020"/>
+        </linearGradient>
+        <filter id="heroGlow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="4.5" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="heroGlowOuter" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="11" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="sparkGlow" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="2.5" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- outer ring -->
+      <circle cx="70" cy="70" r="64" stroke="#C9A84C" stroke-width="0.6" opacity="0.22"/>
+      <circle cx="70" cy="70" r="56" stroke="#C9A84C" stroke-width="0.3" stroke-dasharray="2 6" opacity="0.12"/>
+      <!-- soft halo behind star -->
+      <polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3"
+        fill="#C9A84C" opacity="0.18" filter="url(#heroGlowOuter)"/>
+      <!-- main star: 4 long rays N/S/E/W + 4 short diagonal rays -->
+      <polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3"
+        fill="url(#starGrad2)" filter="url(#heroGlow)"/>
+      <!-- sparkle + marks -->
+      <g fill="#C9A84C" filter="url(#sparkGlow)" opacity="0.92">
+        <text x="95" y="37" font-size="11" font-family="serif">+</text>
+        <text x="107" y="54" font-size="8" font-family="serif">+</text>
+        <text x="28" y="44" font-size="9" font-family="serif">+</text>
+        <text x="40" y="30" font-size="7" font-family="serif">+</text>
+      </g>
+      <!-- bright centre -->
+      <circle cx="70" cy="70" r="6.5" fill="#f5e8b8" opacity="0.95" filter="url(#heroGlow)"/>
+      <circle cx="70" cy="70" r="3.2" fill="#ffffff" opacity="0.98"/>
     </svg>
   </div>
   <div class="hero-eyebrow">Ancient Lineage of King Salomon · Modern Mystery School</div>
@@ -468,7 +517,19 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
   <div class="hero-subtitle">Connect to Your North Star</div>
   <p class="hero-tagline">Where the light of ancient wisdom illuminates your path forward.<br>Discover the timeless tools of transformation that have guided humanity's greatest minds for over three thousand years.</p>
   <div class="hero-divider">
-    <div class="h-line"></div><span style="color:var(--gold);letter-spacing:0.3em;">✦ &nbsp; ✦ &nbsp; ✦</span><div class="h-line r"></div>
+    <div class="h-line"></div>
+    <svg width="18" height="18" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 6px #C9A84C);">
+      <polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3" fill="#C9A84C"/>
+      <circle cx="70" cy="70" r="4" fill="#fff" opacity="0.9"/>
+    </svg>
+    <svg width="12" height="12" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 4px #C9A84C);opacity:0.6;">
+      <polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3" fill="#C9A84C"/>
+    </svg>
+    <svg width="18" height="18" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 6px #C9A84C);">
+      <polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3" fill="#C9A84C"/>
+      <circle cx="70" cy="70" r="4" fill="#fff" opacity="0.9"/>
+    </svg>
+    <div class="h-line r"></div>
   </div>
   <div class="hero-btns">
     <button class="btn-gold" onclick="showPage('start')">✦ Begin Your Journey</button>
@@ -483,7 +544,7 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
 <!-- STATS -->
 <div class="stats-band">
   <div><span class="stat-num">3,000+</span><span class="stat-label">Years of Lineage</span></div>
-  <div><span class="stat-num">20+</span><span class="stat-label">Healing Modalities</span></div>
+  <div><span class="stat-num">40+</span><span class="stat-label">Healing Modalities</span></div>
   <div><span class="stat-num">2</span><span class="stat-label">Expert Guides</span></div>
   <div><span class="stat-num">∞</span><span class="stat-label">Your Potential</span></div>
 </div>
@@ -578,16 +639,13 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
           <span style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid rgba(201,168,76,0.3);color:var(--gold-light);">King Salomon Lineage</span>
           <span style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid rgba(201,168,76,0.3);color:var(--gold-light);">Salisbury, MA</span>
         </div>
-        <img src="https://images.squarespace-cdn.com/content/v1/62db1ae0510b506d6298722f/3cd7b192-1e3f-453c-9892-b93f96d5c487/02.jpg"
-          alt="Dr. Sean Carey"
-          style="width:100%;height:180px;object-fit:cover;object-position:center;border:1px solid rgba(201,168,76,0.15);">
       </div>
     </div>
 
     <!-- KASIA -->
     <div style="border:1px solid rgba(201,168,76,0.2);background:var(--navy-card);overflow:hidden;transition:all 0.4s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.5)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.2)'">
       <div style="position:relative;overflow:hidden;height:420px;">
-        <img src="https://static.wixstatic.com/media/cd00f3_715c3b7d31644c68b68dbc578bc5f589~mv2.jpg/v1/fill/w_464,h_564,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_9932.jpg"
+        <img src="https://i.ibb.co/23b7pkGm/70bf9061-6bc1-4268-ad96-9c9d95f56fcf-2.jpg"
           alt="Kasia Mikolajczyk"
           style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.6s ease;"
           onmouseover="this.style.transform='scale(1.04)'"
@@ -595,7 +653,7 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,9,18,0.85) 0%,rgba(6,9,18,0.2) 50%,transparent 100%);"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:2rem;">
           <div style="font-family:'Cinzel',serif;font-size:1.3rem;color:var(--cream);margin-bottom:0.3rem;">Kasia Mikolajczyk</div>
-          <div style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Ritual Master · Magus Hermeticus · Guide</div>
+          <div style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Healer · Teacher · Guide</div>
         </div>
       </div>
       <div style="padding:2rem;">
@@ -606,9 +664,9 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
           She is now a Life Activation Practitioner, Healer, Teacher, Guide, and Ritual Master — Magus Hermeticus — trained in an ancient tradition spanning over 8,000 years. She leads transformational sessions and classes from her studios in London.
         </p>
         <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          <span style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid rgba(201,168,76,0.3);color:var(--gold-light);">3rd Step Ritual Master</span>
           <span style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid rgba(201,168,76,0.3);color:var(--gold-light);">Magus Hermeticus</span>
-          <span style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid rgba(201,168,76,0.3);color:var(--gold-light);">Ritual Master</span>
-          <span style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid rgba(201,168,76,0.3);color:var(--gold-light);">8,000 Year Lineage</span>
+          <span style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid rgba(201,168,76,0.3);color:var(--gold-light);">King Salomon Lineage</span>
           <span style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid rgba(201,168,76,0.3);color:var(--gold-light);">London, UK</span>
         </div>
       </div>
@@ -655,39 +713,51 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
   </div>
   <div class="cal-events">
     <div class="cal-event">
-      <div class="cal-date"><div class="cal-day">26</div><div class="cal-month">Mar 2026</div></div>
+      <div class="cal-date"><div class="cal-day">28</div><div class="cal-month">May 2026</div></div>
       <div><div class="cal-name">Healing the Most Important Relationship in Your Life</div>
         <div class="cal-meta"><span>⏱ 7:00 PM – 9:00 PM</span><span>📍 London W2 6EU</span><span>🌿 With Kasia</span></div></div>
       <button class="cal-book" onclick="showPage('start')">Book Now</button>
     </div>
     <div class="cal-event">
-      <div class="cal-date"><div class="cal-day">28</div><div class="cal-month">Mar 2026</div></div>
-      <div><div class="cal-name">Empower Thyself Program & Initiation</div>
+      <div class="cal-date"><div class="cal-day">30–31</div><div class="cal-month">May 2026</div></div>
+      <div><div class="cal-name">Empower Thyself Program & Initiation <span style="font-size:0.68rem;color:var(--gold);background:rgba(201,168,76,0.1);padding:0.2rem 0.6rem;margin-left:0.5rem;border:1px solid rgba(201,168,76,0.3);">Multiple Dates</span></div>
         <div class="cal-meta"><span>⏱ Sat 10AM – Sun 6PM</span><span>📍 London W2 6EU</span><span>💷 £1,250</span></div></div>
       <button class="cal-book" onclick="showPage('start')">Book Now</button>
     </div>
     <div class="cal-event">
-      <div class="cal-date"><div class="cal-day">6</div><div class="cal-month">Apr 2026</div></div>
-      <div><div class="cal-name">Sacred Geometry 2 · Crystal Healing Workshop</div>
-        <div class="cal-meta"><span>⏱ 10:00 AM – 7:00 PM</span><span>📍 London W2 6EU</span><span>🔮 Full Day</span></div></div>
+      <div class="cal-date"><div class="cal-day">1</div><div class="cal-month">Jun 2026</div></div>
+      <div><div class="cal-name">Finding Peace in Chaos of Everyday Life</div>
+        <div class="cal-meta"><span>⏱ Evening Class</span><span>📍 Ouna Coffee Shop, Chingford</span><span>🌿 With Kasia</span></div></div>
       <button class="cal-book" onclick="showPage('start')">Book Now</button>
     </div>
     <div class="cal-event">
-      <div class="cal-date"><div class="cal-day">8</div><div class="cal-month">Apr 2026</div></div>
+      <div class="cal-date"><div class="cal-day">4</div><div class="cal-month">Jun 2026</div></div>
       <div><div class="cal-name">Sanctuary Meditation · Meet Your Higher Self</div>
-        <div class="cal-meta"><span>⏱ 7:00 PM – 9:00 PM</span><span>📍 London W2 6EU</span><span>🧘 Evening Class</span></div></div>
+        <div class="cal-meta"><span>⏱ Evening Class</span><span>📍 London W2 6EU</span><span>🧘 With Kasia</span></div></div>
       <button class="cal-book" onclick="showPage('start')">Book Now</button>
     </div>
     <div class="cal-event">
-      <div class="cal-date"><div class="cal-day">15</div><div class="cal-month">Apr 2026</div></div>
-      <div><div class="cal-name">Prayer Night · Everyone Welcome</div>
-        <div class="cal-meta"><span>⏱ 7:00 PM – 8:00 PM</span><span>📍 London W2 6EU</span><span>🙏 Free · Open to All</span></div></div>
+      <div class="cal-date"><div class="cal-day">10</div><div class="cal-month">Jun 2026</div></div>
+      <div><div class="cal-name">Prayer Night · Everyone is Welcome</div>
+        <div class="cal-meta"><span>⏱ Evening</span><span>📍 MMS UK & EU</span><span>🙏 Free · Open to All</span></div></div>
       <button class="cal-book" onclick="showPage('start')">Join Us</button>
+    </div>
+    <div class="cal-event">
+      <div class="cal-date"><div class="cal-day">27–28</div><div class="cal-month">Jun 2026</div></div>
+      <div><div class="cal-name">Empower Thyself Program & Initiation</div>
+        <div class="cal-meta"><span>⏱ Fri 10AM – Sat 6PM</span><span>📍 Salisbury, MA</span><span>💵 $150 USD · With Dr. Sean</span></div></div>
+      <button class="cal-book" onclick="showPage('start')">Book Now</button>
+    </div>
+    <div class="cal-event">
+      <div class="cal-date"><div class="cal-day">29–30</div><div class="cal-month">Jun 2026</div></div>
+      <div><div class="cal-name">Empower Thyself Program & Initiation <span style="font-size:0.68rem;color:var(--gold);background:rgba(201,168,76,0.1);padding:0.2rem 0.6rem;margin-left:0.5rem;border:1px solid rgba(201,168,76,0.3);">2nd Date</span></div>
+        <div class="cal-meta"><span>⏱ Mon 10AM – Tue 6PM</span><span>📍 London W2 6EU</span><span>💷 £1,250</span></div></div>
+      <button class="cal-book" onclick="showPage('start')">Book Now</button>
     </div>
     <div class="cal-event">
       <div class="cal-date"><div class="cal-day">1</div><div class="cal-month">Jul 2026</div></div>
       <div><div class="cal-name">Spiritual Intuition Level 1</div>
-        <div class="cal-meta"><span>⏱ 7:00 PM – 9:00 PM</span><span>📍 London W2 6EU</span><span>✨ Evening Class</span></div></div>
+        <div class="cal-meta"><span>⏱ Evening Class</span><span>📍 London W2 6EU</span><span>✨ With Kasia</span></div></div>
       <button class="cal-book" onclick="showPage('start')">Book Now</button>
     </div>
   </div>
@@ -698,7 +768,12 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
 
 <!-- LINEAGE -->
 <div class="lineage-band">
-  <div class="lin-emblem">✦</div>
+  <div class="lin-emblem">
+    <svg width="44" height="44" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 8px #C9A84C);">
+      <polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3" fill="#C9A84C"/>
+      <circle cx="70" cy="70" r="5" fill="#fff" opacity="0.95"/>
+    </svg>
+  </div>
   <span class="eyebrow" style="display:block;text-align:center;">The Holy Lineage of King Salomon</span>
   <h2>A Living Tradition Over 3,000 Years Old</h2>
   <div class="gold-line center"></div>
@@ -944,6 +1019,20 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
       <div class="sess-card"><div class="sess-name">🔮 Twin Crystal Reading</div><div class="sess-price-row"><span class="sess-price">£100</span><span class="sess-dur">45 Minutes</span></div><p class="sess-desc">Combines two complementary crystals to access your higher self at a deeper level. Especially valuable when needing to make important decisions or understand a situation in greater depth. A crystal healing session is recommended beforehand for optimal results.</p><button class="sess-cta" onclick="showPage('start')">Book a Consultation →</button></div>
       <div class="sess-card"><div class="sess-name">🔆 Laser Light Healing</div><div class="sess-price-row"><span class="sess-price">£150</span><span class="sess-dur">60 Minutes</span></div><p class="sess-desc">Uses the harmonic resonance of Light flowing through Sound, Waves, Etheric, and Magnetic energies for immediate and direct healing of the physical body. Creates balance across all layers of the energy field. Pure, intensified light that brings your inner light into harmony, balance, and empowerment.</p><button class="sess-cta" onclick="showPage('start')">Book a Consultation →</button></div>
       <div class="sess-card"><div class="sess-name">✂️ Cord Cutting &amp; Cleansing</div><div class="sess-price-row"><span class="sess-price">Contact for Pricing</span><span class="sess-dur">Duration Varies</span></div><p class="sess-desc">Energetic cords form throughout our lives, carrying emotional residue that drains our energy and keeps us tied to past relationships or situations. This session identifies and severs unhealthy cords, restoring your energetic sovereignty and freeing you to move forward with clarity.</p><button class="sess-cta" onclick="showPage('start')">Book a Consultation →</button></div>
+      <div class="sess-card" style="border-color:rgba(201,168,76,0.3);background:linear-gradient(135deg,rgba(201,168,76,0.07),rgba(201,168,76,0.02));">
+        <div class="sess-name" style="color:var(--gold);">✦ Advanced Healing Sessions Available</div>
+        <div style="height:1px;background:rgba(201,168,76,0.2);margin:1rem 0;"></div>
+        <p class="sess-desc" style="margin-bottom:1.2rem;">For those further along their healing journey, a number of advanced modalities are available by consultation. These are powerful, high-level sessions reserved for those who have completed prerequisite work.</p>
+        <div style="display:flex;flex-direction:column;gap:0.6rem;">
+          <div style="display:flex;align-items:center;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.6rem;">✦</span> Holy God Matrix</div>
+          <div style="display:flex;align-items:center;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.6rem;">✦</span> Spiritual Drug Detox</div>
+          <div style="display:flex;align-items:center;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.6rem;">✦</span> King Salomon Healing</div>
+          <div style="display:flex;align-items:center;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.6rem;">✦</span> Auric Region Healing</div>
+          <div style="display:flex;align-items:center;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.6rem;">✦</span> Etheric Reconstruction Level 2</div>
+          <div style="display:flex;align-items:center;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.6rem;">✦</span> Etheric Reconstruction Level 3</div>
+        </div>
+        <button class="sess-cta" style="margin-top:1.5rem;" onclick="showPage('start')">Enquire via Consultation →</button>
+      </div>
       <div class="sess-card"><div class="sess-name">🏠 Space Blessing · Home Crystal Grids</div><div class="sess-price-row"><span class="sess-price">By Space Size</span><span class="sess-dur">Contact for Quote</span></div><p class="sess-desc">Uses sacred geometry, ancient mantras, clearing herbs, and ritual to transform the energy of your home, office, or spa. Perfect for clearing a new space or removing interference from previous occupants. Includes crystal grid placement for ongoing energetic protection.</p><button class="sess-cta" onclick="showPage('start')">Request a Quote →</button></div>
       <div class="sess-card"><div class="sess-name">👶 Baby Blessing</div><div class="sess-price-row"><span class="sess-price">Contact for Pricing</span><span class="sess-dur">Duration Varies</span></div><p class="sess-desc">A sacred ceremony welcoming a new soul into the world with love, light, and ancient blessings. Provides protection, energetic support, and spiritual connection for both the baby and family. A profoundly moving and meaningful gift for any new arrival.</p><button class="sess-cta" onclick="showPage('start')">Book a Consultation →</button></div>
     </div>
@@ -1044,27 +1133,69 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
 (function(){
   const c=document.getElementById('cosmos');
   const ctx=c.getContext('2d');
-  let W,H,stars=[];
+  let W,H;
   function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight;}
   resize();
   window.addEventListener('resize',resize);
+
+  /* — Twinkling background stars — */
   class Star{
-    constructor(){this.reset();}
-    reset(){
+    constructor(){this.reset(true);}
+    reset(init){
       this.x=Math.random()*W; this.y=Math.random()*H;
-      this.r=Math.random()*1.5; this.o=Math.random()*0.7+0.1;
-      this.ts=Math.random()*0.015+0.004; this.td=1;
+      this.r=Math.random()*1.4+0.2;
+      this.o=init?Math.random()*0.7+0.05:0.05;
+      this.ts=Math.random()*0.012+0.003; this.td=1;
     }
-    update(){this.o+=this.ts*this.td;if(this.o>0.85||this.o<0.05)this.td*=-1;}
+    update(){this.o+=this.ts*this.td;if(this.o>0.82||this.o<0.05)this.td*=-1;}
     draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
       ctx.fillStyle='rgba(255,255,255,'+this.o+')';ctx.fill();}
   }
-  for(let i=0;i<280;i++)stars.push(new Star());
-  let shooters=[];
+  const stars=[];
+  for(let i=0;i<300;i++)stars.push(new Star());
+
+  /* — Gently flowing drift stars — */
+  class DriftStar{
+    constructor(init){this.reset(init);}
+    reset(init){
+      /* start off-screen left, or anywhere if init */
+      this.x = init ? Math.random()*W : -8;
+      this.y = Math.random()*H;
+      this.r = Math.random()*1.8+0.5;
+      this.o = Math.random()*0.45+0.08;
+      this.vx = Math.random()*0.28+0.06;   /* very slow rightward drift */
+      this.vy = (Math.random()-0.5)*0.12;  /* tiny vertical wobble */
+      this.wobble = Math.random()*Math.PI*2;
+      this.wobbleSpeed = Math.random()*0.008+0.003;
+      /* occasional faint gold tint */
+      this.gold = Math.random()<0.15;
+    }
+    update(){
+      this.wobble += this.wobbleSpeed;
+      this.x += this.vx;
+      this.y += this.vy + Math.sin(this.wobble)*0.18;
+      if(this.x > W+10) this.reset(false);
+    }
+    draw(){
+      const col = this.gold
+        ? 'rgba(201,168,76,'+this.o+')'
+        : 'rgba(200,215,255,'+this.o+')';
+      ctx.beginPath();
+      ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+      ctx.fillStyle=col;
+      ctx.fill();
+    }
+  }
+  const drifters=[];
+  for(let i=0;i<90;i++)drifters.push(new DriftStar(true));
+  /* stagger their start so they don't all arrive at once */
+  drifters.forEach(function(d,i){d.x = Math.random()*W;});
+
+  /* — Shooting stars — */
   class Shooter{
     constructor(){
       this.x=Math.random()*W*0.7; this.y=Math.random()*H*0.4;
-      this.len=Math.random()*130+60; this.speed=Math.random()*9+6;
+      this.len=Math.random()*140+60; this.speed=Math.random()*9+6;
       this.angle=Math.PI/5+Math.random()*0.3; this.alpha=1;
     }
     update(){
@@ -1082,10 +1213,13 @@ footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(201,168,76,0.15);
       ctx.strokeStyle=g;ctx.lineWidth=1.5;ctx.stroke();
     }
   }
+  let shooters=[];
   setInterval(function(){if(shooters.length<3)shooters.push(new Shooter());},4500);
+
   function tick(){
     ctx.clearRect(0,0,W,H);
     stars.forEach(function(s){s.update();s.draw();});
+    drifters.forEach(function(d){d.update();d.draw();});
     shooters=shooters.filter(function(s){return s.alpha>0;});
     shooters.forEach(function(s){s.update();s.draw();});
     requestAnimationFrame(tick);
