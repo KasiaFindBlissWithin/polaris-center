@@ -622,16 +622,17 @@ footer {
 }
 .car-track-outer {
   overflow: hidden;
+  width: 100%;
 }
 .car-track {
   display: flex;
   gap: 1px;
-  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
   will-change: transform;
+  align-items: stretch;
 }
 .car-card {
-  flex: 0 0 calc(33.333% - 1px);
-  min-width: calc(33.333% - 1px);
+  flex-shrink: 0;
   background: var(--navy-card);
   border: 1px solid var(--border);
   padding: 2.2rem 2rem 2rem;
@@ -639,6 +640,7 @@ footer {
   transition: border-color 0.25s;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 .car-card:hover { border-color: var(--border-mid); }
 .car-guide-dot {
@@ -709,13 +711,10 @@ footer {
   width: 20px; border-radius: 3px;
 }
 
-/* responsive carousel */
 @media (max-width: 900px) {
-  .car-card { flex: 0 0 calc(50% - 1px); min-width: calc(50% - 1px); }
   .carousel-wrap { padding: 0 2.5rem; }
 }
 @media (max-width: 580px) {
-  .car-card { flex: 0 0 100%; min-width: 100%; }
   .carousel-wrap { padding: 0 2rem; }
 }
 
@@ -1337,69 +1336,75 @@ tabBtns.forEach(btn => {
   window.addEventListener('resize',()=>{ resize(); mkStars(); });
   resize(); mkStars(); mkShooter(); draw();
 /* ── CAROUSEL ── */
-(function() {
+window.addEventListener('load', function() {
+  const outer  = document.querySelector('.car-track-outer');
   const track  = document.getElementById('carTrack');
   const dotsEl = document.getElementById('carDots');
-  if (!track) return;
-
-  const cards  = track.querySelectorAll('.car-card');
   const prev   = document.querySelector('.car-prev');
   const next   = document.querySelector('.car-next');
-  const total  = cards.length;
+  if (!track || !prev || !next) return;
 
-  // how many visible?
-  function visCount() {
-    const w = track.parentElement.offsetWidth;
-    if (w < 581) return 1;
-    if (w < 901) return 2;
+  const cards = Array.from(track.querySelectorAll('.car-card'));
+  const total = cards.length;
+  let cur = 0;
+
+  function vis() {
+    const w = outer.offsetWidth;
+    if (w < 580) return 1;
+    if (w < 900) return 2;
     return 3;
   }
 
-  let cur = 0;
+  function setCardWidths() {
+    const vc = vis();
+    const gap = 1;
+    const cardW = (outer.offsetWidth - gap * (vc - 1)) / vc;
+    cards.forEach(c => {
+      c.style.flex = '0 0 ' + cardW + 'px';
+      c.style.minWidth = cardW + 'px';
+    });
+    track.style.gap = gap + 'px';
+  }
 
-  // build dots (one per page)
+  function goTo(idx) {
+    const vc = vis();
+    cur = Math.max(0, Math.min(idx, total - vc));
+    const cardW = cards[0].getBoundingClientRect().width;
+    const gap = 1;
+    track.style.transform = 'translateX(-' + (cur * (cardW + gap)) + 'px)';
+    prev.disabled = cur === 0;
+    next.disabled = cur >= total - vc;
+    buildDots();
+  }
+
   function buildDots() {
+    const vc = vis();
+    const pages = Math.ceil(total / vc);
+    const pageIdx = Math.min(Math.floor(cur / vc), pages - 1);
     dotsEl.innerHTML = '';
-    const pages = Math.ceil(total / visCount());
     for (let i = 0; i < pages; i++) {
       const d = document.createElement('button');
-      d.className = 'car-dot' + (i === 0 ? ' active' : '');
-      d.setAttribute('aria-label', 'Go to page ' + (i+1));
-      d.addEventListener('click', () => goTo(i * visCount()));
+      d.className = 'car-dot' + (i === pageIdx ? ' active' : '');
+      d.setAttribute('aria-label', 'Page ' + (i + 1));
+      const pageStart = i * vc;
+      d.addEventListener('click', function() { goTo(pageStart); });
       dotsEl.appendChild(d);
     }
   }
 
-  function updateDots() {
-    const vc = visCount();
-    const pageIdx = Math.round(cur / vc);
-    dotsEl.querySelectorAll('.car-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === pageIdx);
-    });
-  }
-
-  function goTo(idx) {
-    const vc = visCount();
-    cur = Math.max(0, Math.min(idx, total - vc));
-    const cardW = cards[0].offsetWidth + 1; // +1 for gap
-    track.style.transform = `translateX(-${cur * cardW}px)`;
-    prev.disabled = cur === 0;
-    next.disabled = cur >= total - vc;
-    updateDots();
-  }
-
-  prev.addEventListener('click', () => goTo(cur - visCount()));
-  next.addEventListener('click', () => goTo(cur + visCount()));
+  prev.addEventListener('click', function() { goTo(cur - vis()); });
+  next.addEventListener('click', function() { goTo(cur + vis()); });
 
   let resizeTimer;
-  window.addEventListener('resize', () => {
+  window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => { buildDots(); goTo(0); }, 120);
+    resizeTimer = setTimeout(function() { setCardWidths(); goTo(0); }, 100);
   });
 
-  buildDots();
+  // init
+  setCardWidths();
   goTo(0);
-})();
+});
 </script>
 </body>
 </html>
