@@ -1,2 +1,2 @@
-# polaris-center
-polaris-center-londonwebsite-1stedition
+# polaris-centre
+polaris-centre-londonwebsite-1stedition
