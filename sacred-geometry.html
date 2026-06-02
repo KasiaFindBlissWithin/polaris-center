@@ -472,15 +472,17 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
 
       <!-- RIGHT FORM -->
       <div>
-        <form class="c-form" id="bookingForm" onsubmit="handleBooking(event)">
-          <input type="hidden" name="_to" value="kasia@polariscentre.london,sean@polariscentre.london">
-          <input type="hidden" name="_subject" value="New Sacred Geometry 1 Booking Enquiry — Polaris Centre">
-          <div><label class="c-label">Your Full Name *</label><input class="c-input" type="text" placeholder="First and last name" required></div>
-          <div><label class="c-label">Email Address *</label><input class="c-input" type="email" placeholder="your@email.com" required></div>
-          <div><label class="c-label">Phone Number</label><input class="c-input" type="tel" placeholder="+44 or +1..."></div>
+        <form class="c-form" id="bookingForm" action="https://formspree.io/f/mwvzgnzg" method="POST" onsubmit="handleBooking(event)">
+          <input type="hidden" name="_replyto" value="kasia@polariscentre.london">
+          <input type="hidden" name="_subject" value="✦ New Sacred Geometry 1 Booking — Polaris Centre">
+          <input type="hidden" name="_cc" value="sean@polariscentre.london">
+          <input type="hidden" name="_next" value="https://polariscentre.london/sacred-geometry">
+          <div><label class="c-label">Your Full Name *</label><input class="c-input" type="text" name="Full Name" placeholder="First and last name" required></div>
+          <div><label class="c-label">Email Address *</label><input class="c-input" type="email" name="Email" placeholder="your@email.com" required></div>
+          <div><label class="c-label">Phone Number</label><input class="c-input" type="tel" name="Phone" placeholder="+44 or +1..."></div>
           <div>
             <label class="c-label">I Would Like To *</label>
-            <select class="c-select c-input" required>
+            <select class="c-select c-input" name="I Would Like To" required>
               <option value="">— Please select —</option>
               <option>Book Sacred Geometry 1 — London In Person · £150</option>
               <option>Book Sacred Geometry 1 + Special Offer (Life Activation + Free Session)</option>
@@ -491,7 +493,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
           </div>
           <div>
             <label class="c-label">Preferred Date</label>
-            <select class="c-select c-input">
+            <select class="c-select c-input" name="Preferred Date">
               <option>22nd June 2026 — Monday Evening · 6:00 PM – 9:30 PM</option>
               <option>25th July 2026 — Saturday Morning · 10:00 AM – 1:30 PM</option>
               <option>No preference — next available date</option>
@@ -499,12 +501,12 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
           </div>
           <!-- Special offer tick -->
           <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:1.2rem;background:rgba(201,168,76,0.07);border:1px solid var(--border2);">
-            <input type="checkbox" id="offerCheck" style="margin-top:0.25rem;accent-color:var(--gold);flex-shrink:0;width:16px;height:16px;">
+            <input type="checkbox" id="offerCheck" name="Special Offer" value="Yes - Sacred Geometry 1 + Life Activation + Free Cord Cutting" style="margin-top:0.25rem;accent-color:var(--gold);flex-shrink:0;width:16px;height:16px;">
             <label for="offerCheck" style="font-size:0.84rem;color:var(--dim);line-height:1.6;cursor:pointer;">
               <strong style="color:var(--gold);">✦ Add the Special Offer:</strong> Book Sacred Geometry 1 + Life Activation and receive a <strong style="color:var(--text);">FREE session worth <span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">£150</span></strong> — Cord Cutting included at no charge.
             </label>
           </div>
-          <div><label class="c-label">Anything You'd Like Us to Know</label><textarea class="c-textarea" placeholder="Any questions, previous experience with energy work, or anything else you'd like us to know..."></textarea></div>
+          <div><label class="c-label">Anything You'd Like Us to Know</label><textarea class="c-textarea" name="Message" placeholder="Any questions, previous experience with energy work, or anything else you'd like us to know..."></textarea></div>
           <button type="submit" class="c-submit" style="width:100%;text-align:center;padding:1.2rem;">Reserve My Spot Now ✦ — £150</button>
           <p style="font-size:0.72rem;color:var(--muted);text-align:center;margin-top:0.5rem;">Spots are limited · Secure payment link sent within 24 hours · Full refund within 7 days</p>
         </form>
@@ -645,8 +647,22 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
 // BOOKING FORM
 function handleBooking(e){
   e.preventDefault();
-  document.getElementById('bookingForm').style.display='none';
-  document.getElementById('formSuccess').style.display='block';
+  var form = document.getElementById('bookingForm');
+  var data = new FormData(form);
+  fetch('https://formspree.io/f/mwvzgnzg', {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(function(response) {
+    if (response.ok) {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    } else {
+      alert('Something went wrong. Please email us directly at kasia@polariscentre.london');
+    }
+  }).catch(function() {
+    alert('Something went wrong. Please email us directly at kasia@polariscentre.london');
+  });
 }
 </script>
 </body>
