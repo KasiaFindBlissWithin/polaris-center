@@ -91,7 +91,7 @@ section{padding:6rem 2rem;position:relative;}
 
 /* EGYPT BAND */
 .egypt-band{position:relative;overflow:hidden;min-height:440px;display:flex;align-items:center;}
-.egypt-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?w=1600&q=80');background-size:cover;background-position:center 30%;filter:brightness(0.22) sepia(0.5) saturate(1.5);}
+.egypt-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/3689159/pexels-photo-3689159.jpeg?auto=compress&cs=tinysrgb&w=1600');background-size:cover;background-position:center 30%;filter:brightness(0.22) sepia(0.5) saturate(1.5);}
 .egypt-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(6,13,30,0.97) 40%,rgba(6,13,30,0.5) 75%,rgba(6,13,30,0.2) 100%);}
 .egypt-content{position:relative;z-index:1;padding:6rem 4rem;max-width:680px;}
 .egypt-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2.1rem);font-style:italic;color:var(--text);line-height:1.55;margin-bottom:1.2rem;}
@@ -340,7 +340,36 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
   <div class="container">
     <div class="what-grid">
       <div class="what-img-wrap">
-        <img src="https://images.unsplash.com/photo-1568607689150-17e625c1586e?w=800&q=80" alt="Sacred Geometry">
+        <div style="width:100%;aspect-ratio:1;background:linear-gradient(135deg,#060D1E,#0A1530,#0E1E42);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+          <!-- Sacred geometry SVG pattern -->
+          <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:90%;height:90%;filter:drop-shadow(0 0 20px rgba(201,168,76,0.3));">
+            <defs>
+              <linearGradient id="sg1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#8B6410"/>
+                <stop offset="40%" stop-color="#E8D080"/>
+                <stop offset="70%" stop-color="#C9A84C"/>
+                <stop offset="100%" stop-color="#8B6410"/>
+              </linearGradient>
+            </defs>
+            <!-- Outer circle -->
+            <circle cx="200" cy="200" r="190" stroke="url(#sg1)" stroke-width="1" opacity="0.6"/>
+            <circle cx="200" cy="200" r="155" stroke="url(#sg1)" stroke-width="0.5" opacity="0.3"/>
+            <!-- Flower of Life circles -->
+            <circle cx="200" cy="140" r="60" stroke="url(#sg1)" stroke-width="1.2" fill="none" opacity="0.8"/>
+            <circle cx="252" cy="170" r="60" stroke="url(#sg1)" stroke-width="1.2" fill="none" opacity="0.8"/>
+            <circle cx="252" cy="230" r="60" stroke="url(#sg1)" stroke-width="1.2" fill="none" opacity="0.8"/>
+            <circle cx="200" cy="260" r="60" stroke="url(#sg1)" stroke-width="1.2" fill="none" opacity="0.8"/>
+            <circle cx="148" cy="230" r="60" stroke="url(#sg1)" stroke-width="1.2" fill="none" opacity="0.8"/>
+            <circle cx="148" cy="170" r="60" stroke="url(#sg1)" stroke-width="1.2" fill="none" opacity="0.8"/>
+            <circle cx="200" cy="200" r="60" stroke="url(#sg1)" stroke-width="1.2" fill="none" opacity="0.8"/>
+            <!-- Star of David -->
+            <polygon points="200,90 270,220 130,220" fill="none" stroke="url(#sg1)" stroke-width="0.8" opacity="0.5"/>
+            <polygon points="200,310 130,180 270,180" fill="none" stroke="url(#sg1)" stroke-width="0.8" opacity="0.5"/>
+            <!-- Centre dot -->
+            <circle cx="200" cy="200" r="6" fill="#E8D080" opacity="0.95"/>
+            <circle cx="200" cy="200" r="3" fill="#ffffff" opacity="0.9"/>
+          </svg>
+        </div>
         <div class="what-img-frame"></div>
       </div>
       <div>
