@@ -472,11 +472,9 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
 
       <!-- RIGHT FORM -->
       <div>
-        <form class="c-form" id="bookingForm" action="https://formspree.io/f/mwvzgnzg" method="POST" onsubmit="handleBooking(event)">
-          <input type="hidden" name="_replyto" value="kasia@polariscentre.london">
-          <input type="hidden" name="_subject" value="✦ New Sacred Geometry 1 Booking — Polaris Centre">
-          <input type="hidden" name="_cc" value="sean@polariscentre.london">
-          <input type="hidden" name="_next" value="https://polariscentre.london/sacred-geometry">
+        <form class="c-form" id="bookingForm" name="sacred-geometry-booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="sacred-geometry-booking">
+          <p style="display:none;"><input name="bot-field"></p>
           <div><label class="c-label">Your Full Name *</label><input class="c-input" type="text" name="Full Name" placeholder="First and last name" required></div>
           <div><label class="c-label">Email Address *</label><input class="c-input" type="email" name="Email" placeholder="your@email.com" required></div>
           <div><label class="c-label">Phone Number</label><input class="c-input" type="tel" name="Phone" placeholder="+44 or +1..."></div>
@@ -649,17 +647,13 @@ function handleBooking(e){
   e.preventDefault();
   var form = document.getElementById('bookingForm');
   var data = new FormData(form);
-  fetch('https://formspree.io/f/mwvzgnzg', {
+  fetch('/', {
     method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  }).then(function(response) {
-    if (response.ok) {
-      form.style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
-    } else {
-      alert('Something went wrong. Please email us directly at kasia@polariscentre.london');
-    }
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(data).toString()
+  }).then(function() {
+    form.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
   }).catch(function() {
     alert('Something went wrong. Please email us directly at kasia@polariscentre.london');
   });
