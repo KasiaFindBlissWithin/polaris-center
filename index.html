@@ -1120,13 +1120,14 @@ footer {
       <div class="c-detail"><span class="c-ic">✉️</span><a href="mailto:kasia@polariscentre.london">kasia@polariscentre.london</a></div>
       <div class="c-detail"><span class="c-ic">✉️</span><a href="mailto:sean@polariscentre.london">sean@polariscentre.london</a></div>
     </div>
-    <form class="c-form" onsubmit="handleForm(event)">
-      <input type="hidden" name="_to" value="kasia@polariscentre.london,sean@polariscentre.london">
+    <form class="c-form" action="https://formspree.io/f/xdajqwne" method="POST">
+      <input type="hidden" name="_replyto" value="kasia@polariscentre.london">
       <input type="hidden" name="_subject" value="New Enquiry — Polaris Centre">
-      <div><label class="c-label">Your Name</label><input class="c-input" type="text" placeholder="Full name" required></div>
-      <div><label class="c-label">Email Address</label><input class="c-input" type="email" placeholder="your@email.com" required></div>
-      <div><label class="c-label">I'm Interested In</label><select class="c-select c-input"><option>Life Activation — Start Here</option><option>Empower Thyself Program</option><option>Energy Healing Sessions</option><option>Sacred Geometry</option><option>Distance / Remote Healing</option><option>Corporate Programme</option><option>Not sure — please guide me</option></select></div>
-      <div><label class="c-label">Your Message</label><textarea class="c-textarea" placeholder="Tell us a little about yourself..."></textarea></div>
+      <input type="hidden" name="cc" value="sean@polariscentre.london">
+      <div><label class="c-label">Your Name</label><input class="c-input" type="text" placeholder="Full name" name="Full Name" required></div>
+      <div><label class="c-label">Email Address</label><input class="c-input" type="email" name="Email" placeholder="your@email.com" required></div>
+      <div><label class="c-label">I'm Interested In</label><select class="c-select c-input" name="I Am Interested In"><option>Life Activation — Start Here</option><option>Empower Thyself Program</option><option>Energy Healing Sessions</option><option>Sacred Geometry</option><option>Distance / Remote Healing</option><option>Corporate Programme</option><option>Not sure — please guide me</option></select></div>
+      <div><label class="c-label">Your Message</label><textarea class="c-textarea" name="Message" placeholder="Tell us a little about yourself..."></textarea></div>
       <button type="submit" class="c-submit">Send Message ✦</button>
     </form>
   </div>
@@ -1205,14 +1206,15 @@ footer {
       <p class="prose">Your consultation is completely free, with no obligation. It's simply a conversation — a chance for us to understand where you are and what might best support you.</p>
       <p class="prose">We offer consultations <strong>in person</strong> (London &amp; Salisbury, MA), <strong>by phone</strong>, and <strong>via video call</strong>.</p>
     </div>
-    <form class="c-form" onsubmit="handleForm(event)">
-      <input type="hidden" name="_to" value="kasia@polariscentre.london,sean@polariscentre.london">
+    <form class="c-form" action="https://formspree.io/f/xdajqwne" method="POST">
+      <input type="hidden" name="_replyto" value="kasia@polariscentre.london">
       <input type="hidden" name="_subject" value="New Enquiry — Polaris Centre">
-      <div><label class="c-label">Your Name</label><input class="c-input" type="text" placeholder="Full name" required></div>
-      <div><label class="c-label">Email</label><input class="c-input" type="email" placeholder="your@email.com" required></div>
-      <div><label class="c-label">Phone (optional)</label><input class="c-input" type="tel" placeholder="+1 or +44..."></div>
-      <div><label class="c-label">Preferred Consultation</label><select class="c-select c-input"><option>Video Call (Zoom)</option><option>Phone Call</option><option>In Person — London</option><option>In Person — Salisbury, MA</option></select></div>
-      <div><label class="c-label">Tell Us About Yourself</label><textarea class="c-textarea" placeholder="What brings you here? What are you hoping for?"></textarea></div>
+      <input type="hidden" name="cc" value="sean@polariscentre.london">
+      <div><label class="c-label">Your Name</label><input class="c-input" type="text" placeholder="Full name" name="Full Name" required></div>
+      <div><label class="c-label">Email</label><input class="c-input" type="email" name="Email" placeholder="your@email.com" required></div>
+      <div><label class="c-label">Phone (optional)</label><input class="c-input" type="tel" name="Phone" placeholder="+1 or +44..."></div>
+      <div><label class="c-label">Preferred Consultation</label><select class="c-select c-input" name="Preferred Consultation"><option>Video Call (Zoom)</option><option>Phone Call</option><option>In Person — London</option><option>In Person — Salisbury, MA</option></select></div>
+      <div><label class="c-label">Tell Us About Yourself</label><textarea class="c-textarea" name="Message" placeholder="What brings you here? What are you hoping for?"></textarea></div>
       <button type="submit" class="c-submit">Request My Free Consultation ✦</button>
     </form>
   </div>
