@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Activation London | Polaris Centre</title>
+<meta name="description" content="You are not your pain. You are not your patterns. Life Activation reconnects you to your original divine blueprint — activating your DNA, clearing generational conditioning, and awakening who you truly are.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23060D1E' rx='12'/><polygon points='50,12 51.5,47 62,38 52.5,49 78,50 52.5,51 62,62 51.5,53 50,88 48.5,53 38,62 47.5,51 22,50 47.5,49 38,38 48.5,47' fill='%23C9A84C'/><circle cx='50' cy='50' r='4' fill='%23F0E090'/></svg>">
+<meta name="theme-color" content="#060D1E">
+<meta property="og:title" content="Life Activation London | Polaris Centre">
+<meta property="og:description" content="You are not your pain. You are not your patterns. Life Activation reconnects you to your original divine blueprint.">
+<meta property="og:image" content="https://i.ibb.co/fdLb450n/Kasiablackdress.jpg">
+<meta property="og:url" content="https://polariscentre.london/life-activation">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#060D1E;--navy2:#0A1530;--navy3:#0E1E42;
+  --gold:#C9A84C;--gold2:#E8D080;--gold3:#F5ECC0;
+  --grad:linear-gradient(135deg,#8B6410 0%,#E8D080 35%,#C9A84C 55%,#F0E898 75%,#8B6410 100%);
+  --text:#EDE8D8;--dim:#A89C78;--muted:#5A6878;
+  --border:rgba(201,168,76,0.2);--border2:rgba(201,168,76,0.45);
+  --green:#7ec87e;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--navy);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;}
+#cosmos{position:fixed;inset:0;z-index:0;pointer-events:none;}
+.z{position:relative;z-index:1;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;background:rgba(6,13,30,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
+.logo-name{font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.22em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.logo-sub{font-size:0.52rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--dim);display:block;margin-top:0.1rem;}
+.nav-btn{font-size:0.65rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--navy);background:var(--grad);padding:0.6rem 1.5rem;border:none;cursor:pointer;font-family:'Jost',sans-serif;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:opacity 0.3s;text-decoration:none;}
+.nav-btn:hover{opacity:0.85;}
+
+/* BUTTONS */
+.btn-gold{display:inline-block;font-size:0.68rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);background:var(--grad);padding:1rem 2.6rem;border:none;cursor:pointer;font-family:'Jost',sans-serif;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:opacity 0.3s;text-decoration:none;display:inline-block;}
+.btn-gold:hover{opacity:0.85;}
+.btn-ghost{display:inline-block;font-size:0.68rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border2);padding:1rem 2.6rem;cursor:pointer;font-family:'Jost',sans-serif;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:all 0.3s;text-decoration:none;background:none;}
+.btn-ghost:hover{background:rgba(201,168,76,0.08);}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+@keyframes floatY{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+@keyframes orb{to{transform:translate(-50%,-50%) rotate(360deg);}}
+@keyframes shimmer{0%{background-position:0% center;}100%{background-position:200% center;}}
+@keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1);}50%{transform:translate(-50%,-50%) scale(1.1);}}
+@keyframes slideUp{to{transform:translateY(0);}}
+@keyframes pulse{0%,100%{opacity:0.6;}50%{opacity:1;}}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9rem 2rem 6rem;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.stockcake.com/public/3/5/6/356864d6-3ea9-4a5c-b5c9-74822e5a4f2e/sunset-couple-silhouette-stockcake.jpg');background-size:cover;background-position:center;filter:brightness(0.3) sepia(0.2);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,13,30,0.5) 0%,rgba(6,13,30,0.15) 30%,rgba(6,13,30,0.4) 65%,rgba(6,13,30,0.98) 100%);}
+.orbit{position:absolute;top:50%;left:50%;border-radius:50%;border:1px solid rgba(201,168,76,0.1);pointer-events:none;transform:translate(-50%,-50%);}
+.o1{width:420px;height:420px;animation:orb 50s linear infinite;}
+.o2{width:650px;height:650px;animation:orb 80s linear infinite reverse;border-style:dashed;border-color:rgba(201,168,76,0.06);}
+.hero-eyebrow{font-size:0.62rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:1.2rem;animation:fadeUp 1s ease 0.3s both;}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';width:50px;height:1px;background:var(--gold);opacity:0.5;}
+.hero-title{font-family:'Cinzel',serif;font-size:clamp(1.2rem,3vw,2rem);font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--dim);margin-bottom:1rem;animation:fadeUp 1s ease 0.4s both;}
+.hero-question{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,6vw,5rem);font-weight:300;font-style:italic;line-height:1.15;color:var(--text);margin-bottom:2rem;animation:fadeUp 1s ease 0.55s both;max-width:900px;}
+.hero-question em{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic;}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.45rem);font-style:italic;color:rgba(237,232,216,0.8);max-width:680px;line-height:1.8;margin:0 auto 1rem;animation:fadeUp 1s ease 0.7s both;}
+.hero-truth{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:3rem;animation:fadeUp 1s ease 0.85s both;}
+.hero-btns{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;animation:fadeUp 1s ease 1s both;}
+
+/* PAIN SECTION */
+.pain-band{background:rgba(10,21,48,0.8);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:5rem 2rem;}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:1100px;margin:0 auto;}
+.pain-card{padding:2.5rem 2rem;text-align:center;border-right:1px solid var(--border);}
+.pain-card:last-child{border-right:none;}
+.pain-icon{font-size:2rem;margin-bottom:1rem;display:block;}
+.pain-title{font-family:'Cinzel',serif;font-size:0.88rem;letter-spacing:0.1em;color:var(--text);margin-bottom:0.7rem;}
+.pain-body{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.75;}
+
+/* SECTIONS */
+section{padding:6rem 2rem;}
+.container{max-width:1100px;margin:0 auto;}
+.container-sm{max-width:780px;margin:0 auto;}
+.sec-label{font-size:0.6rem;letter-spacing:0.38em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.sec-title{font-family:'Cinzel',serif;font-size:clamp(1.6rem,4vw,2.8rem);font-weight:400;line-height:1.2;color:var(--text);margin-bottom:1.3rem;}
+.sec-title em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.gold-line{width:50px;height:2px;background:var(--grad);margin-bottom:2rem;}
+.gold-line.c{margin-left:auto;margin-right:auto;}
+.prose{font-family:'Cormorant Garamond',serif;font-size:1.12rem;line-height:1.9;color:var(--dim);margin-bottom:1.2rem;}
+.prose strong{color:var(--text);font-weight:600;}
+.prose em{color:var(--gold2);font-style:italic;}
+
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+
+/* TRUTH BAND */
+.truth-band{position:relative;overflow:hidden;padding:7rem 2rem;text-align:center;background:linear-gradient(135deg,rgba(6,13,30,0.98),rgba(14,30,66,0.9));}
+.truth-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,0.12),transparent 65%);}
+.truth-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,4vw,3rem);font-style:italic;font-weight:300;color:var(--text);line-height:1.45;max-width:900px;margin:0 auto 1.5rem;position:relative;z-index:1;}
+.truth-quote em{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;}
+
+/* WHAT IS IT */
+.dark-band{background:rgba(10,21,48,0.6);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+
+/* BENEFITS */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1px;}
+.card{background:rgba(14,30,66,0.7);border:1px solid var(--border);padding:2.5rem 2rem;transition:all 0.35s;}
+.card:hover{border-color:var(--border2);transform:translateY(-4px);}
+.card-icon{font-size:1.8rem;margin-bottom:1rem;display:block;}
+.card-title{font-family:'Cinzel',serif;font-size:0.82rem;letter-spacing:0.1em;color:var(--text);margin-bottom:0.6rem;}
+.card-body{font-size:0.88rem;color:var(--muted);line-height:1.75;}
+
+/* INCLUDES */
+.include-item{display:flex;align-items:flex-start;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border);}
+.include-item:last-child{border-bottom:none;}
+.include-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:0.45rem;}
+.include-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.6;}
+
+/* TESTIMONIALS */
+.test-card{background:rgba(14,30,66,0.7);border:1px solid var(--border);padding:2.2rem;position:relative;overflow:hidden;transition:border-color 0.3s;}
+.test-card:hover{border-color:var(--border2);}
+.test-bg-q{position:absolute;top:-0.5rem;right:1rem;font-family:'Cormorant Garamond',serif;font-size:7rem;color:rgba(201,168,76,0.06);line-height:1;pointer-events:none;}
+.test-stars{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:0.78rem;letter-spacing:0.1em;margin-bottom:1rem;}
+.test-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;line-height:1.75;color:var(--dim);margin-bottom:1.3rem;}
+.test-divider{height:1px;background:var(--border);margin-bottom:0.9rem;}
+.test-name{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.1em;color:var(--text);}
+.test-role{font-size:0.68rem;color:var(--muted);}
+
+/* KASIA */
+.kasia-grid{display:grid;grid-template-columns:1fr 1fr;min-height:500px;}
+.kasia-img{overflow:hidden;position:relative;}
+.kasia-img img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.88) sepia(0.08);}
+.kasia-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,var(--navy2) 100%);}
+.kasia-text{background:var(--navy2);display:flex;flex-direction:column;justify-content:center;padding:4rem;}
+
+/* BOOKING */
+.booking-section{background:rgba(10,21,48,0.8);border-top:1px solid var(--border);}
+.price-display{display:inline-flex;align-items:baseline;gap:0.6rem;background:rgba(201,168,76,0.08);border:1px solid var(--border2);padding:1rem 2.5rem;margin:1rem 0 1.5rem;}
+.price-big{font-family:'Cinzel',serif;font-size:3rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.c-form{display:flex;flex-direction:column;gap:1.1rem;}
+.c-label{font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.35rem;}
+.c-input,.c-select,.c-textarea{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.22);padding:0.85rem 1.1rem;color:var(--text);font-family:'Jost',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.3s;}
+.c-input:focus,.c-select:focus,.c-textarea:focus{border-color:var(--gold);}
+.c-textarea{resize:vertical;min-height:90px;}
+.c-submit{padding:1.2rem;background:var(--grad);color:var(--navy);border:none;font-family:'Jost',sans-serif;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;font-weight:500;width:100%;transition:opacity 0.3s;}
+.c-submit:hover{opacity:0.85;}
+
+/* FAQ */
+.faq-item{border:1px solid var(--border);background:rgba(14,30,66,0.65);margin-bottom:1px;}
+.faq-q{width:100%;background:none;border:none;padding:1.4rem 1.8rem;text-align:left;font-family:'Cinzel',serif;font-size:0.82rem;letter-spacing:0.08em;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color 0.3s;}
+.faq-q:hover,.faq-item.open .faq-q{color:var(--gold);}
+.faq-arrow{color:var(--gold);font-size:1rem;transition:transform 0.3s;flex-shrink:0;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-a{display:none;padding:0 1.8rem 1.4rem;}
+.faq-a p{font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.8;color:var(--dim);}
+
+/* FINAL CTA */
+.final-cta{position:relative;min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9rem 2rem;overflow:hidden;}
+.final-bg{position:absolute;inset:0;background-image:url('https://images.stockcake.com/public/e/7/e/e7e266f7-eb13-4320-b7ce-2025359faa6d/sunset-pyramids-view-stockcake.jpg');background-size:cover;background-position:center 55%;filter:brightness(0.25) sepia(0.4) saturate(1.4);}
+.final-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,13,30,0.7) 0%,rgba(6,13,30,0.2) 40%,rgba(6,13,30,0.92) 100%);}
+
+/* WHATSAPP */
+.wa-btn{position:fixed;bottom:1.5rem;right:1.5rem;z-index:400;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.3s;}
+.wa-btn:hover{transform:scale(1.1);}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;background:rgba(0,0,0,0.4);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:0 1.2rem;}
+  .two-col,.kasia-grid{grid-template-columns:1fr;}
+  .pain-grid,.grid-3{grid-template-columns:1fr;}
+  .grid-2{grid-template-columns:1fr;}
+  .pain-card{border-right:none;border-bottom:1px solid var(--border);}
+  .kasia-img{height:380px;}
+  .kasia-img-overlay{display:none;}
+}
+</style>
+</head>
+<body>
+<canvas id="cosmos"></canvas>
+
+<!-- NAV -->
+<nav class="z">
+  <a href="/" style="display:flex;align-items:center;gap:0.7rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#A07828"/><stop offset="50%" stop-color="#F0E090"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs><polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3" fill="url(#ng)"/><circle cx="70" cy="70" r="4" fill="#F0E898"/></svg>
+    <span style="display:flex;flex-direction:column;line-height:1.1;"><span class="logo-name">Polaris Centre</span><span class="logo-sub">London · UK</span></span>
+  </a>
+  <a href="#booking" class="nav-btn">Book Your Session ✦</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero z">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="orbit o1"></div>
+  <div class="orbit o2"></div>
+  <p class="hero-eyebrow">Life Activation · London · In Person</p>
+  <p class="hero-title">A Message For You</p>
+  <h1 class="hero-question">What if the anxiety, the heartbreak,<br>the feeling of being lost —<br><em>was never truly you?</em></h1>
+  <p class="hero-sub">You were born whole. Pure. Connected to something vast and luminous. Life has layered over that truth — with pain, with conditioning, with other people's stories about who you are. But underneath all of it, your original self is still there. Waiting.</p>
+  <p class="hero-truth">✦ The most important relationship in your life is the one with yourself ✦</p>
+  <div class="hero-btns">
+    <a href="#booking" class="btn-gold">Book Your Life Activation ✦</a>
+    <a href="#what" class="btn-ghost">Discover What This Is</a>
+  </div>
+</section>
+
+<!-- PAIN SECTION — speaking their language -->
+<div class="pain-band z">
+  <div style="text-align:center;margin-bottom:3rem;">
+    <p class="sec-label" style="text-align:center;">You May Recognise Yourself Here</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2.2rem);font-style:italic;color:var(--text);max-width:700px;margin:0 auto;line-height:1.5;">So many of us are living from our wounds — believing that the pain we carry is simply who we are.</h2>
+  </div>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <span class="pain-icon">💔</span>
+      <h3 class="pain-title">Heartbreak & Relationships</h3>
+      <p class="pain-body">You keep attracting the same patterns. The same hurt. You long for deep connection but something always gets in the way — and you wonder if the problem is you.</p>
+    </div>
+    <div class="pain-card">
+      <span class="pain-icon">🌫</span>
+      <h3 class="pain-title">Anxiety, Depression & Feeling Lost</h3>
+      <p class="pain-body">The weight in your chest that won't lift. The sense that life is passing you by. A quiet voice asking: is this really it? You are not broken. You are disconnected.</p>
+    </div>
+    <div class="pain-card" style="border-right:none;">
+      <span class="pain-icon">🔍</span>
+      <h3 class="pain-title">Searching For Something More</h3>
+      <p class="pain-body">You have tried therapy, read the books, done the work. Something is still missing. A deeper layer that thinking alone cannot reach — a reconnection that must be felt.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TRUTH BAND -->
+<div class="truth-band z">
+  <p class="sec-label" style="text-align:center;margin-bottom:1.5rem;">The Truth That Changes Everything</p>
+  <p class="truth-quote">"You are not your pain. You are not your patterns. You are not the story you have been told about yourself. <em>You are a divine being — and your original blueprint is still intact, waiting to be activated.</em>"</p>
+  <div class="gold-line c" style="margin-top:2rem;"></div>
+</div>
+
+<!-- WHAT IS IT -->
+<section id="what" class="z">
+  <div class="container">
+    <div class="two-col">
+      <div style="position:relative;overflow:hidden;border:1px solid var(--border2);min-height:480px;">
+        <img src="https://i.ibb.co/21Xm139G/Kasiawand-tree.jpg" alt="Kasia Mikolajczyk — Life Activation Practitioner" style="width:100%;height:100%;object-fit:cover;object-position:center top;min-height:480px;transform:scaleX(-1);">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,13,30,0.7) 0%,transparent 50%);"></div>
+        <div style="position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;">
+          <p style="font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.15em;color:var(--gold);">Kasia Mikolajczyk</p>
+          <p style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--dim);">Life Activation Practitioner · London</p>
+        </div>
+      </div>
+      <div>
+        <p class="sec-label">What Is Life Activation</p>
+        <h2 class="sec-title">An Ancient Practice.<br><em>A Profound Awakening.</em></h2>
+        <div class="gold-line"></div>
+        <p class="prose">Life Activation is a <strong>3,000-year-old shamanic healing practice</strong> from the lineage of King Salomon — passed directly from teacher to student through an unbroken tradition of over 3,000 years. It is not a concept. It is not a belief system. It is a direct energetic transmission that works on the deepest level of who you are.</p>
+        <p class="prose">During the session, your <strong>physical and spiritual DNA is activated</strong> — dormant aspects of your being are awakened, emotional blockages and unhealthy patterns are released, and the conditioning you have carried — from your own life and from up to <strong>seven generations before and after you</strong> — begins to clear.</p>
+        <p class="prose">What remains when that clearing happens is the real you. <em>Clearer. Lighter. More alive than you may have felt in years.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT CHANGES -->
+<section class="dark-band z" style="padding:6rem 2rem;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <p class="sec-label" style="text-align:center;">What Shifts After Your Session</p>
+      <h2 class="sec-title" style="text-align:center;">The Changes People Notice<br><em>Are Real — and They Last</em></h2>
+      <div class="gold-line c"></div>
+    </div>
+    <div class="grid-3" style="margin-top:0;">
+      <div class="card"><span class="card-icon">✨</span><h3 class="card-title">Clarity & Direction</h3><p class="card-body">The fog lifts. Decisions that felt impossible become clear. A sense of purpose and forward momentum returns — often within days of the session.</p></div>
+      <div class="card"><span class="card-icon">🕊</span><h3 class="card-title">Inner Peace</h3><p class="card-body">The constant mental noise quietens. Anxiety loosens its grip. A deeper stillness becomes available — one that is not dependent on circumstances.</p></div>
+      <div class="card"><span class="card-icon">💞</span><h3 class="card-title">Relationships Transform</h3><p class="card-body">As your relationship with yourself heals, every other relationship shifts. Old patterns lose their power. Space opens for genuine love and connection.</p></div>
+      <div class="card"><span class="card-icon">⚡</span><h3 class="card-title">Renewed Energy</h3><p class="card-body">Clients consistently report feeling more energised, more present, more fully themselves. Life stops feeling like something you endure and starts feeling like yours.</p></div>
+      <div class="card"><span class="card-icon">🧬</span><h3 class="card-title">Generational Healing</h3><p class="card-body">Patterns that have run through your family for generations begin to dissolve — freeing not only you, but those who come after you.</p></div>
+      <div class="card"><span class="card-icon">🌟</span><h3 class="card-title">Your True Self Emerges</h3><p class="card-body">Beneath the pain, the conditioning, the survival — there is a version of you that is radiant and whole. Life Activation begins the journey back to that person.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="z">
+  <div class="container">
+    <div class="two-col" style="gap:5rem;align-items:start;">
+      <div>
+        <p class="sec-label">Your Session</p>
+        <h2 class="sec-title">What Happens<br><em>During Your Activation</em></h2>
+        <div class="gold-line"></div>
+        <p class="prose">Your Life Activation session is deeply personal, profoundly gentle, and fully clothed. It takes place in a sacred space in Central London, and lasts between 1.5 and 2 hours.</p>
+        <p class="prose">You will receive a brief spiritual reading, a full energetic activation, and a follow-up appointment to support your integration in the days that follow.</p>
+        <div style="margin-top:2rem;">
+          <div class="include-item"><div class="include-dot"></div><div class="include-text">Physical & Spiritual DNA Activation</div></div>
+          <div class="include-item"><div class="include-dot"></div><div class="include-text">Crown Cap Removal</div></div>
+          <div class="include-item"><div class="include-dot"></div><div class="include-text">Central Core Balancing</div></div>
+          <div class="include-item"><div class="include-dot"></div><div class="include-text">16 Lotus Petal Awakening</div></div>
+          <div class="include-item"><div class="include-dot"></div><div class="include-text">Elemental & Magnetic Line Balancing</div></div>
+          <div class="include-item"><div class="include-dot"></div><div class="include-text">Chakra Balancing & Negative Crystal Removal</div></div>
+          <div class="include-item"><div class="include-dot"></div><div class="include-text">Brief Spiritual Reading</div></div>
+          <div class="include-item"><div class="include-dot"></div><div class="include-text">Two Life Activation Sprays (Purificado & Crystalo)</div></div>
+          <div class="include-item"><div class="include-dot"></div><div class="include-text">Follow-up integration appointment</div></div>
+        </div>
+      </div>
+      <div>
+        <p class="sec-label">Who This Is For</p>
+        <h2 class="sec-title">You Are Ready<br><em>If You Feel This</em></h2>
+        <div class="gold-line"></div>
+        <div style="display:flex;flex-direction:column;gap:1rem;margin-top:1rem;">
+          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;background:rgba(14,30,66,0.6);border:1px solid var(--border);">
+            <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:0.1rem;">✦</span>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.65;">You are tired of carrying the same pain and are ready to truly let it go</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;background:rgba(14,30,66,0.6);border:1px solid var(--border);">
+            <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:0.1rem;">✦</span>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.65;">You sense there is a version of yourself you have not yet fully met</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;background:rgba(14,30,66,0.6);border:1px solid var(--border);">
+            <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:0.1rem;">✦</span>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.65;">You are ready to take responsibility for your healing — not as a burden, but as the most loving act you can take for yourself</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;background:rgba(14,30,66,0.6);border:1px solid var(--border);">
+            <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:0.1rem;">✦</span>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.65;">You want healing that works at the root — not just the surface</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;background:rgba(14,30,66,0.6);border:1px solid var(--border);">
+            <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:0.1rem;">✦</span>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.65;">You feel called to know yourself more deeply — and to live from that knowing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="dark-band z" style="padding:6rem 2rem;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <p class="sec-label" style="text-align:center;">Real Client Experiences</p>
+      <h2 class="sec-title" style="text-align:center;">What Happens When People<br><em>Say Yes to Themselves</em></h2>
+      <div class="gold-line c"></div>
+    </div>
+    <div class="grid-3" style="margin-top:0;">
+      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">Two weeks after my Life Activation, I felt the energy of everything around me — as if the universe had begun to communicate with me. A very powerful shift in awareness I did not know was possible.</p><div class="test-divider"></div><p class="test-name">Sandy Snyder</p><p class="test-role">Google Review</p></div>
+      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">My self-limiting thoughts of fear and self-doubt have lessened considerably. I feel more empowered and inspired to create bigger things in my life. Subtle but persistent positive change — every single day.</p><div class="test-divider"></div><p class="test-name">Morgan MacBean</p><p class="test-role">Google Review</p></div>
+      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">I can sleep. I feel more energised and have already started taking on more things. What an extraordinary gift this work has been to my life. I only wish I had found it sooner.</p><div class="test-divider"></div><p class="test-name">Dr. Francis Marcone</p><p class="test-role">Google Review</p></div>
+      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">Since my session I have had more focus, more peace, and opportunities showing up out of the blue. Truly profound and immediately impactful. Not typically my thing — but life-changing.</p><div class="test-divider"></div><p class="test-name">Dr. Bill Moss</p><p class="test-role">Google Review</p></div>
+      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">I felt energy moving in my body, old physical injuries clearing. I recommend anyone seeking more joy and deeper relationships to experience this. The shift was immediate and real.</p><div class="test-divider"></div><p class="test-name">Dr. Steve Tullus</p><p class="test-role">Google Review</p></div>
+      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">Kasia held space for healing in such a beautiful and powerful way. I left feeling completely different — lighter, clearer, more myself than I had felt in years. Truly transformational.</p><div class="test-divider"></div><p class="test-name">Alice Helps</p><p class="test-role">Google Review</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- KASIA SECTION -->
+<section class="z" style="padding:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="kasia-grid">
+    <div class="kasia-img">
+      <img src="https://i.ibb.co/23b7pkGm/70bf9061-6bc1-4268-ad96-9c9d95f56fcf-2.jpg" alt="Kasia Mikolajczyk" style="transform:scaleX(-1);">
+      <div class="kasia-img-overlay"></div>
+    </div>
+    <div class="kasia-text">
+      <p class="sec-label">Your Practitioner</p>
+      <div class="gold-line"></div>
+      <h2 style="font-family:'Cinzel',serif;font-size:1.4rem;color:var(--text);margin-bottom:0.3rem;">Kasia Mikolajczyk</h2>
+      <p style="font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--dim);margin-bottom:1.8rem;">Life Activation Practitioner · Healer · Teacher &amp; Guide<br><span style="font-size:0.58rem;letter-spacing:0.15em;">Trained &amp; Certified by the Royal Lineage of King Salomon · Modern Mystery School</span></p>
+      <blockquote style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,1.8vw,1.2rem);font-style:italic;color:var(--text);line-height:1.8;margin:0 0 1.8rem;border-left:2px solid var(--gold);padding-left:1.5rem;">"Since childhood I knew my purpose was to help people heal — one person at a time. For over 8 years I have witnessed the most extraordinary transformations through Life Activation. People arrive carrying years of pain. They leave reconnected to something they forgot was there. That is the greatest privilege of my work."</blockquote>
+      <p class="prose" style="font-size:0.98rem;">Kasia is a certified Life Activation Practitioner, Healer, Teacher, Guide, and Ritual Master — Magus Hermeticus — trained in the Modern Mystery School tradition. She works from her studios in Central London and has guided hundreds of people back to themselves.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;">
+        <span style="font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid var(--border2);color:var(--gold);">Ritual Master · Magus Hermeticus</span>
+        <span style="font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid var(--border2);color:var(--gold);">King Salomon Lineage</span>
+        <span style="font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid var(--border2);color:var(--gold);">8+ Years · London</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking-section z" id="booking">
+  <div class="container">
+    <div style="text-align:center;padding:4rem 2rem 3rem;border-bottom:1px solid var(--border);margin-bottom:4rem;">
+      <p class="sec-label" style="text-align:center;">Begin Your Journey</p>
+      <h2 style="font-family:'Cinzel',serif;font-size:clamp(1.8rem,4.5vw,3rem);color:var(--text);line-height:1.2;margin-bottom:1rem;">Book Your<br><span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Life Activation</span></h2>
+      <div class="price-display"><span class="price-big">£250</span><span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);">1.5–2 Hours · In Person · London</span></div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--dim);max-width:560px;margin:0 auto 1.5rem;">This is not just a session. It is the beginning of coming home to yourself.</p>
+
+      <!-- Direct booking button -->
+      <div style="max-width:520px;margin:0 auto;">
+        <a href="https://buy.stripe.com/dRm28r9Dc1ne1hs8ai9MY00" target="_blank" class="btn-gold" style="width:100%;text-align:center;display:block;padding:1.4rem 2rem;font-size:0.78rem;text-decoration:none;margin-bottom:1rem;background:linear-gradient(135deg,#8B6410,#E8D080,#C9A84C,#F0E090,#8B6410);background-size:200% auto;animation:shimmer 3s linear infinite;">
+          ✦ Book Now & Pay Securely — £250
+        </a>
+        <div style="display:flex;align-items:center;gap:1rem;margin:1.2rem 0;">
+          <div style="flex:1;height:1px;background:var(--border);"></div>
+          <span style="font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--muted);">or have a question first</span>
+          <div style="flex:1;height:1px;background:var(--border);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col" style="gap:5rem;align-items:start;">
+      <div>
+        <p class="sec-label">What Happens Next</p>
+        <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;">
+          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);">
+            <span style="font-family:'Cinzel',serif;font-size:1.4rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;line-height:1;">01</span>
+            <div><p style="font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.1em;color:var(--text);margin-bottom:0.3rem;">Fill in the form</p><p style="font-size:0.84rem;color:var(--muted);">Takes 2 minutes. Tell us a little about yourself and what brings you here.</p></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);">
+            <span style="font-family:'Cinzel',serif;font-size:1.4rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;line-height:1;">02</span>
+            <div><p style="font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.1em;color:var(--text);margin-bottom:0.3rem;">Kasia contacts you personally</p><p style="font-size:0.84rem;color:var(--muted);">Within 24 hours — to answer questions and confirm your appointment.</p></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);">
+            <span style="font-family:'Cinzel',serif;font-size:1.4rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;line-height:1;">03</span>
+            <div><p style="font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.1em;color:var(--text);margin-bottom:0.3rem;">You arrive and receive</p><p style="font-size:0.84rem;color:var(--muted);">A sacred space in Central London. You leave different from how you arrived.</p></div>
+          </div>
+        </div>
+        <div style="padding:1.5rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);">
+          <p style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Free Consultation Available</p>
+          <p style="font-size:0.85rem;color:var(--dim);margin-bottom:1rem;line-height:1.6;">Not sure if this is right for you? Kasia offers a free 20-minute consultation — no obligation, no pressure.</p>
+          <a href="tel:447533653331" style="display:block;font-size:0.82rem;color:var(--gold);text-decoration:none;margin-bottom:0.5rem;">📞 +44 7533 653 331</a>
+          <a href="mailto:kasia@polariscentre.london" style="display:block;font-size:0.82rem;color:var(--gold);text-decoration:none;">✉️ kasia@polariscentre.london</a>
+        </div>
+      </div>
+      <div>
+        <form class="c-form" name="life-activation-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="life-activation-enquiry">
+          <p style="display:none;"><input name="bot-field"></p>
+          <div><label class="c-label">Your Full Name *</label><input class="c-input" type="text" name="Full Name" placeholder="First and last name" required></div>
+          <div><label class="c-label">Email Address *</label><input class="c-input" type="email" name="Email" placeholder="your@email.com" required></div>
+          <div><label class="c-label">Phone Number</label><input class="c-input" type="tel" name="Phone" placeholder="+44..."></div>
+          <div><label class="c-label">What brings you here? *</label>
+            <select class="c-select c-input" name="Reason" required>
+              <option value="">— Please select —</option>
+              <option>I am struggling with anxiety or depression</option>
+              <option>I am heartbroken or in a difficult relationship</option>
+              <option>I feel lost or unfulfilled in life</option>
+              <option>I am seeking deeper spiritual growth</option>
+              <option>I want to break old patterns and heal</option>
+              <option>I am curious and want to know more</option>
+            </select>
+          </div>
+          <div><label class="c-label">Anything you'd like to share</label><textarea class="c-textarea" name="Message" placeholder="Tell me a little about where you are right now. I read every message personally."></textarea></div>
+          <button type="submit" class="c-submit">Send My Enquiry ✦</button>
+          <p style="font-size:0.72rem;color:var(--muted);text-align:center;margin-top:0.5rem;">I read every message personally and respond within 24 hours — Kasia</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="z" style="padding:6rem 2rem;background:rgba(10,21,48,0.5);border-top:1px solid var(--border);">
+  <div class="container-sm">
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <p class="sec-label" style="text-align:center;">Questions</p>
+      <h2 class="sec-title" style="text-align:center;">What People Ask<br><em>Before They Book</em></h2>
+      <div class="gold-line c"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1px;">
+      <div class="faq-item open"><button class="faq-q" onclick="toggleFaq(this)">Do I need any spiritual background or prior experience?<span class="faq-arrow">↓</span></button><div class="faq-a" style="display:block;"><p>None whatsoever. Life Activation is the ideal first step — for people who have never explored anything like this, and equally for those who have been on a spiritual path for years. All you need is an open mind and a genuine willingness to heal.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How will I feel after the session?<span class="faq-arrow">↓</span></button><div class="faq-a"><p>Most people report feeling lighter, clearer, and more peaceful almost immediately. Some notice the shift within hours; others feel the changes unfolding gently over the following days and weeks. Effects are typically felt for up to three months and build over time.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is this session suitable for someone going through grief or trauma?<span class="faq-arrow">↓</span></button><div class="faq-a"><p>Yes. Life Activation works gently but powerfully at the root level — releasing emotional blockages that other modalities often cannot reach. Many clients come during some of the most difficult seasons of their lives, and find the session brings a sense of relief and renewed clarity that they did not expect.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the difference between this and therapy or counselling?<span class="faq-arrow">↓</span></button><div class="faq-a"><p>Therapy works with the mind and the story. Life Activation works with your energy field and your DNA — the deeper blueprint beneath thought and narrative. They are complementary, not competing. Many clients find that Life Activation accelerates and deepens the work they are already doing in therapy.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Where does the session take place?<span class="faq-arrow">↓</span></button><div class="faq-a"><p>Sessions take place in person in Central London (W2 6EU). The session is fully clothed, gentle, and takes place in a calm, sacred space. After booking, you will receive full details about location, what to wear, and what to expect.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What if I have more questions before booking?<span class="faq-arrow">↓</span></button><div class="faq-a"><p>Please reach out — I am happy to speak with you personally before you commit. There is no pressure and no obligation. You can call, email, or message on WhatsApp and I will get back to you personally.<div style="margin-top:1rem;display:flex;gap:1rem;flex-wrap:wrap;"><a href="https://wa.me/447533653331" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#25D366;border:1px solid rgba(37,211,102,0.4);padding:0.6rem 1.2rem;text-decoration:none;">💬 WhatsApp Kasia</a><a href="tel:447533653331" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border2);padding:0.6rem 1.2rem;text-decoration:none;">📞 Call Kasia</a></div></p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta z">
+  <div class="final-bg"></div>
+  <div class="final-overlay"></div>
+  <div style="position:relative;z-index:2;text-align:center;max-width:800px;margin:0 auto;">
+    <p style="font-size:0.62rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;justify-content:center;gap:1.2rem;">
+      <span style="display:inline-block;width:50px;height:1px;background:rgba(201,168,76,0.5);"></span>
+      The Journey Back to You
+      <span style="display:inline-block;width:50px;height:1px;background:rgba(201,168,76,0.5);"></span>
+    </p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,4rem);font-style:italic;font-weight:300;line-height:1.25;color:var(--text);margin-bottom:1.5rem;">You have been carrying this<br>long enough.</h2>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.4rem);font-style:italic;color:rgba(237,232,216,0.8);line-height:1.8;margin:0 auto 1rem;">Healing is not weakness. It is the most courageous thing a person can do.<br>And it begins with one decision — to say yes to yourself.</p>
+    <p style="font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.22em;color:var(--gold);margin-bottom:3rem;">✦ Your original blueprint is still intact. ✦</p>
+    <div style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;">
+      <a href="https://buy.stripe.com/dRm28r9Dc1ne1hs8ai9MY00" target="_blank" class="btn-gold">Book Your Life Activation ✦</a>
+      <a href="#booking" class="btn-ghost">Send an Enquiry</a>
+    </div>
+  </div>
+</section>
+
+<footer class="z">
+  <p style="font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.3em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.5rem;">✦ POLARIS CENTRE</p>
+  <p style="font-size:0.7rem;color:var(--muted);">© 2026 Polaris Centre London · All Rights Reserved · <a href="/" style="color:var(--dim);text-decoration:none;">Main Site</a></p>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/447533653331" target="_blank" class="wa-btn z" aria-label="WhatsApp Kasia">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+(function(){
+  var c=document.getElementById('cosmos'),ctx=c.getContext('2d');
+  var W,H,stars=[],shooters=[];
+  function resize(){W=c.width=window.innerWidth;H=c.height=Math.max(document.body.scrollHeight,window.innerHeight);}
+  function rnd(a,b){return a+Math.random()*(b-a);}
+  function mkStars(){stars=[];var n=Math.floor(W*H/3500);for(var i=0;i<n;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:rnd(0.2,1.3),a:rnd(0.1,0.85),spd:rnd(0.003,0.012),dir:Math.random()>.5?1:-1});}
+  function mkShooter(){shooters.push({x:rnd(W*.1,W*.85),y:rnd(0,H*.35),vx:Math.cos(rnd(20,45)*Math.PI/180)*rnd(6,13),vy:Math.sin(rnd(20,45)*Math.PI/180)*rnd(6,13),a:1,fade:rnd(0.012,0.025),trail:[]});}
+  var frame=0;
+  function draw(){
+    c.width=W;
+    var bg=ctx.createLinearGradient(0,0,0,H);bg.addColorStop(0,'#050C1A');bg.addColorStop(0.5,'#080F22');bg.addColorStop(1,'#0B1530');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+    for(var i=0;i<stars.length;i++){var s=stars[i];s.a+=s.spd*s.dir;if(s.a>0.9||s.a<0.08)s.dir*=-1;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle='rgba(210,225,255,'+s.a+')';ctx.fill();}
+    frame++;if(frame%180===0&&shooters.length<3)mkShooter();
+    for(var i=shooters.length-1;i>=0;i--){var s=shooters[i];s.trail.push({x:s.x,y:s.y});if(s.trail.length>20)s.trail.shift();s.x+=s.vx;s.y+=s.vy;s.a-=s.fade;
+      if(s.trail.length>1){var g=ctx.createLinearGradient(s.trail[0].x,s.trail[0].y,s.x,s.y);g.addColorStop(0,'rgba(255,255,255,0)');g.addColorStop(1,'rgba(255,252,210,'+s.a+')');ctx.beginPath();ctx.moveTo(s.trail[0].x,s.trail[0].y);s.trail.forEach(function(p){ctx.lineTo(p.x,p.y);});ctx.strokeStyle=g;ctx.lineWidth=1.5;ctx.stroke();}
+      if(s.a<=0||s.x>W+200||s.y>H+200)shooters.splice(i,1);}
+    requestAnimationFrame(draw);}
+  window.addEventListener('resize',function(){resize();mkStars();});
+  resize();mkStars();mkShooter();draw();
+})();
+
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-a').style.display='none';});
+  if(!isOpen){item.classList.add('open');item.querySelector('.faq-a').style.display='block';}
+}
+</script>
+</body>
+</html>
