@@ -154,7 +154,7 @@ section{padding:6rem 2rem;}
 
 /* FINAL CTA */
 .final-cta{position:relative;min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9rem 2rem;overflow:hidden;}
-.final-bg{position:absolute;inset:0;background-image:url('https://images.stockcake.com/public/e/7/e/e7e266f7-eb13-4320-b7ce-2025359faa6d/sunset-pyramids-view-stockcake.jpg');background-size:cover;background-position:center 55%;filter:brightness(0.25) sepia(0.4) saturate(1.4);}
+.final-bg{position:absolute;inset:0;background-size:cover;background-position:center 30%;filter:brightness(0.9) sepia(0.15) saturate(1.2);}
 .final-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,13,30,0.7) 0%,rgba(6,13,30,0.2) 40%,rgba(6,13,30,0.92) 100%);}
 
 /* WHATSAPP */
@@ -164,7 +164,7 @@ section{padding:6rem 2rem;}
 /* FOOTER */
 footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;background:rgba(0,0,0,0.4);}
 
-/* RESPONSIVE */
+/* RESPONSIVE — TABLET */
 @media(max-width:900px){
   nav{padding:0 1.2rem;}
   .two-col,.kasia-grid{grid-template-columns:1fr;}
@@ -174,6 +174,68 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
   .kasia-img{height:380px;}
   .kasia-img-overlay{display:none;}
 }
+
+/* RESPONSIVE — MOBILE */
+@media(max-width:640px){
+
+  /* Body padding so urgency banner doesn't cover content */
+  body{padding-bottom:130px;}
+
+  /* Nav */
+  nav{padding:0 1rem;}
+  .nav-btn{font-size:0.58rem;padding:0.5rem 1rem;letter-spacing:0.12em;}
+
+  /* Hero */
+  .hero{padding:7rem 1.2rem 4rem;}
+  .hero-sub{font-size:1rem;line-height:1.7;}
+  .hero-btns{flex-direction:column;align-items:center;}
+  .hero-btns a{width:100%;text-align:center;}
+  .o1{width:260px;height:260px;}
+  .o2{width:400px;height:400px;}
+
+  /* Trust strip — 2x2 grid, hide dividers */
+  #trust-strip-inner{flex-wrap:wrap;gap:1.2rem 2rem;justify-content:center;}
+  .trust-divider{display:none;}
+
+  /* Sections — reduce padding */
+  section{padding:4rem 1.2rem;}
+
+  /* What is LA image */
+  .two-col > div:first-child{min-height:260px!important;}
+  .two-col > div:first-child img{min-height:260px!important;}
+
+  /* Kasia photo */
+  .kasia-img{height:260px;}
+
+  /* Hide "Who it's for" on mobile — duplicates pain section */
+  .mobile-hide{display:none!important;}
+
+  /* Testimonials — show only first 3 on mobile */
+  .grid-3 .test-card:nth-child(n+4){display:none;}
+
+  /* Booking section */
+  .price-display{padding:0.8rem 1.2rem;}
+  .price-big{font-size:2.2rem;}
+  .booking-section{padding:4rem 1.2rem;}
+
+  /* Urgency banner — stack vertically on mobile */
+  #urgency-banner{flex-direction:column;align-items:flex-start;gap:0.8rem;padding:1rem;}
+  #urgency-banner > div:first-child{width:100%;}
+  #urgency-banner > div:last-child{width:100%;justify-content:space-between;}
+
+  /* FAQ */
+  .faq-q{font-size:0.75rem;padding:1.2rem 1rem;}
+  .faq-a{padding:0 1rem 1.2rem;}
+
+  /* Enquiry form */
+  .c-form{gap:0.9rem;}
+
+  /* Final CTA */
+  .final-cta{padding:6rem 1.2rem;}
+
+  /* Pain band */
+  .pain-band{padding:3.5rem 1.2rem;}
+}
 </style>
 </head>
 <body>
@@ -181,11 +243,11 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
 
 <!-- NAV -->
 <nav class="z">
-  <a href="/" style="display:flex;align-items:center;gap:0.7rem;text-decoration:none;">
+  <div style="display:flex;align-items:center;gap:0.7rem;">
     <svg width="28" height="28" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#A07828"/><stop offset="50%" stop-color="#F0E090"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs><polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3" fill="url(#ng)"/><circle cx="70" cy="70" r="4" fill="#F0E898"/></svg>
     <span style="display:flex;flex-direction:column;line-height:1.1;"><span class="logo-name">Polaris Centre</span><span class="logo-sub">London · UK</span></span>
-  </a>
-  <a href="#booking" class="nav-btn">Book Your Session ✦</a>
+  </div>
+  <a href="https://buy.stripe.com/dRm7sLcPo9TK3pAeyG9MY03" target="_blank" class="nav-btn">Book Your Session ✦</a>
 </nav>
 
 <!-- HERO -->
@@ -196,14 +258,40 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
   <div class="orbit o2"></div>
   <p class="hero-eyebrow">Life Activation · London · In Person</p>
   <p class="hero-title">A Message For You</p>
-  <h1 class="hero-question">What if the anxiety, the heartbreak,<br>the feeling of being lost —<br><em>was never truly you?</em></h1>
-  <p class="hero-sub">You were born whole. Pure. Connected to something vast and luminous. Life has layered over that truth — with pain, with conditioning, with other people's stories about who you are. But underneath all of it, your original self is still there. Waiting.</p>
-  <p class="hero-truth">✦ The most important relationship in your life is the one with yourself ✦</p>
+  <h1 class="hero-question">Still carrying anxiety, heartbreak,<br>or that quiet feeling<br><em>that something is missing?</em></h1>
+  <p style="font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--dim);margin-bottom:2rem;animation:fadeUp 1s ease 0.65s both;">A 90-minute in-person healing session · Central London · Ancient shamanic practice</p>
+  <p class="hero-sub">You have tried to think your way through it. You have pushed on, kept going, done the work. And yet something remains — a heaviness, a disconnection, a sense that the life you know you're capable of is just out of reach. What if the problem isn't you — but what's been layered over you?</p>
+  <p class="hero-truth">✦ Your true self is still there. It simply needs to be remembered. ✦</p>
   <div class="hero-btns">
     <a href="#booking" class="btn-gold">Book Your Life Activation ✦</a>
     <a href="#what" class="btn-ghost">Discover What This Is</a>
   </div>
 </section>
+
+<!-- TRUST STRIP -->
+<div class="z" style="background:rgba(6,13,30,0.97);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.5rem 2rem;">
+  <div id="trust-strip-inner" style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:0.8rem;">
+      <span style="font-family:'Cinzel',serif;font-size:1.5rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">300+</span>
+      <span style="font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--dim);">Sessions Facilitated</span>
+    </div>
+    <div class="trust-divider" style="width:1px;height:30px;background:var(--border);flex-shrink:0;"></div>
+    <div style="display:flex;align-items:center;gap:0.8rem;">
+      <span style="font-family:'Cinzel',serif;font-size:1.5rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">9</span>
+      <span style="font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--dim);">Years of Practice</span>
+    </div>
+    <div class="trust-divider" style="width:1px;height:30px;background:var(--border);flex-shrink:0;"></div>
+    <div style="display:flex;align-items:center;gap:0.8rem;">
+      <span style="font-size:0.85rem;color:#FFD700;letter-spacing:0.05em;">★★★★★</span>
+      <span style="font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--dim);">Google Reviews</span>
+    </div>
+    <div class="trust-divider" style="width:1px;height:30px;background:var(--border);flex-shrink:0;"></div>
+    <div style="display:flex;align-items:center;gap:0.8rem;">
+      <span style="font-family:'Cinzel',serif;font-size:1.5rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">W2</span>
+      <span style="font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--dim);">Central London</span>
+    </div>
+  </div>
+</div>
 
 <!-- PAIN SECTION — speaking their language -->
 <div class="pain-band z">
@@ -233,7 +321,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
 <!-- TRUTH BAND -->
 <div class="truth-band z">
   <p class="sec-label" style="text-align:center;margin-bottom:1.5rem;">The Truth That Changes Everything</p>
-  <p class="truth-quote">"You are not your pain. You are not your patterns. You are not the story you have been told about yourself. <em>You are a divine being — and your original blueprint is still intact, waiting to be activated.</em>"</p>
+  <p class="truth-quote">"You are not your pain. You are not your patterns. You are not the story you have been told about yourself. <em>You are whole, you are strong — and your full potential has always lived within you. It is time to remember.</em>"</p>
   <div class="gold-line c" style="margin-top:2rem;"></div>
 </div>
 
@@ -254,80 +342,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
         <h2 class="sec-title">An Ancient Practice.<br><em>A Profound Awakening.</em></h2>
         <div class="gold-line"></div>
         <p class="prose">Life Activation is a <strong>3,000-year-old shamanic healing practice</strong> from the lineage of King Salomon — passed directly from teacher to student through an unbroken tradition of over 3,000 years. It is not a concept. It is not a belief system. It is a direct energetic transmission that works on the deepest level of who you are.</p>
-        <p class="prose">During the session, your <strong>physical and spiritual DNA is activated</strong> — dormant aspects of your being are awakened, emotional blockages and unhealthy patterns are released, and the conditioning you have carried — from your own life and from up to <strong>seven generations before and after you</strong> — begins to clear.</p>
+        <p class="prose">During the session, your <strong>physical and spiritual DNA is activated</strong> — dormant aspects of your being are awakened, your awareness expands so you can move through emotional blockages and unhealthy patterns more quickly. The conditioning you have carried — from your own life and from up to <strong>seven generations before you</strong> — begins to clear.</p>
         <p class="prose">What remains when that clearing happens is the real you. <em>Clearer. Lighter. More alive than you may have felt in years.</em></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT CHANGES -->
-<section class="dark-band z" style="padding:6rem 2rem;">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:3.5rem;">
-      <p class="sec-label" style="text-align:center;">What Shifts After Your Session</p>
-      <h2 class="sec-title" style="text-align:center;">The Changes People Notice<br><em>Are Real — and They Last</em></h2>
-      <div class="gold-line c"></div>
-    </div>
-    <div class="grid-3" style="margin-top:0;">
-      <div class="card"><span class="card-icon">✨</span><h3 class="card-title">Clarity & Direction</h3><p class="card-body">The fog lifts. Decisions that felt impossible become clear. A sense of purpose and forward momentum returns — often within days of the session.</p></div>
-      <div class="card"><span class="card-icon">🕊</span><h3 class="card-title">Inner Peace</h3><p class="card-body">The constant mental noise quietens. Anxiety loosens its grip. A deeper stillness becomes available — one that is not dependent on circumstances.</p></div>
-      <div class="card"><span class="card-icon">💞</span><h3 class="card-title">Relationships Transform</h3><p class="card-body">As your relationship with yourself heals, every other relationship shifts. Old patterns lose their power. Space opens for genuine love and connection.</p></div>
-      <div class="card"><span class="card-icon">⚡</span><h3 class="card-title">Renewed Energy</h3><p class="card-body">Clients consistently report feeling more energised, more present, more fully themselves. Life stops feeling like something you endure and starts feeling like yours.</p></div>
-      <div class="card"><span class="card-icon">🧬</span><h3 class="card-title">Generational Healing</h3><p class="card-body">Patterns that have run through your family for generations begin to dissolve — freeing not only you, but those who come after you.</p></div>
-      <div class="card"><span class="card-icon">🌟</span><h3 class="card-title">Your True Self Emerges</h3><p class="card-body">Beneath the pain, the conditioning, the survival — there is a version of you that is radiant and whole. Life Activation begins the journey back to that person.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT'S INCLUDED -->
-<section class="z">
-  <div class="container">
-    <div class="two-col" style="gap:5rem;align-items:start;">
-      <div>
-        <p class="sec-label">Your Session</p>
-        <h2 class="sec-title">What Happens<br><em>During Your Activation</em></h2>
-        <div class="gold-line"></div>
-        <p class="prose">Your Life Activation session is deeply personal, profoundly gentle, and fully clothed. It takes place in a sacred space in Central London, and lasts between 1.5 and 2 hours.</p>
-        <p class="prose">You will receive a brief spiritual reading, a full energetic activation, and a follow-up appointment to support your integration in the days that follow.</p>
-        <div style="margin-top:2rem;">
-          <div class="include-item"><div class="include-dot"></div><div class="include-text">Physical & Spiritual DNA Activation</div></div>
-          <div class="include-item"><div class="include-dot"></div><div class="include-text">Crown Cap Removal</div></div>
-          <div class="include-item"><div class="include-dot"></div><div class="include-text">Central Core Balancing</div></div>
-          <div class="include-item"><div class="include-dot"></div><div class="include-text">16 Lotus Petal Awakening</div></div>
-          <div class="include-item"><div class="include-dot"></div><div class="include-text">Elemental & Magnetic Line Balancing</div></div>
-          <div class="include-item"><div class="include-dot"></div><div class="include-text">Chakra Balancing & Negative Crystal Removal</div></div>
-          <div class="include-item"><div class="include-dot"></div><div class="include-text">Brief Spiritual Reading</div></div>
-          <div class="include-item"><div class="include-dot"></div><div class="include-text">Two Life Activation Sprays (Purificado & Crystalo)</div></div>
-          <div class="include-item"><div class="include-dot"></div><div class="include-text">Follow-up integration appointment</div></div>
-        </div>
-      </div>
-      <div>
-        <p class="sec-label">Who This Is For</p>
-        <h2 class="sec-title">You Are Ready<br><em>If You Feel This</em></h2>
-        <div class="gold-line"></div>
-        <div style="display:flex;flex-direction:column;gap:1rem;margin-top:1rem;">
-          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;background:rgba(14,30,66,0.6);border:1px solid var(--border);">
-            <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:0.1rem;">✦</span>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.65;">You are tired of carrying the same pain and are ready to truly let it go</p>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;background:rgba(14,30,66,0.6);border:1px solid var(--border);">
-            <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:0.1rem;">✦</span>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.65;">You sense there is a version of yourself you have not yet fully met</p>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;background:rgba(14,30,66,0.6);border:1px solid var(--border);">
-            <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:0.1rem;">✦</span>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.65;">You are ready to take responsibility for your healing — not as a burden, but as the most loving act you can take for yourself</p>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;background:rgba(14,30,66,0.6);border:1px solid var(--border);">
-            <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:0.1rem;">✦</span>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.65;">You want healing that works at the root — not just the surface</p>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;background:rgba(14,30,66,0.6);border:1px solid var(--border);">
-            <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:0.1rem;">✦</span>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dim);line-height:1.65;">You feel called to know yourself more deeply — and to live from that knowing</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -341,16 +357,91 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
       <h2 class="sec-title" style="text-align:center;">What Happens When People<br><em>Say Yes to Themselves</em></h2>
       <div class="gold-line c"></div>
     </div>
-    <div class="grid-3" style="margin-top:0;">
-      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">Two weeks after my Life Activation, I felt the energy of everything around me — as if the universe had begun to communicate with me. A very powerful shift in awareness I did not know was possible.</p><div class="test-divider"></div><p class="test-name">Sandy Snyder</p><p class="test-role">Google Review</p></div>
-      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">My self-limiting thoughts of fear and self-doubt have lessened considerably. I feel more empowered and inspired to create bigger things in my life. Subtle but persistent positive change — every single day.</p><div class="test-divider"></div><p class="test-name">Morgan MacBean</p><p class="test-role">Google Review</p></div>
-      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">I can sleep. I feel more energised and have already started taking on more things. What an extraordinary gift this work has been to my life. I only wish I had found it sooner.</p><div class="test-divider"></div><p class="test-name">Dr. Francis Marcone</p><p class="test-role">Google Review</p></div>
-      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">Since my session I have had more focus, more peace, and opportunities showing up out of the blue. Truly profound and immediately impactful. Not typically my thing — but life-changing.</p><div class="test-divider"></div><p class="test-name">Dr. Bill Moss</p><p class="test-role">Google Review</p></div>
-      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">I felt energy moving in my body, old physical injuries clearing. I recommend anyone seeking more joy and deeper relationships to experience this. The shift was immediate and real.</p><div class="test-divider"></div><p class="test-name">Dr. Steve Tullus</p><p class="test-role">Google Review</p></div>
-      <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">Kasia held space for healing in such a beautiful and powerful way. I left feeling completely different — lighter, clearer, more myself than I had felt in years. Truly transformational.</p><div class="test-divider"></div><p class="test-name">Alice Helps</p><p class="test-role">Google Review</p></div>
+
+    <!-- CAROUSEL -->
+    <div style="position:relative;">
+      <div id="tc-track" style="overflow:hidden;">
+        <div id="tc-inner" style="display:flex;transition:transform 0.45s cubic-bezier(0.4,0,0.2,1);gap:0;">
+
+          <div class="tc-slide" style="min-width:100%;padding:0 0.5rem;box-sizing:border-box;">
+            <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">I'm really grateful for the healing work I've done with Kasia 💖 I first came for a Life Activation a few years ago and returned because I noticed genuine positive changes in my life over time. When I first came, I felt quite lost, emotionally low, depressed and disconnected from myself. Looking back now, I can see how much I've changed. I feel more grounded, more authentic, calmer and much more connected to life. My anxiety gone, depression gone, unhealthy habits improved, and even my relationships started changing in a positive way. It feels like a quantum leap in healing and personal growth. I can't recommend it enough — it's the best gift you can give to yourself!</p><div class="test-divider"></div><p class="test-name">Taty I</p><div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.3rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg><p class="test-role" style="margin:0;">Google Review</p></div></div>
+          </div>
+
+          <div class="tc-slide" style="min-width:100%;padding:0 0.5rem;box-sizing:border-box;">
+            <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">It's been a week since my Life Activation, and I'm in a completely different space compared to a week ago. Even if someone doesn't believe in spiritual things — whatever they are — it worked for me, and it was worth it. I couldn't believe a single session brought such rapid behavioural changes that I had been finding so hard to achieve on my own. I'm taking better care of myself, I discovered what I wanted to do with my design field, and I'm just so excited about the future. I am looking forward to the next step. ✨</p><div class="test-divider"></div><p class="test-name">Ally Ikutani</p><div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.3rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg><p class="test-role" style="margin:0;">Google Review</p></div></div>
+          </div>
+
+          <div class="tc-slide" style="min-width:100%;padding:0 0.5rem;box-sizing:border-box;">
+            <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">I highly recommend the Life Activation with Kasia. As a working professional with a strong drive to make a positive impact, this experience has brought significant growth and transformation to my life. Beyond the spiritual aspect, I've seen very real changes day to day — my financial freedom has increased, my career has evolved to serve others on a deeper level, and my relationships feel more fulfilling. I've gained a greater understanding of both myself and the world around me. I cannot recommend her highly enough as both a practitioner and guide.</p><div class="test-divider"></div><p class="test-name">Jessica Réa</p><div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.3rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg><p class="test-role" style="margin:0;">Google Review</p></div></div>
+          </div>
+
+          <div class="tc-slide" style="min-width:100%;padding:0 0.5rem;box-sizing:border-box;">
+            <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">The Life Activation was very transformative for me. It fundamentally changed the way I relate with myself, others and situations. A game changer. For anyone who desires to truly transform — I recommend this.</p><div class="test-divider"></div><p class="test-name">Grace Hui</p><div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.3rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg><p class="test-role" style="margin:0;">Google Review</p></div></div>
+          </div>
+
+          <div class="tc-slide" style="min-width:100%;padding:0 0.5rem;box-sizing:border-box;">
+            <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">I was feeling lost, overwhelmed and couldn't quite define what it was — despite living a healthy lifestyle. Kasia is an incredible listener who really hears you. Being in her company is calming in itself, let alone her power of healing. The Life Activation completely changed my spirit. It's been a tough few weeks and I can safely say it is Kasia's healing that has helped me get through. She is a true gift who shares pure light and love.</p><div class="test-divider"></div><p class="test-name">Simone Misquitta</p><div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.3rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg><p class="test-role" style="margin:0;">Google Review</p></div></div>
+          </div>
+
+          <div class="tc-slide" style="min-width:100%;padding:0 0.5rem;box-sizing:border-box;">
+            <div class="test-card"><div class="test-bg-q">"</div><div class="test-stars">★★★★★</div><p class="test-text">Life Activation felt so powerful — I've had it done twice. The first time I felt more connected to my inner self, more present, centred. The second time felt even more profound — like coming back from a spa weekend. I can compare it to a deep-clean of the house. My inner house was cleansed inside out. I am so much calmer, more joyful, no longer triggered by small things. I will do this once a year as an MOT for my energy. I cannot recommend it enough.</p><div class="test-divider"></div><p class="test-name">Aurika P.</p><div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.3rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg><p class="test-role" style="margin:0;">Google Review</p></div></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Prev / Next arrows -->
+      <button id="tc-prev" onclick="tcMove(-1)" aria-label="Previous" style="position:absolute;top:50%;left:-1.5rem;transform:translateY(-50%);background:rgba(6,13,30,0.9);border:1px solid var(--border2);color:var(--gold);width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all 0.3s;z-index:10;">‹</button>
+      <button id="tc-next" onclick="tcMove(1)" aria-label="Next" style="position:absolute;top:50%;right:-1.5rem;transform:translateY(-50%);background:rgba(6,13,30,0.9);border:1px solid var(--border2);color:var(--gold);width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all 0.3s;z-index:10;">›</button>
     </div>
+
+    <!-- Dots -->
+    <div id="tc-dots" style="display:flex;justify-content:center;gap:0.5rem;margin-top:2rem;"></div>
+
   </div>
 </section>
+
+<script>
+(function(){
+  var total=6,cur=0;
+  var inner=document.getElementById('tc-inner');
+  var dotsEl=document.getElementById('tc-dots');
+
+  // Build dots
+  for(var i=0;i<total;i++){
+    var d=document.createElement('button');
+    d.setAttribute('data-i',i);
+    d.style.cssText='width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;transition:all 0.3s;background:'+(i===0?'var(--gold)':'rgba(201,168,76,0.3)');
+    d.addEventListener('click',(function(idx){return function(){goTo(idx);};})(i));
+    dotsEl.appendChild(d);
+  }
+
+  function goTo(n){
+    cur=n;
+    inner.style.transform='translateX(-'+cur+'00%)';
+    dotsEl.querySelectorAll('button').forEach(function(d,i){
+      d.style.background=i===cur?'var(--gold)':'rgba(201,168,76,0.3)';
+      d.style.width=i===cur?'24px':'8px';
+      d.style.borderRadius='4px';
+    });
+  }
+
+  window.tcMove=function(dir){
+    goTo((cur+dir+total)%total);
+  };
+
+  // Auto-advance every 6 seconds
+  setInterval(function(){window.tcMove(1);},6000);
+
+  // Touch swipe support
+  var startX=0;
+  inner.addEventListener('touchstart',function(e){startX=e.touches[0].clientX;},{passive:true});
+  inner.addEventListener('touchend',function(e){
+    var diff=startX-e.changedTouches[0].clientX;
+    if(Math.abs(diff)>50)window.tcMove(diff>0?1:-1);
+  },{passive:true});
+})();
+</script>
 
 <!-- KASIA SECTION -->
 <section class="z" style="padding:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
@@ -364,12 +455,15 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
       <div class="gold-line"></div>
       <h2 style="font-family:'Cinzel',serif;font-size:1.4rem;color:var(--text);margin-bottom:0.3rem;">Kasia Mikolajczyk</h2>
       <p style="font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--dim);margin-bottom:1.8rem;">Life Activation Practitioner · Healer · Teacher &amp; Guide<br><span style="font-size:0.58rem;letter-spacing:0.15em;">Trained &amp; Certified by the Royal Lineage of King Salomon · Modern Mystery School</span></p>
-      <blockquote style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,1.8vw,1.2rem);font-style:italic;color:var(--text);line-height:1.8;margin:0 0 1.8rem;border-left:2px solid var(--gold);padding-left:1.5rem;">"Since childhood I knew my purpose was to help people heal — one person at a time. For over 8 years I have witnessed the most extraordinary transformations through Life Activation. People arrive carrying years of pain. They leave reconnected to something they forgot was there. That is the greatest privilege of my work."</blockquote>
-      <p class="prose" style="font-size:0.98rem;">Kasia is a certified Life Activation Practitioner, Healer, Teacher, Guide, and Ritual Master — Magus Hermeticus — trained in the Modern Mystery School tradition. She works from her studios in Central London and has guided hundreds of people back to themselves.</p>
+      <blockquote style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,1.8vw,1.2rem);font-style:italic;color:var(--text);line-height:1.8;margin:0 0 1.8rem;border-left:2px solid var(--gold);padding-left:1.5rem;">"Since childhood, Kasia knew she wanted to make the world a better place — to help people live more joyous, peaceful lives. That calling never left her. Then one day she found Life Activation, and began to remember who she truly was. Life began to change. She received more healing, began studying in the Royal Lineage of the Modern Mystery School, and stepped onto the path of knowing herself."</blockquote>
+      <p class="prose" style="font-size:0.98rem;">From her twenties, Kasia searched for a way to support others — exploring psychology, Emotional Freedom Technique, yoga, and countless self-help books. Each offered something. And yet something was always missing. That feeling kept pushing her forward.</p>
+      <p class="prose" style="font-size:0.98rem;">When she found the Modern Mystery School and received her own Life Activation, she knew she had arrived. Her whole being filled with hope for a better future. For the first time, the missing piece was no longer missing. She had found something that worked at the deepest level — and she knew immediately that she wanted to share it with others.</p>
+      <p class="prose" style="font-size:0.98rem;">She began her own journey of transformation and very quickly trained to share Life Activation and the tools of empowerment with the world. Over the last 9 years, she has witnessed the most extraordinary transformations in her clients — people returning to the best, fullest, most empowered version of themselves. Whole. Alive. Free.</p>
+      <p class="prose" style="font-size:0.98rem;">Kasia works from her studio in Central London, certified as a Life Activation Practitioner, Healer, Teacher, Guide — in the Royal Lineage of King Salomon.</p>
       <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;">
-        <span style="font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid var(--border2);color:var(--gold);">Ritual Master · Magus Hermeticus</span>
         <span style="font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid var(--border2);color:var(--gold);">King Salomon Lineage</span>
-        <span style="font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid var(--border2);color:var(--gold);">8+ Years · London</span>
+        <span style="font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid var(--border2);color:var(--gold);">9+ Years</span>
+        <span style="font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid var(--border2);color:var(--gold);">London · EU · USA</span>
       </div>
     </div>
   </div>
@@ -386,63 +480,51 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
 
       <!-- Direct booking button -->
       <div style="max-width:520px;margin:0 auto;">
-        <a href="https://buy.stripe.com/dRm28r9Dc1ne1hs8ai9MY00" target="_blank" class="btn-gold" style="width:100%;text-align:center;display:block;padding:1.4rem 2rem;font-size:0.78rem;text-decoration:none;margin-bottom:1rem;background:linear-gradient(135deg,#8B6410,#E8D080,#C9A84C,#F0E090,#8B6410);background-size:200% auto;animation:shimmer 3s linear infinite;">
+
+        <!-- Flashing gift offer -->
+        <div id="gift-offer" style="margin-bottom:1.2rem;border:1px solid rgba(201,168,76,0.5);background:rgba(201,168,76,0.07);padding:1rem 1.4rem;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);"></div>
+          <p style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;display:flex;align-items:center;gap:0.6rem;justify-content:center;">
+            <span id="gift-dot" style="width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block;box-shadow:0 0 8px 2px rgba(201,168,76,0.7);"></span>
+            Today Only · Limited Availability
+            <span id="gift-dot2" style="width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block;box-shadow:0 0 8px 2px rgba(201,168,76,0.7);"></span>
+          </p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--text);line-height:1.55;text-align:center;">Book your Life Activation and receive a <strong style="font-style:normal;color:var(--gold2);font-weight:600;">free Cord Cutting session</strong> — normally £150 — included as a gift.</p>
+        </div>
+
+        <a href="https://buy.stripe.com/dRm7sLcPo9TK3pAeyG9MY03" target="_blank" class="btn-gold" style="width:100%;text-align:center;display:block;padding:1.4rem 2rem;font-size:0.78rem;text-decoration:none;margin-bottom:1rem;background:linear-gradient(135deg,#8B6410,#E8D080,#C9A84C,#F0E090,#8B6410);background-size:200% auto;animation:shimmer 3s linear infinite;">
           ✦ Book Now & Pay Securely — £250
         </a>
+        <p style="font-size:0.75rem;color:var(--dim);text-align:center;margin-bottom:0.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;">Pay in full or split into instalments with Klarna — available at checkout.</p>
         <div style="display:flex;align-items:center;gap:1rem;margin:1.2rem 0;">
           <div style="flex:1;height:1px;background:var(--border);"></div>
-          <span style="font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--muted);">or have a question first</span>
+          <span style="font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--muted);">have a question first? scroll down</span>
           <div style="flex:1;height:1px;background:var(--border);"></div>
         </div>
       </div>
     </div>
 
-    <div class="two-col" style="gap:5rem;align-items:start;">
-      <div>
-        <p class="sec-label">What Happens Next</p>
-        <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;">
-          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);">
-            <span style="font-family:'Cinzel',serif;font-size:1.4rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;line-height:1;">01</span>
-            <div><p style="font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.1em;color:var(--text);margin-bottom:0.3rem;">Fill in the form</p><p style="font-size:0.84rem;color:var(--muted);">Takes 2 minutes. Tell us a little about yourself and what brings you here.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);">
-            <span style="font-family:'Cinzel',serif;font-size:1.4rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;line-height:1;">02</span>
-            <div><p style="font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.1em;color:var(--text);margin-bottom:0.3rem;">Kasia contacts you personally</p><p style="font-size:0.84rem;color:var(--muted);">Within 24 hours — to answer questions and confirm your appointment.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);">
-            <span style="font-family:'Cinzel',serif;font-size:1.4rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;line-height:1;">03</span>
-            <div><p style="font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.1em;color:var(--text);margin-bottom:0.3rem;">You arrive and receive</p><p style="font-size:0.84rem;color:var(--muted);">A sacred space in Central London. You leave different from how you arrived.</p></div>
-          </div>
+    <div style="max-width:680px;margin:0 auto;">
+      <p class="sec-label" style="text-align:center;">What Happens Next</p>
+      <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;">
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);">
+          <span style="font-family:'Cinzel',serif;font-size:1.4rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;line-height:1;">01</span>
+          <div><p style="font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.1em;color:var(--text);margin-bottom:0.3rem;">Book & pay securely</p><p style="font-size:0.84rem;color:var(--muted);">Complete your booking via Stripe in under 2 minutes. Klarna instalments available.</p></div>
         </div>
-        <div style="padding:1.5rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);">
-          <p style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Free Consultation Available</p>
-          <p style="font-size:0.85rem;color:var(--dim);margin-bottom:1rem;line-height:1.6;">Not sure if this is right for you? Kasia offers a free 20-minute consultation — no obligation, no pressure.</p>
-          <a href="tel:447533653331" style="display:block;font-size:0.82rem;color:var(--gold);text-decoration:none;margin-bottom:0.5rem;">📞 +44 7533 653 331</a>
-          <a href="mailto:kasia@polariscentre.london" style="display:block;font-size:0.82rem;color:var(--gold);text-decoration:none;">✉️ kasia@polariscentre.london</a>
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);">
+          <span style="font-family:'Cinzel',serif;font-size:1.4rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;line-height:1;">02</span>
+          <div><p style="font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.1em;color:var(--text);margin-bottom:0.3rem;">Kasia contacts you personally</p><p style="font-size:0.84rem;color:var(--muted);">Within 24 hours — to confirm your appointment and schedule a time that suits you.</p></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);">
+          <span style="font-family:'Cinzel',serif;font-size:1.4rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;line-height:1;">03</span>
+          <div><p style="font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.1em;color:var(--text);margin-bottom:0.3rem;">You arrive and receive</p><p style="font-size:0.84rem;color:var(--muted);">A sacred space in Central London. You leave different from how you arrived.</p></div>
         </div>
       </div>
-      <div>
-        <form class="c-form" name="life-activation-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="life-activation-enquiry">
-          <p style="display:none;"><input name="bot-field"></p>
-          <div><label class="c-label">Your Full Name *</label><input class="c-input" type="text" name="Full Name" placeholder="First and last name" required></div>
-          <div><label class="c-label">Email Address *</label><input class="c-input" type="email" name="Email" placeholder="your@email.com" required></div>
-          <div><label class="c-label">Phone Number</label><input class="c-input" type="tel" name="Phone" placeholder="+44..."></div>
-          <div><label class="c-label">What brings you here? *</label>
-            <select class="c-select c-input" name="Reason" required>
-              <option value="">— Please select —</option>
-              <option>I am struggling with anxiety or depression</option>
-              <option>I am heartbroken or in a difficult relationship</option>
-              <option>I feel lost or unfulfilled in life</option>
-              <option>I am seeking deeper spiritual growth</option>
-              <option>I want to break old patterns and heal</option>
-              <option>I am curious and want to know more</option>
-            </select>
-          </div>
-          <div><label class="c-label">Anything you'd like to share</label><textarea class="c-textarea" name="Message" placeholder="Tell me a little about where you are right now. I read every message personally."></textarea></div>
-          <button type="submit" class="c-submit">Send My Enquiry ✦</button>
-          <p style="font-size:0.72rem;color:var(--muted);text-align:center;margin-top:0.5rem;">I read every message personally and respond within 24 hours — Kasia</p>
-        </form>
+      <div style="padding:1.5rem;border:1px solid var(--border);background:rgba(14,30,66,0.5);text-align:center;">
+        <p style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Prefer to speak first?</p>
+        <p style="font-size:0.85rem;color:var(--dim);margin-bottom:1rem;line-height:1.6;">Kasia offers a free 20-minute consultation — no obligation, no pressure.</p>
+        <a href="tel:447533653331" style="display:inline-block;font-size:0.82rem;color:var(--gold);text-decoration:none;margin-bottom:0.5rem;margin-right:1.5rem;">📞 +44 7533 653 331</a>
+        <a href="mailto:kasia@polariscentre.london" style="display:inline-block;font-size:0.82rem;color:var(--gold);text-decoration:none;">✉️ kasia@polariscentre.london</a>
       </div>
     </div>
   </div>
@@ -467,10 +549,42 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
   </div>
 </section>
 
+<!-- ENQUIRY FORM -->
+<section class="z" id="enquiry" style="padding:6rem 2rem;background:rgba(10,21,48,0.6);border-top:1px solid var(--border);">
+  <div class="container-sm">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <p class="sec-label" style="text-align:center;">Still Have Questions?</p>
+      <h2 class="sec-title" style="text-align:center;">Send Kasia<br><em>A Personal Message</em></h2>
+      <div class="gold-line c"></div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--dim);max-width:500px;margin:0 auto;">No pressure, no obligation. I read every message personally and respond within 24 hours. — Kasia</p>
+    </div>
+    <form class="c-form" name="life-activation-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="max-width:580px;margin:0 auto;">
+      <input type="hidden" name="form-name" value="life-activation-enquiry">
+      <p style="display:none;"><input name="bot-field"></p>
+      <div><label class="c-label">Your Full Name *</label><input class="c-input" type="text" name="Full Name" placeholder="First and last name" required></div>
+      <div><label class="c-label">Email Address *</label><input class="c-input" type="email" name="Email" placeholder="your@email.com" required></div>
+      <div><label class="c-label">Phone Number</label><input class="c-input" type="tel" name="Phone" placeholder="+44..."></div>
+      <div><label class="c-label">What brings you here? *</label>
+        <select class="c-select c-input" name="Reason" required>
+          <option value="">— Please select —</option>
+          <option>I am struggling with anxiety or depression</option>
+          <option>I am heartbroken or in a difficult relationship</option>
+          <option>I feel lost or unfulfilled in life</option>
+          <option>I am seeking deeper spiritual growth</option>
+          <option>I want to break old patterns and heal</option>
+          <option>I am curious and want to know more</option>
+        </select>
+      </div>
+      <div><label class="c-label">Your message</label><textarea class="c-textarea" name="Message" placeholder="Tell me a little about where you are right now. I read every message personally."></textarea></div>
+      <button type="submit" class="c-submit">Send My Message ✦</button>
+    </form>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final-cta z">
-  <div class="final-bg"></div>
-  <div class="final-overlay"></div>
+  <div class="final-bg" style="background-image:url('https://images.stockcake.com/public/8/a/a/8aa46db5-d656-4ea8-bf03-717c48e8551f_large/sunrise-mountain-embrace-stockcake.jpg');"></div>
+  <div class="final-overlay" style="background:linear-gradient(to bottom,rgba(6,13,30,0.6) 0%,rgba(6,13,30,0.25) 40%,rgba(6,13,30,0.75) 100%);"></div>
   <div style="position:relative;z-index:2;text-align:center;max-width:800px;margin:0 auto;">
     <p style="font-size:0.62rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;justify-content:center;gap:1.2rem;">
       <span style="display:inline-block;width:50px;height:1px;background:rgba(201,168,76,0.5);"></span>
@@ -479,17 +593,17 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;
     </p>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,4rem);font-style:italic;font-weight:300;line-height:1.25;color:var(--text);margin-bottom:1.5rem;">You have been carrying this<br>long enough.</h2>
     <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.4rem);font-style:italic;color:rgba(237,232,216,0.8);line-height:1.8;margin:0 auto 1rem;">Healing is not weakness. It is the most courageous thing a person can do.<br>And it begins with one decision — to say yes to yourself.</p>
-    <p style="font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.22em;color:var(--gold);margin-bottom:3rem;">✦ Your original blueprint is still intact. ✦</p>
+    <p style="font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.22em;color:var(--gold);margin-bottom:3rem;">✦ Life Activation reconnects you to who you truly are — beneath all the pain you've been carrying. ✦</p>
     <div style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;">
-      <a href="https://buy.stripe.com/dRm28r9Dc1ne1hs8ai9MY00" target="_blank" class="btn-gold">Book Your Life Activation ✦</a>
-      <a href="#booking" class="btn-ghost">Send an Enquiry</a>
+      <a href="https://buy.stripe.com/dRm7sLcPo9TK3pAeyG9MY03" target="_blank" class="btn-gold">Book Your Life Activation ✦</a>
+      <a href="#enquiry" class="btn-ghost">Send an Enquiry</a>
     </div>
   </div>
 </section>
 
 <footer class="z">
   <p style="font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.3em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.5rem;">✦ POLARIS CENTRE</p>
-  <p style="font-size:0.7rem;color:var(--muted);">© 2026 Polaris Centre London · All Rights Reserved · <a href="/" style="color:var(--dim);text-decoration:none;">Main Site</a></p>
+  <p style="font-size:0.7rem;color:var(--muted);">© 2026 Polaris Centre London · All Rights Reserved</p>
 </footer>
 
 <!-- WHATSAPP -->
@@ -526,6 +640,65 @@ function toggleFaq(btn){
   document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-a').style.display='none';});
   if(!isOpen){item.classList.add('open');item.querySelector('.faq-a').style.display='block';}
 }
+
+// Gift offer pulsing dots
+(function(){
+  var dots=[document.getElementById('gift-dot'),document.getElementById('gift-dot2')];
+  var on=true;
+  setInterval(function(){
+    on=!on;
+    dots.forEach(function(d){if(d)d.style.opacity=on?'1':'0.2';});
+  },700);
+})();
+</script>
+
+<!-- URGENCY BANNER -->
+<div id="urgency-banner" style="position:fixed;bottom:0;left:0;right:0;z-index:500;background:linear-gradient(90deg,rgba(6,13,30,0.98),rgba(10,21,48,0.98));border-top:1px solid rgba(201,168,76,0.4);padding:0.85rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+    <span style="font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.5);padding:0.25rem 0.7rem;white-space:nowrap;">✦ Today Only</span>
+    <p style="font-size:0.82rem;color:var(--text);line-height:1.4;">Book your <span style="color:var(--gold2);">Life Activation</span> today and receive a <span style="color:var(--gold2);font-weight:500;">free Cord Cutting session worth £150</span> — releasing emotional ties that keep you stuck, completely free.</p>
+  </div>
+  <div style="display:flex;align-items:center;gap:1.2rem;flex-shrink:0;">
+    <div style="display:flex;align-items:center;gap:0.5rem;">
+      <div style="text-align:center;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.35);padding:0.4rem 0.7rem;min-width:42px;">
+        <span id="u-mins" style="font-family:'Cinzel',serif;font-size:1.1rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1;">20</span>
+        <span style="font-size:0.48rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">mins</span>
+      </div>
+      <span style="color:var(--gold);font-size:1rem;opacity:0.6;">:</span>
+      <div style="text-align:center;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.35);padding:0.4rem 0.7rem;min-width:42px;">
+        <span id="u-secs" style="font-family:'Cinzel',serif;font-size:1.1rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1;">00</span>
+        <span style="font-size:0.48rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">secs</span>
+      </div>
+    </div>
+    <a href="https://buy.stripe.com/dRm7sLcPo9TK3pAeyG9MY03" target="_blank" style="font-size:0.65rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--navy);background:var(--grad);padding:0.7rem 1.4rem;border:none;cursor:pointer;font-family:'Jost',sans-serif;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);text-decoration:none;white-space:nowrap;">Claim Offer ✦</a>
+    <button id="urgency-close" style="background:none;border:none;color:var(--muted);font-size:1.1rem;cursor:pointer;padding:0.2rem 0.4rem;line-height:1;flex-shrink:0;">×</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var banner=document.getElementById('urgency-banner');
+  var minsEl=document.getElementById('u-mins');
+  var secsEl=document.getElementById('u-secs');
+  if(!banner||!minsEl||!secsEl)return;
+  var total=20*60;
+  function render(){
+    var m=Math.floor(total/60);
+    var s=total%60;
+    minsEl.textContent=m<10?'0'+m:m;
+    secsEl.textContent=s<10?'0'+s:s;
+  }
+  function tick(){
+    if(total<=0){banner.style.display='none';return;}
+    total--;
+    render();
+  }
+  render();
+  setInterval(tick,1000);
+  document.getElementById('urgency-close').addEventListener('click',function(){
+    banner.style.display='none';
+  });
+})();
 </script>
 </body>
 </html>
