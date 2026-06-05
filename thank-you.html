@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Booking is Confirmed — Polaris Centre London</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18215793983"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18215793983');
+</script>
+
+<!-- Event snippet for Purchase conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18215793983/hQHwCIvzt7kcEL_q--1D',
+      'value': 250.0,
+      'currency': 'GBP',
+      'transaction_id': ''
+  });
+</script>
+
+<style>
+:root{
+  --navy:#060D1E;
+  --navy2:#0A1530;
+  --gold:#C9A84C;
+  --gold2:#F0E090;
+  --grad:linear-gradient(135deg,#A07828,#F0E090,#C9A84C,#F0E898);
+  --text:rgba(255,255,255,0.88);
+  --dim:rgba(255,255,255,0.55);
+  --muted:rgba(255,255,255,0.35);
+  --border:rgba(201,168,76,0.2);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  background:var(--navy);
+  color:var(--text);
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+  position:relative;
+  overflow-x:hidden;
+}
+
+canvas{position:fixed;inset:0;pointer-events:none;z-index:0;}
+
+.z{position:relative;z-index:1;}
+
+/* Animated star ring */
+.ring{
+  position:fixed;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:600px;height:600px;
+  border-radius:50%;
+  border:1px solid rgba(201,168,76,0.08);
+  animation:spin 40s linear infinite;
+  pointer-events:none;
+  z-index:0;
+}
+.ring2{
+  width:400px;height:400px;
+  animation:spin 25s linear infinite reverse;
+  border-color:rgba(201,168,76,0.05);
+}
+
+@keyframes spin{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(360deg);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes pulse{0%,100%{opacity:0.6;transform:scale(1);}50%{opacity:1;transform:scale(1.15);}}
+@keyframes shimmer{0%{background-position:0% center;}100%{background-position:200% center;}}
+
+.container{
+  max-width:680px;
+  width:100%;
+  text-align:center;
+}
+
+.star-icon{
+  width:64px;height:64px;
+  margin:0 auto 2rem;
+  animation:fadeUp 0.8s ease both, pulse 3s ease 1s infinite;
+}
+
+.eyebrow{
+  font-size:0.62rem;
+  letter-spacing:0.35em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:1.5rem;
+  animation:fadeUp 0.8s ease 0.1s both;
+}
+
+.title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(1.8rem,5vw,3.2rem);
+  font-weight:400;
+  letter-spacing:0.04em;
+  background:var(--grad);
+  background-size:200% auto;
+  animation:shimmer 4s linear infinite, fadeUp 0.8s ease 0.2s both;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:1rem;
+  line-height:1.2;
+}
+
+.subtitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.2rem,3vw,1.7rem);
+  font-style:italic;
+  font-weight:300;
+  color:var(--dim);
+  margin-bottom:3rem;
+  line-height:1.6;
+  animation:fadeUp 0.8s ease 0.3s both;
+}
+
+.gold-line{
+  width:60px;height:1px;
+  background:var(--grad);
+  margin:0 auto 3rem;
+  animation:fadeUp 0.8s ease 0.35s both;
+}
+
+.message{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.1rem,2.5vw,1.35rem);
+  font-style:italic;
+  color:var(--text);
+  line-height:1.8;
+  margin-bottom:3rem;
+  animation:fadeUp 0.8s ease 0.4s both;
+}
+
+.steps{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  margin-bottom:3rem;
+  animation:fadeUp 0.8s ease 0.5s both;
+}
+
+.step{
+  display:flex;
+  align-items:flex-start;
+  gap:1.2rem;
+  padding:1.2rem 1.5rem;
+  background:rgba(14,30,66,0.5);
+  border:1px solid var(--border);
+  text-align:left;
+}
+
+.step-num{
+  font-family:'Cinzel',serif;
+  font-size:0.7rem;
+  color:var(--gold);
+  letter-spacing:0.2em;
+  flex-shrink:0;
+  padding-top:0.15rem;
+}
+
+.step-text{
+  font-size:0.88rem;
+  color:var(--dim);
+  line-height:1.65;
+  letter-spacing:0.03em;
+}
+
+.step-text strong{
+  color:var(--text);
+  font-weight:400;
+}
+
+.divider{
+  width:100%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,168,76,0.3),transparent);
+  margin:2rem 0;
+  animation:fadeUp 0.8s ease 0.6s both;
+}
+
+.contact{
+  animation:fadeUp 0.8s ease 0.7s both;
+}
+
+.contact p{
+  font-size:0.78rem;
+  color:var(--muted);
+  letter-spacing:0.08em;
+  margin-bottom:0.8rem;
+  text-transform:uppercase;
+}
+
+.contact a{
+  color:var(--gold2);
+  text-decoration:none;
+  font-size:0.88rem;
+  letter-spacing:0.05em;
+  border-bottom:1px solid rgba(201,168,76,0.3);
+  padding-bottom:2px;
+  transition:border-color 0.3s;
+}
+
+.contact a:hover{border-color:var(--gold);}
+
+.footer-note{
+  margin-top:3rem;
+  font-size:0.65rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--muted);
+  animation:fadeUp 0.8s ease 0.8s both;
+}
+
+@media(max-width:640px){
+  body{padding:1.5rem 1rem;}
+  .ring{width:320px;height:320px;}
+  .ring2{width:200px;height:200px;}
+  .step{padding:1rem 1.2rem;}
+}
+</style>
+</head>
+<body>
+
+<canvas id="cosmos"></canvas>
+<div class="ring z"></div>
+<div class="ring ring2 z"></div>
+
+<div class="container z">
+
+  <!-- Star icon -->
+  <svg class="star-icon" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#A07828"/><stop offset="50%" stop-color="#F0E090"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs>
+    <polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3" fill="url(#sg)"/>
+    <circle cx="70" cy="70" r="4" fill="#F0E898"/>
+  </svg>
+
+  <p class="eyebrow">✦ Polaris Centre London ✦</p>
+
+  <h1 class="title">Your Booking is Confirmed</h1>
+
+  <p class="subtitle">Welcome to the beginning of your journey home to yourself.</p>
+
+  <div class="gold-line"></div>
+
+  <p class="message">"The most courageous thing you can do is say yes to yourself. You have just done that. Kasia looks forward to meeting you and holding space for your transformation."</p>
+
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">01</span>
+      <p class="step-text"><strong>Kasia will contact you personally within 24 hours</strong> to confirm your appointment and schedule a time that suits you.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <p class="step-text"><strong>Your session takes place at 4 Celbridge Mews, London W2 6EU</strong> — a sacred, private space in the heart of Central London. Your session lasts between 1.5 and 2 hours.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <p class="step-text"><strong>Your free Cord Cutting session (worth £150)</strong> will be scheduled alongside your Life Activation — releasing emotional ties that keep you stuck.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">04</span>
+      <p class="step-text"><strong>A follow-up integration appointment</strong> is included to support you in the days after your session.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="contact">
+    <p>Questions? Reach Kasia directly</p>
+    <a href="mailto:kasia@polariscentre.london">kasia@polariscentre.london</a>
+  </div>
+
+  <p class="footer-note">✦ Polaris Centre London · polariscentre.london ✦</p>
+
+</div>
+
+<script>
+// Starfield
+(function(){
+  var c=document.getElementById('cosmos');
+  var ctx=c.getContext('2d');
+  var stars=[];
+  function resize(){c.width=window.innerWidth;c.height=window.innerHeight;}
+  resize();
+  window.addEventListener('resize',resize);
+  for(var i=0;i<120;i++){
+    stars.push({
+      x:Math.random()*c.width,
+      y:Math.random()*c.height,
+      r:Math.random()*1.2+0.2,
+      o:Math.random()*0.5+0.1,
+      s:Math.random()*0.3+0.1
+    });
+  }
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    stars.forEach(function(s){
+      s.o+=Math.sin(Date.now()*0.001*s.s)*0.005;
+      ctx.beginPath();
+      ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(240,224,144,'+Math.max(0.05,Math.min(0.6,s.o))+')';
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+
+</body>
+</html>
