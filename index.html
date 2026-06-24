@@ -9,11 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Jost:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 :root{
-  --gold:#C9A84C;--gold-light:#E8D5A0;--gold-pale:#f5ecd4;--gold-dark:#8B6914;
-  --deep-navy:#000000;--navy:#0e0d52;--navy-mid:#2422aa;--navy-card:rgba(8,7,50,0.82);
-  --cream:#F0EBE0;--text-light:#9aace8;--text-mid:#c0caf2;
-  --gold-grad:linear-gradient(135deg,#A07828 0%,#E8D080 45%,#C9A84C 65%,#F0E090 82%,#A07828 100%);
-  --border:rgba(201,168,76,0.18);--border-mid:rgba(201,168,76,0.35);--border-gold:rgba(201,168,76,0.55);
+  --gold:#D4A843;--gold-light:#F0D070;--gold-pale:#f5ecd4;--gold-dark:#8B6914;
+  --deep-navy:#050b1a;--navy:#0a1835;--navy-mid:#112550;--navy-card:rgba(8,18,55,0.95);
+  --cream:#F5F0E8;--text-light:#a8bce8;--text-mid:#ccd5f0;
+  --gold-grad:linear-gradient(135deg,#A07828 0%,#F0D070 45%,#D4A843 65%,#F5E090 82%,#A07828 100%);
+  --border:rgba(212,168,67,0.22);--border-mid:rgba(212,168,67,0.42);--border-gold:rgba(212,168,67,0.65);
   --text:#EDE8D8;--text-dim:#A89C78;--text-muted:#8090b0;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -27,9 +27,9 @@ body{background:linear-gradient(135deg,#000000 0%,#04031f 22%,#0f0e6e 50%,#201fa
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 4rem;height:72px;
   display:flex;align-items:center;justify-content:space-between;
-  background:linear-gradient(to bottom,rgba(0,0,15,0.97),rgba(0,0,15,0));
-  backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.08);transition:background 0.4s;}
-nav.scrolled{background:rgba(0,0,15,0.97);border-bottom-color:rgba(201,168,76,0.2);}
+  background:linear-gradient(to bottom,rgba(4,9,22,0.98),rgba(4,9,22,0.0));
+  backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,168,67,0.15);transition:background 0.4s;}
+nav.scrolled{background:rgba(4,9,22,0.98);border-bottom-color:rgba(212,168,67,0.35);}
 .nav-logo{display:flex;align-items:center;gap:0.8rem;cursor:pointer;}
 .nav-logo-text{display:flex;flex-direction:column;line-height:1;}
 .nav-logo-name{font-family:'Great Vibes',cursive;font-size:1.55rem;color:var(--gold);line-height:1;}
@@ -317,6 +317,7 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
     <li><button class="nav-btn" onclick="showPage('home')">Home</button></li>
     <li><button class="nav-btn" onclick="showPage('start')">Start Here</button></li>
     <li><button class="nav-btn" onclick="showPage('sessions')">Healing Sessions</button></li>
+    <li><button class="nav-btn" onclick="showPage('lineage')">Lineage</button></li>
     <li><button class="nav-btn" onclick="scrollToSection('home','cal-anchor')">Calendar</button></li>
     <li><button class="nav-btn" onclick="scrollToSection('home','about-anchor')">About</button></li>
   </ul>
@@ -714,18 +715,24 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
 
   <!-- EMPOWER THYSELF -->
   <div id="tab-empower" class="tab-panel">
-    <div style="background:var(--navy-card);border:1px solid var(--border-mid);padding:3.5rem;margin-bottom:2rem;">
-      <span style="display:inline-block;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;background:rgba(201,168,76,0.12);border:1px solid var(--border-mid);color:var(--gold);padding:0.3rem 0.8rem;margin-bottom:1rem;">◈ The First Initiation · Mystery School Tradition</span>
-      <h2 style="font-family:'Cinzel',serif;font-size:clamp(1.8rem,4vw,3rem);color:var(--cream);margin-bottom:1rem;line-height:1.2;">Empower Thyself Program &amp; Initiation</h2>
-      <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--text-mid);margin-bottom:1rem;max-width:700px;">A life-changing 2-day immersion into the wisdom of the Mystery School. Receive ancient tools for self-mastery and formal initiation into the Royal Lineage of King Salomon.</p>
-      <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text-light);line-height:1.8;max-width:700px;margin-bottom:2rem;">During this 2-day programme, you will receive tools that directly apply to your life and train you to achieve greater self-mastery, abundance, and manifestation. You will explore the deeper nature of your mind and the negative ego — and learn how to overcome what has held you back.</p>
-      <div style="display:flex;align-items:baseline;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;">
-        <span style="font-family:'Cinzel',serif;font-size:2.5rem;background:var(--gold-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">£1,250</span>
-        <span style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);">2-Day Immersion · London &amp; USA</span>
+    <div style="background:var(--navy-card);border:1px solid var(--border-mid);padding:3.5rem;margin-bottom:2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div>
+        <span style="display:inline-block;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;background:rgba(201,168,76,0.12);border:1px solid var(--border-mid);color:var(--gold);padding:0.3rem 0.8rem;margin-bottom:1rem;">◈ The First Initiation · Mystery School Tradition</span>
+        <h2 style="font-family:'Cinzel',serif;font-size:clamp(1.8rem,4vw,3rem);color:var(--cream);margin-bottom:1rem;line-height:1.2;">Empower Thyself Program &amp; Initiation</h2>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--text-mid);margin-bottom:1rem;max-width:700px;">A life-changing 2-day immersion into the wisdom of the Mystery School. Receive ancient tools for self-mastery and formal initiation into the Royal Lineage of King Salomon.</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--text-light);line-height:1.8;max-width:700px;margin-bottom:2rem;">During this 2-day programme, you will receive tools that directly apply to your life and train you to achieve greater self-mastery, abundance, and manifestation. You will explore the deeper nature of your mind and the negative ego — and learn how to overcome what has held you back.</p>
+        <div style="display:flex;align-items:baseline;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;">
+          <span style="font-family:'Cinzel',serif;font-size:2.5rem;background:var(--gold-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">£1,250</span>
+          <span style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);">2-Day Immersion · London &amp; USA</span>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <button class="btn-gold" onclick="showPage('start')">Book Your Place ✦</button>
+          <button class="btn-ghost" onclick="showPage('start')">Free Consultation</button>
+        </div>
       </div>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-        <button class="btn-gold" onclick="showPage('start')">Book Your Place ✦</button>
-        <button class="btn-ghost" onclick="showPage('start')">Free Consultation</button>
+      <div style="position:relative;">
+        <img src="https://i.ibb.co/FkDHFNG7/initiation1.jpg" alt="The Accolade — Initiation into the Lineage" style="width:100%;border:1px solid rgba(201,168,76,0.3);box-shadow:0 20px 60px rgba(0,0,0,0.6);">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:1.2rem;background:linear-gradient(to top,rgba(0,0,20,0.92),transparent);font-family:'Cormorant Garamond',serif;font-size:0.82rem;font-style:italic;color:rgba(201,168,76,0.8);text-align:center;">The Accolade — Edmund Blair Leighton, 1901</div>
       </div>
     </div>
     <div class="benefits-grid">
@@ -818,6 +825,366 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
 </footer>
 </div><!-- /sessions -->
 
+<!-- ████ LINEAGE PAGE ████ -->
+<div id="page-lineage" class="page">
+
+<!-- HERO -->
+<div style="position:relative;min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10rem 2rem 5rem;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,0.18) 0%,rgba(53,51,205,0.12) 40%,transparent 70%);pointer-events:none;"></div>
+  <div style="margin-bottom:2rem;animation:floatY 7s ease-in-out infinite;">
+    <svg width="80" height="80" viewBox="0 0 140 140" fill="none">
+      <defs><filter id="lhg" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+      <circle cx="70" cy="70" r="65" stroke="#C9A84C" stroke-width="0.8" opacity="0.3"/>
+      <polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3" fill="url(#sg2)" filter="url(#lhg)"/>
+      <g fill="#C9A84C" opacity="0.85"><text x="96" y="36" font-size="10" font-family="serif">+</text><text x="30" y="42" font-size="8" font-family="serif">+</text></g>
+      <circle cx="70" cy="70" r="5" fill="#f5e8b8" opacity="0.95"/><circle cx="70" cy="70" r="2.5" fill="#fff" opacity="0.98"/>
+    </svg>
+  </div>
+  <span class="eyebrow" style="display:block;">The Holy Lineage of King Salomon</span>
+  <h1 style="font-family:'Cinzel Decorative',serif;font-size:clamp(3rem,8vw,7rem);font-weight:700;line-height:0.95;background:linear-gradient(135deg,#f0e0b0 0%,#C9A84C 25%,#f5ecd4 48%,#C9A84C 72%,#7a5a10 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem;filter:drop-shadow(0 0 40px rgba(201,168,76,0.3));">Lineage</h1>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.5vw,1.65rem);font-style:italic;color:var(--gold-light);max-width:800px;line-height:1.75;margin-bottom:2.5rem;">An unbroken chain of wisdom passed from teacher to student for over 3,000 years — the living tradition of King Salomon, now available to all who seek it.</p>
+  <div style="display:flex;align-items:center;gap:1.5rem;justify-content:center;">
+    <div class="h-line"></div>
+    <svg width="16" height="16" viewBox="0 0 140 140" fill="none" style="filter:drop-shadow(0 0 5px #C9A84C);"><polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3" fill="#C9A84C"/></svg>
+    <div class="h-line r"></div>
+  </div>
+</div>
+
+<!-- KING SALOMON -->
+<div style="background:rgba(0,0,18,0.55);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:6rem 4rem;">
+  <div style="max-width:1260px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+    <div>
+      <span class="eyebrow">Origins · Over 3,000 Years</span>
+      <h2 class="sec-title">The Temple of King Salomon</h2>
+      <div class="gold-line"></div>
+      <p class="prose">More than 3,000 years ago, King Salomon gathered together 40,000 healers, warriors, shamans, oracles, and medicine people from around the world. They worked for around 30 years in a sacred Temple space — searching for a universal system that activates our Divine Essence and works on all humans, regardless of where they come from on the planet.</p>
+      <p class="prose">King Salomon wanted to empower all humans — to move humanity from stagnation and suffering into progression, unity, and peace. To create Shamballah, or Peace on Earth. World Peace starts with each individual. As we create peace within, we can share it with those around us.</p>
+      <p class="prose">Our lineage is over <strong>3,000 years old</strong> as far as records reveal, but reaches back over <strong>8,000 years</strong> to the roots of Hermetic Wisdom — traceable to King David, then Enoch, then Abraham, and Adam.</p>
+    </div>
+    <img src="https://static.wixstatic.com/media/cd00f3_ab88f186e12e4874a1e639ece8b4b38c~mv2.jpg/v1/fill/w_491,h_569,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SolomonsTemple-79381148-52cabac32d734776ab1623aabf4edead.jpg" alt="King Solomon's Temple" style="width:100%;border:1px solid rgba(201,168,76,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+  </div>
+</div>
+
+<!-- WHAT IS A MYSTERY SCHOOL -->
+<div class="inner">
+  <div style="text-align:center;margin-bottom:4rem;">
+    <span class="eyebrow" style="display:block;">Ancient Wisdom for Modern Life</span>
+    <h2 class="sec-title" style="text-align:center;">What is a Mystery School?</h2>
+    <div class="gold-line center"></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-bottom:4rem;">
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Edmund_Blair_Leighton_-_Accolade.jpg" alt="The Accolade — Initiation into the Lineage" style="width:100%;border:1px solid rgba(201,168,76,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+    </div>
+    <div>
+      <p class="prose">A Mystery School can be likened to a tree with a strong trunk and several branches. Each has a foundation in its own lineage and different branches of study — Shamanism, Alchemy, Druidism, and more.</p>
+      <p class="prose">Mystery schools have historically kept their teachings secret for three key reasons: protection of sacred knowledge, ensuring the spiritual readiness of the student, and maintaining the purity of the ancient teachings.</p>
+      <p class="prose">The common misconception is that the mystery is hidden "out there." It is not. <strong>It is hidden within each of us.</strong> The teachings help us look within to discover hidden resources, strengths, gifts, and talents — to Know Thyself, and to fulfil our life purpose.</p>
+      <div style="background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);padding:2rem;margin-top:1.5rem;">
+        <h3 style="font-family:'Cinzel',serif;font-size:0.85rem;color:var(--gold);letter-spacing:0.1em;margin-bottom:1rem;">Why Lineage Matters</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;">
+          <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.4rem;">✦</span>Ensures the purity, authenticity, and power of the teachings</li>
+          <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.4rem;">✦</span>Maintains the honour and virtue of ancient wisdom</li>
+          <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.4rem;">✦</span>Holds the secrets of God, the Universe, and true spiritual power</li>
+          <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.4rem;">✦</span>The teachings contain NO religion and NO dogma</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 SCHOOLS -->
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <span class="eyebrow" style="display:block;">There Are Seven</span>
+    <h2 class="sec-title" style="text-align:center;">The 7 Mystery Schools of the World</h2>
+    <div class="gold-line center"></div>
+    <p class="prose" style="max-width:800px;margin:0 auto 3rem;">In 1997, the Modern Mystery School opened its doors to the public for the first time — making this ancient wisdom available to all who sincerely seek it. We now live in very privileged times.</p>
+</div>
+
+<!-- VIDEOS -->
+<div style="background:rgba(0,0,18,0.55);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:6rem 4rem;">
+  <div style="max-width:1260px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:4rem;">
+      <span class="eyebrow" style="display:block;">Hear From the Lineage Holders</span>
+      <h2 class="sec-title" style="text-align:center;">The Mystery School in Their Words</h2>
+      <div class="gold-line center"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;">
+      <a href="https://www.youtube.com/watch?v=8ldGHTJUjLc" target="_blank" rel="noopener" style="text-decoration:none;display:block;group;">
+        <div style="position:relative;overflow:hidden;border:1px solid rgba(201,168,76,0.25);cursor:pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.04)';this.querySelector('.play-btn').style.background='rgba(201,168,76,0.9)'" onmouseout="this.querySelector('img').style.transform='scale(1)';this.querySelector('.play-btn').style.background='rgba(0,0,0,0.7)'">
+          <img src="https://img.youtube.com/vi/8ldGHTJUjLc/maxresdefault.jpg" alt="The Modern Mystery School" style="width:100%;display:block;transition:transform 0.4s ease;" onerror="this.src='https://img.youtube.com/vi/8ldGHTJUjLc/hqdefault.jpg'">
+          <div style="position:absolute;inset:0;background:rgba(0,0,15,0.35);"></div>
+          <div class="play-btn" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.3s;border:2px solid rgba(255,255,255,0.6);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(to top,rgba(0,0,20,0.95),transparent);">
+            <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.2rem;">Watch on YouTube</div>
+          </div>
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-muted);margin-top:0.8rem;font-style:italic;text-align:center;">The Modern Mystery School — What is it about?</p>
+      </a>
+      <a href="https://www.youtube.com/watch?v=op7aLi8Ueek" target="_blank" rel="noopener" style="text-decoration:none;display:block;">
+        <div style="position:relative;overflow:hidden;border:1px solid rgba(201,168,76,0.25);cursor:pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.04)';this.querySelector('.play-btn2').style.background='rgba(201,168,76,0.9)'" onmouseout="this.querySelector('img').style.transform='scale(1)';this.querySelector('.play-btn2').style.background='rgba(0,0,0,0.7)'">
+          <img src="https://img.youtube.com/vi/op7aLi8Ueek/maxresdefault.jpg" alt="The Lineage of King Salomon" style="width:100%;display:block;transition:transform 0.4s ease;" onerror="this.src='https://img.youtube.com/vi/op7aLi8Ueek/hqdefault.jpg'">
+          <div style="position:absolute;inset:0;background:rgba(0,0,15,0.35);"></div>
+          <div class="play-btn2" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.3s;border:2px solid rgba(255,255,255,0.6);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(to top,rgba(0,0,20,0.95),transparent);">
+            <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.2rem;">Watch on YouTube</div>
+          </div>
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-muted);margin-top:0.8rem;font-style:italic;text-align:center;">The Lineage of King Salomon Explained</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- GREAT INITIATES -->
+<div class="inner" style="text-align:center;">
+  <span class="eyebrow" style="display:block;">Those Who Walked the Path</span>
+  <h2 class="sec-title" style="text-align:center;">The Great Initiates of History</h2>
+  <div class="gold-line center"></div>
+  <p class="prose" style="max-width:780px;margin:0 auto 2.5rem;">Many of history's greatest minds were initiates of the Mystery School tradition — reflecting the greatness of the teachings through their own extraordinary lives and work.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center;margin-bottom:3rem;">
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:0.6rem 1.4rem;">Leonardo da Vinci</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:0.6rem 1.4rem;">Nikola Tesla</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:0.6rem 1.4rem;">Albert Einstein</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:0.6rem 1.4rem;">Sir Isaac Newton</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:0.6rem 1.4rem;">Rudolf Steiner</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:0.6rem 1.4rem;">Carl Jung</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:0.6rem 1.4rem;">Winston Churchill</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:0.6rem 1.4rem;">Michelangelo</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:0.6rem 1.4rem;">William Shakespeare</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:0.6rem 1.4rem;">David Bowie</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:0.6rem 1.4rem;">Mother Theresa</span>
+  </div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Edmund_Blair_Leighton_-_Accolade.jpg" alt="The Accolade — Initiation into the Lineage" style="max-width:420px;width:100%;border:1px solid rgba(201,168,76,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+</div>
+
+<!-- LINEAGE HOLDERS -->
+<div style="background:rgba(0,0,18,0.55);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:6rem 4rem;">
+  <div style="max-width:1260px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:5rem;">
+      <span class="eyebrow" style="display:block;">The Third Order</span>
+      <h2 class="sec-title" style="text-align:center;">The Lineage Holders Today</h2>
+      <div class="gold-line center"></div>
+      <p class="prose" style="max-width:800px;margin:0 auto;">The Third Order are the three key holders who anchor the lineage on Earth, maintaining the purity and authenticity of the teachings and ensuring the doors of the Mystery School remain open to those who seek enlightenment.</p>
+    </div>
+    <img src="https://static.wixstatic.com/media/cd00f3_88bb9f33d1b745cd8e986553e77c887d~mv2.jpg/v1/crop/x_30,y_11,w_527,h_307/fill/w_520,h_303,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MMSint4606all3.jpg" alt="The Third Order" style="width:100%;max-width:680px;display:block;margin:0 auto 5rem;border:1px solid rgba(201,168,76,0.2);">
+
+    <!-- GUDNI -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:5rem;padding-bottom:5rem;border-bottom:1px solid rgba(201,168,76,0.12);">
+      <img src="https://static.wixstatic.com/media/cd00f3_d3154252e4af4f77a574372a029199a7~mv2.jpeg/v1/crop/x_32,y_0,w_527,h_480/fill/w_414,h_377,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MMSintFounderGudni.jpeg" alt="Founder Gudni Gudnason" style="width:100%;border:1px solid rgba(201,168,76,0.2);">
+      <div>
+        <span class="eyebrow">Hierophant · Founder of the Modern Mystery School</span>
+        <h3 style="font-family:'Cinzel',serif;font-size:1.5rem;color:var(--cream);margin-bottom:0.5rem;line-height:1.2;">Sovereign Ipsissimus<br>Gudni "Frater Ged" Gudnason</h3>
+        <div class="gold-line"></div>
+        <p class="prose">Ipsissimus Gudni founded the Modern Mystery School when he was allowed to bring this Lineage out to the public in 1997. His dedication to safeguard the lineage is beyond inspiring — he dedicates his entire life to this mission and lives it with joy and passion in everything he does.</p>
+        <p class="prose">Through humour and fantastical tales, he shares hidden wisdom and tools — always reminding students that they are their own best teachers. He promotes living a life of pure magic and mysticism, embracing the royalty of the divine self within, and above all, finding JOY.</p>
+        <blockquote style="border-left:3px solid var(--gold);padding-left:1.5rem;font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-style:italic;color:var(--text-mid);line-height:1.75;">"You are an eternal being. You have never been born, therefore you can never die."<br><span style="font-size:0.72rem;letter-spacing:0.12em;font-style:normal;color:var(--gold);font-family:'Jost',sans-serif;margin-top:0.5rem;display:block;">— Sovereign Ipsissimus Gudni Gudnason</span></blockquote>
+      </div>
+    </div>
+
+    <!-- DAVE -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:5rem;padding-bottom:5rem;border-bottom:1px solid rgba(201,168,76,0.12);">
+      <div>
+        <span class="eyebrow">Ritual Master Teacher · Warrior of Light</span>
+        <h3 style="font-family:'Cinzel',serif;font-size:1.5rem;color:var(--cream);margin-bottom:0.5rem;line-height:1.2;">Sovereign Ipsissimus<br>Dave "Thor" Lanyon</h3>
+        <div class="gold-line"></div>
+        <p class="prose">Ipsissimus Dave Lanyon is a true Warrior of Light — his heart can be felt by everyone who meets him, yet he does not let any shadow pass unchecked. His passion for empowering people leads him to teach all over the world.</p>
+        <p class="prose">He specialises in presenting Hermetic and Esoteric wisdom in practical, actionable ways. Initiated as a Knight Templar, he leads the worldwide Order of the Warriors of Light and is a High Priest of Egyptian Magick, Master of Enochian Magick, and specialist of Viking, Celtic, and Egyptian Shamanism. Author of two books: <em>Essential Principles for the Warrior of Light</em> and <em>You Are Not Perfect the Way You Are.</em></p>
+        <blockquote style="border-left:3px solid var(--gold);padding-left:1.5rem;font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-style:italic;color:var(--text-mid);line-height:1.75;">"Our ultimate weapon is Love, our shield is Peace, our fuel is Passion, and our goal is Joy."<br><span style="font-size:0.72rem;letter-spacing:0.12em;font-style:normal;color:var(--gold);font-family:'Jost',sans-serif;margin-top:0.5rem;display:block;">— Sovereign Ipsissimus Dave Lanyon</span></blockquote>
+      </div>
+      <img src="https://static.wixstatic.com/media/cd00f3_e432a0a265ae4d78ae60e8d3b9b5d21f~mv2.jpg/v1/crop/x_73,y_0,w_1054,h_960/fill/w_414,h_377,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/sov%20ips%20Dave.jpg" alt="Sovereign Ipsissimus Dave Lanyon" style="width:100%;border:1px solid rgba(201,168,76,0.2);">
+    </div>
+
+    <!-- HIDETO -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <img src="https://static.wixstatic.com/media/cd00f3_c8e3fb6bb4654bd78adc2e794b919085~mv2.jpeg/v1/crop/x_66,y_0,w_508,h_463/fill/w_414,h_377,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IPS%20Hideto.jpeg" alt="Sovereign Ipsissimus Hideto Nakagome" style="width:100%;border:1px solid rgba(201,168,76,0.2);">
+      <div>
+        <span class="eyebrow">Master Healer · Head of Ensofic Ray Institute</span>
+        <h3 style="font-family:'Cinzel',serif;font-size:1.5rem;color:var(--cream);margin-bottom:0.5rem;line-height:1.2;">Sovereign Ipsissimus<br>Hideto "REI" Nakagome</h3>
+        <div class="gold-line"></div>
+        <p class="prose">Sovereign Ipsissimus Hideto REI Nakagome has been instrumental in the growth of the Mystery School since joining the lineage in 2000. He comes from a pure Japanese Bushi or Samurai family, accessing that extraordinary power in his work within the Modern Mystery School.</p>
+        <p class="prose">He is a Priest of Mikkyo Esoteric Buddhism, Viking Shaman, Celtic Shaman, Knight Templar, and Egyptian Shaman. As head of the Ensofic Ray Institute, he brings people to an awareness of the beauty and good within themselves. When teaching he does so with humour and fun, so students relax and enjoy their study.</p>
+        <blockquote style="border-left:3px solid var(--gold);padding-left:1.5rem;font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-style:italic;color:var(--text-mid);line-height:1.75;">"The universal life force has to be controlled both inside and outside of you — with this you can have full control over your inner and outer universe."<br><span style="font-size:0.72rem;letter-spacing:0.12em;font-style:normal;color:var(--gold);font-family:'Jost',sans-serif;margin-top:0.5rem;display:block;">— Sovereign Ipsissimus Hideto REI Nakagome</span></blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COUNCIL OF 12 -->
+<div class="inner">
+  <div style="text-align:center;margin-bottom:4rem;">
+    <span class="eyebrow" style="display:block;">The Divine Feminine in the Lineage</span>
+    <h2 class="sec-title" style="text-align:center;">The Council of the 12 Women</h2>
+    <div class="gold-line center"></div>
+    <p class="prose" style="max-width:860px;margin:0 auto 1rem;">Each member brings their own distinct spiritual gifts and leadership qualities, contributing to the continued growth and empowerment of the Modern Mystery School and its community.</p>
+    <p class="prose" style="max-width:860px;margin:0 auto 3rem;">The Council of 12 represents the divine feminine energy within the lineage, embodying the essence of 12 powerful goddesses. These esteemed women, all high-level initiates from around the globe, serve as priestesses and hold unique keys to magick. The Council plays a pivotal leadership role within the Modern Mystery School, guiding and influencing various aspects of the school's direction and teachings.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:5rem;">
+    <div>
+      <img src="https://static.wixstatic.com/media/cd00f3_704a79afb000467bbe4b672308f8f69b~mv2.png/v1/fill/w_335,h_334,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd00f3_704a79afb000467bbe4b672308f8f69b~mv2.png" alt="Council of 12 — Western World Members" style="width:100%;border:1px solid rgba(201,168,76,0.15);margin-bottom:0.8rem;">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:0.82rem;font-style:italic;color:var(--text-muted);text-align:center;">Western World Council Members (left) · Eastern World Council Members (right)</p>
+    </div>
+    <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);padding:2.5rem;">
+      <h3 style="font-family:'Cinzel',serif;font-size:0.88rem;color:var(--gold);letter-spacing:0.12em;margin-bottom:1.5rem;">The Council of 12 Women</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div>
+          <div style="font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:0.8rem;font-family:'Jost',sans-serif;">Western World</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.55rem;">
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Ipsissima Divina Dr. Kate Bartram-Brown</li>
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Ipsissima Divina Dr. Theresa Bullard-Whyke</li>
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Divina Dr. Ann Donnelly</li>
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Ipsissima Divina Franca Lanyon</li>
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Divina Dr. Rita Van den Berg</li>
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Ipsissima Divina Liza Rossi</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:0.8rem;font-family:'Jost',sans-serif;">Eastern World</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.55rem;">
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Ipsissima Divina Eiko Gudnason</li>
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Ipsissima Divina Luisa Nakagome</li>
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Ipsissima Divina Maki Otani</li>
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Ipsissima Divina Azusa Yoda</li>
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Divina Suzoko Kitamura</li>
+            <li style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span>Ipsissima Divina Tsukiko Kimura</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IPSISSIMI -->
+  <div style="text-align:center;margin-bottom:3rem;">
+    <span class="eyebrow" style="display:block;">The Pinnacle of Initiation</span>
+    <h2 class="sec-title" style="text-align:center;">Governing Ipsissima &amp; Ipsissimus</h2>
+    <div class="gold-line center"></div>
+    <p class="prose" style="max-width:860px;margin:0 auto 1rem;">Ipsissimus is the pinnacle initiation of the lineage — earned through years of dedicated service, mastery, and leadership. Those who hold this title are granted their authority by the lineage holders of the Third Order: Founder &amp; Hierophant Gudni Gudnason, Sovereign Ipsissimus Hideto Nakagome, and Sovereign Ipsissimus Dave Lanyon.</p>
+    <p class="prose" style="max-width:860px;margin:0 auto 2.5rem;">As master teachers and high-level initiates within the lineage of King Salomon, Ipsissimus holders serve as pillars of their field — carrying specific keys of knowledge and power that are theirs alone to hold and transmit.</p>
+  </div>
+
+  <img src="https://static.wixstatic.com/media/cd00f3_8e1fa69a97f84f86b475a1e018b45fe8~mv2.jpeg/v1/fill/w_708,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd00f3_8e1fa69a97f84f86b475a1e018b45fe8~mv2.jpeg" alt="The 7 Ipsissimi" style="width:100%;border:1px solid rgba(201,168,76,0.15);margin-bottom:1rem;" onerror="this.style.display='none'">
+  <p style="font-family:'Cormorant Garamond',serif;font-size:0.88rem;font-style:italic;color:var(--text-muted);text-align:center;margin-bottom:3rem;">From Left to Right: Ipsissima Divina Tsukiko Kimura (Ensofic Ray), Ipsissima Divina Luisa Nakagome (Shamanism), Ipsissima Divina Eiko Gudnason (Royal Way), Ipsissima Divina Dr Theresa Bullard-Whyke (Kabbalah), Ipsissima Azusa Yoda (Grand Oracle), Ipsissima Sandra Reed (Honorary), Ipsissima Divina Franca Lanyon (Alchemy)</p>
+
+  <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);padding:3rem;">
+    <h3 style="font-family:'Cinzel',serif;font-size:0.88rem;color:var(--gold);letter-spacing:0.12em;margin-bottom:1.5rem;text-align:center;">Those Who Anchor Immense Light for the Modern Mystery School</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem 3rem;">
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissima Divina Franca Lanyon<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissima of Alchemy</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissima Divina Theresa Bullard-Whyke<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissima of Kabbalah</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissima Divina Luisa Nakagome<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissima of Shamanism</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissima Divina Eiko Gudnason<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissima of the Royal Arts</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissima Divina Tsukiko Kimura<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissima of the Ensofic Arts</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissima Divina Kate Bartram-Brown<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissima of the Noble Arts</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissima Divina Liza Rossi<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissima of the Divine Arts</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissima Kathleen Lanyon<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissima of the Governance of the Light</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissima Azusa Yoda<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissima of the Grand Oracle</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissima Divina Hitomi Shibuya<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissima of the Goethian Arts</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissimus Kimio Iwaki<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissimus of the Occult Arts</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Ipsissima Yoko Watanabe<br><em style="font-size:0.82rem;color:var(--text-muted);">Ipsissima of the Psychic Arts</em></span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Honorary Ipsissima Sandra Reed</span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Honorary Ipsissima Verla Wade</span></div>
+      <div style="display:flex;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-mid);line-height:1.5;"><span style="color:var(--gold);font-size:0.55rem;margin-top:0.38rem;flex-shrink:0;">✦</span><span>Honorary Ipsissima Suzuko Kitamura</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXTERNAL LINKS -->
+<div style="background:rgba(0,0,18,0.55);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:5rem 4rem;">
+  <div style="max-width:1000px;margin:0 auto;text-align:center;">
+    <span class="eyebrow" style="display:block;">Learn More</span>
+    <h2 class="sec-title" style="text-align:center;">Explore the Modern Mystery School</h2>
+    <div class="gold-line center"></div>
+    <p class="prose" style="max-width:680px;margin:0 auto 3rem;">Discover more about the worldwide community, core values, and certified practitioners of the Modern Mystery School lineage.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:3rem;">
+      <a href="https://modernmysteryschoolint.com/core-values/" target="_blank" rel="noopener" style="text-decoration:none;display:block;padding:2.5rem 2rem;border:1px solid rgba(201,168,76,0.2);background:var(--navy-card);transition:all 0.4s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.5)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.2)';this.style.transform='translateY(0)'">
+        <div style="font-size:2rem;margin-bottom:1rem;">✦</div>
+        <div style="font-family:'Cinzel',serif;font-size:0.9rem;color:var(--gold);letter-spacing:0.1em;margin-bottom:0.8rem;">Core Beliefs</div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-light);line-height:1.65;">The foundational values and beliefs that guide the Modern Mystery School and all who walk the path.</p>
+        <div style="margin-top:1.5rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-family:'Jost',sans-serif;">Visit Site →</div>
+      </a>
+      <a href="https://modernmysteryschoolint.com/mms-worldwide/" target="_blank" rel="noopener" style="text-decoration:none;display:block;padding:2.5rem 2rem;border:1px solid rgba(201,168,76,0.2);background:var(--navy-card);transition:all 0.4s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.5)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.2)';this.style.transform='translateY(0)'">
+        <div style="font-size:2rem;margin-bottom:1rem;">🌐</div>
+        <div style="font-family:'Cinzel',serif;font-size:0.9rem;color:var(--gold);letter-spacing:0.1em;margin-bottom:0.8rem;">MMS Worldwide</div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-light);line-height:1.65;">Find Mystery School centres, events, and communities around the world — the global family of light.</p>
+        <div style="margin-top:1.5rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-family:'Jost',sans-serif;">Visit Site →</div>
+      </a>
+      <a href="https://modernmysteryschoolint.com/certified-professionals/" target="_blank" rel="noopener" style="text-decoration:none;display:block;padding:2.5rem 2rem;border:1px solid rgba(201,168,76,0.2);background:var(--navy-card);transition:all 0.4s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.5)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.2)';this.style.transform='translateY(0)'">
+        <div style="font-size:2rem;margin-bottom:1rem;">🎓</div>
+        <div style="font-family:'Cinzel',serif;font-size:0.9rem;color:var(--gold);letter-spacing:0.1em;margin-bottom:0.8rem;">Certified Professionals</div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-light);line-height:1.65;">Browse the directory of certified healers, teachers, and guides trained in the King Salomon lineage.</p>
+        <div style="margin-top:1.5rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-family:'Jost',sans-serif;">Visit Site →</div>
+      </a>
+    </div>
+    <!-- YouTube links -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <a href="https://www.youtube.com/@modernmysteryschoolint" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center;gap:1.5rem;padding:2rem;border:1px solid rgba(201,168,76,0.2);background:var(--navy-card);transition:all 0.4s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.5)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.2)';this.style.transform='translateY(0)'">
+        <div style="width:52px;height:52px;border-radius:50%;background:rgba(255,0,0,0.15);border:1px solid rgba(255,80,80,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#ff4444"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div>
+          <div style="font-family:'Cinzel',serif;font-size:0.85rem;color:var(--gold);letter-spacing:0.08em;margin-bottom:0.4rem;">For More Documentaries</div>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:0.92rem;color:var(--text-light);line-height:1.5;">Explore films, teachings, and insights from the Modern Mystery School International YouTube channel.</p>
+          <div style="margin-top:0.8rem;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,80,80,0.8);font-family:'Jost',sans-serif;">Watch on YouTube →</div>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@modernmysteryschoolukeu" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center;gap:1.5rem;padding:2rem;border:1px solid rgba(201,168,76,0.2);background:var(--navy-card);transition:all 0.4s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.5)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.2)';this.style.transform='translateY(0)'">
+        <div style="width:52px;height:52px;border-radius:50%;background:rgba(255,0,0,0.15);border:1px solid rgba(255,80,80,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#ff4444"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div>
+          <div style="font-family:'Cinzel',serif;font-size:0.85rem;color:var(--gold);letter-spacing:0.08em;margin-bottom:0.4rem;">Hear What Others Say</div>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:0.92rem;color:var(--text-light);line-height:1.5;">Stories, testimonials, and experiences from students of the Modern Mystery School UK &amp; EU.</p>
+          <div style="margin-top:0.8rem;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,80,80,0.8);font-family:'Jost',sans-serif;">Watch on YouTube →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ARE YOU READY -->
+<div style="background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(53,51,205,0.2),rgba(201,168,76,0.05));border-top:1px solid rgba(201,168,76,0.2);border-bottom:1px solid rgba(201,168,76,0.2);padding:6rem 4rem;">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+    <div>
+      <span class="eyebrow">Are You Ready?</span>
+      <h2 class="sec-title">Signs You Are Called to Walk the Path</h2>
+      <div class="gold-line"></div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.7rem;margin-bottom:2rem;">
+        <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);line-height:1.6;"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.45rem;flex-shrink:0;">✦</span>You know there is more to life than what you experience day to day</li>
+        <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);line-height:1.6;"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.45rem;flex-shrink:0;">✦</span>You seek your purpose and meaning in life</li>
+        <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);line-height:1.6;"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.45rem;flex-shrink:0;">✦</span>You want to make this world a better place for all</li>
+        <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);line-height:1.6;"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.45rem;flex-shrink:0;">✦</span>You wish to pursue the mystery of the universe and Know Thyself</li>
+        <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);line-height:1.6;"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.45rem;flex-shrink:0;">✦</span>You seek true freedom from within — clarity, wisdom, and purpose</li>
+        <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);line-height:1.6;"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.45rem;flex-shrink:0;">✦</span>You've tried meditation, yoga, or therapy — and something is still missing</li>
+        <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);line-height:1.6;"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.45rem;flex-shrink:0;">✦</span>You have a feeling inside that this is the next step in your journey</li>
+        <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);line-height:1.6;"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.45rem;flex-shrink:0;">✦</span>You want to heal your heart and know what true love is</li>
+        <li style="display:flex;gap:0.8rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text-mid);line-height:1.6;"><span style="color:var(--gold);font-size:0.6rem;margin-top:0.45rem;flex-shrink:0;">✦</span>You are aware that to make a better world we must start with the person in the mirror</li>
+      </ul>
+      <button class="btn-gold" onclick="showPage('start')">✦ Take Your First Step — Life Activation</button>
+    </div>
+    <div style="padding:3rem;background:var(--navy-card);border:1px solid rgba(201,168,76,0.25);">
+      <h3 style="font-family:'Cinzel',serif;font-size:1rem;color:var(--gold);letter-spacing:0.12em;margin-bottom:1.5rem;">The First Step on the Path</h3>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.8;color:var(--text-mid);margin-bottom:1.5rem;">Life Activation opens the door to the Path of Progression. It is the first step toward a more fulfilled and balanced life, and the entry point to walking the Mystery School tradition.</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.8;color:var(--text-mid);margin-bottom:1.5rem;">After Life Activation, the two-day <strong style="color:var(--cream);">Empower Thyself</strong> class prepares you for your first formal initiation into the lineage of King Salomon through the Modern Mystery School.</p>
+      <div style="border-top:1px solid rgba(201,168,76,0.2);padding-top:1.5rem;display:flex;flex-direction:column;gap:0.8rem;">
+        <div style="display:flex;gap:1rem;align-items:flex-start;"><span style="font-family:'Cinzel',serif;font-size:1.2rem;color:rgba(201,168,76,0.3);">01</span><div><div style="font-family:'Cinzel',serif;font-size:0.82rem;color:var(--cream);">Life Activation · £250</div><div style="font-size:0.8rem;color:var(--text-muted);font-family:'Cormorant Garamond',serif;">Opens the door — no prerequisites</div></div></div>
+        <div style="display:flex;gap:1rem;align-items:flex-start;"><span style="font-family:'Cinzel',serif;font-size:1.2rem;color:rgba(201,168,76,0.3);">02</span><div><div style="font-family:'Cinzel',serif;font-size:0.82rem;color:var(--cream);">Empower Thyself · £1,250</div><div style="font-size:0.8rem;color:var(--text-muted);font-family:'Cormorant Garamond',serif;">2-day initiation into the lineage</div></div></div>
+        <div style="display:flex;gap:1rem;align-items:flex-start;"><span style="font-family:'Cinzel',serif;font-size:1.2rem;color:rgba(201,168,76,0.3);">03</span><div><div style="font-family:'Cinzel',serif;font-size:0.82rem;color:var(--cream);">The Path of Progression</div><div style="font-size:0.8rem;color:var(--text-muted);font-family:'Cormorant Garamond',serif;">Advanced teachings, initiations &amp; mastery</div></div></div>
+      </div>
+      <button class="btn-ghost" style="margin-top:2rem;width:100%;clip-path:none;" onclick="showPage('start')">Book a Free Consultation</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-logo">✦ POLARIS CENTRE</div>
+  <div class="foot-copy">© 2026 Polaris Centre · polariscentre.london · All Rights Reserved</div>
+  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="showPage('start')">Start Here</button><button onclick="showPage('sessions')">Sessions</button><button onclick="showPage('lineage')">Lineage</button></div>
+</footer>
+</div><!-- /lineage -->
+
 <script>
 /* PAGE NAV */
 function showPage(id){
@@ -887,7 +1254,8 @@ window.addEventListener('scroll',function(){
   setInterval(function(){if(shooters.length<3)shooters.push(new Shooter());},4500);
 
   function tick(){
-    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle='rgba(5,11,26,0.3)';
+    ctx.fillRect(0,0,W,H);
     stars.forEach(function(s){s.update();s.draw();});
     drifters.forEach(function(d){d.update();d.draw();});
     shooters=shooters.filter(function(s){return s.alpha>0;});
