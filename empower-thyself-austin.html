@@ -217,6 +217,16 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;ba
 .footer-links a:hover{color:var(--gold);}
 .footer-copy{font-size:0.7rem;color:var(--text-muted);}
 
+/* FAQ */
+.faq-item{background:var(--navy-card);border:1px solid var(--border);}
+.faq-q{width:100%;background:none;border:none;padding:1.6rem 2rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.08em;color:var(--cream);text-align:left;gap:1rem;transition:color 0.3s;}
+.faq-q:hover{color:var(--gold);}
+.faq-icon{color:var(--gold);font-size:0.6rem;flex-shrink:0;transition:transform 0.4s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease;}
+.faq-item.open .faq-a{max-height:400px;}
+.faq-a p{padding:0 2rem 1.6rem;font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.85;color:var(--text-dim);}
+
 /* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
@@ -416,13 +426,13 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;ba
       <span class="req-label required">Required</span>
       <div class="prereq-name">Life Activation Session</div>
       <p class="prereq-body">The Life Activation is the essential prerequisite for Empower Thyself — it prepares your physical and spiritual DNA for the initiation you will receive.<br><br>
-      If you have not yet received a Life Activation, we are happy to connect you with <strong>Rosalyn or Michael Mastrangelo</strong> who can facilitate this 1-on-1 session for you prior to the training. Please <a href="mailto:sean@polariscentre.london?subject=Life%20Activation%20Enquiry%20before%20Austin%20ET">get in touch</a> and we'll make the introduction.</p>
+      If you have not yet received a Life Activation, we are happy to connect you with <strong>Rosalyn or Michael Mastrangelo</strong> who can facilitate this 1-on-1 session for you prior to the training. Please <a href="mailto:kasia@polariscentre.london?subject=Life%20Activation%20Enquiry%20before%20Austin%20ET">get in touch</a> and we'll make the introduction.</p>
     </div>
     <div class="prereq-card reveal" style="transition-delay:0.15s">
       <span class="req-label recommended">Recommended</span>
       <div class="prereq-name">Full Spirit Activation</div>
       <p class="prereq-body">While not required, the Full Spirit Activation is a powerful preparation that deepens your capacity to receive the Empower Thyself initiation. We recommend receiving this session in the weeks before the training if possible.<br><br>
-      <a href="mailto:sean@polariscentre.london?subject=Full%20Spirit%20Activation%20Enquiry">Contact us</a> to enquire about booking a Full Spirit Activation session.</p>
+      <a href="mailto:kasia@polariscentre.london?subject=Full%20Spirit%20Activation%20Enquiry">Contact us</a> to enquire about booking a Full Spirit Activation session.</p>
     </div>
   </div>
 </div>
@@ -458,7 +468,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;ba
   <div class="register-deadline">✦ Save $300 — Register with $400 deposit before July 21st ✦</div>
   <div class="register-btns">
     <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00" style="font-size:0.78rem;padding:1.2rem 3rem;">✦ Reserve with $400 Deposit</a>
-    <a class="btn-ghost" href="mailto:sean@polariscentre.london?subject=Empower%20Thyself%20Austin%20Question" style="font-size:0.78rem;padding:1.2rem 3rem;">Ask a Question</a>
+    <a class="btn-ghost" href="mailto:kasia@polariscentre.london?subject=Empower%20Thyself%20Austin%20Question" style="font-size:0.78rem;padding:1.2rem 3rem;">Ask a Question</a>
   </div>
   <p class="deposit-note">$400 deposit secures your place at the Early Bird rate of $1,200 · Balance due before the event<br>Full price $1,500 for registrations after July 21st, 2026</p>
 </section>
@@ -498,6 +508,100 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;ba
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="section dark">
+  <div class="container-sm">
+    <div style="text-align:center;" class="reveal">
+      <span class="eyebrow" style="display:block;text-align:center;">Frequently Asked Questions</span>
+      <h2 class="sec-title" style="text-align:center;">Your Questions <em>Answered</em></h2>
+      <div class="gold-line center"></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1px;margin-top:2rem;">
+
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What is initiation?
+          <span class="faq-icon">✦</span>
+        </button>
+        <div class="faq-a">
+          <p>Initiation in the Royal Lineage of King Salomon is a sacred rite of passage that has been passed from teacher to student for over 3,000 years. It is not a lecture or a course — it is a direct transmission of energy and ancient tools that permanently shifts your energetic reality and your relationship to your own life. Empowering you to live your best life.</p>
+          <p style="margin-top:1rem;">Many great leaders, inventors, artists, and explorers have been part of the mystery school lineage — reflecting the greatness of these teachings in their own life and work. To name a few: Michelangelo, Leonardo da Vinci, William Shakespeare, Nikola Tesla, Rudolf Steiner, Carl Jung, Isaac Newton, and Winston Churchill.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:0.05s">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Who is this for?
+          <span class="faq-icon">✦</span>
+        </button>
+        <div class="faq-a">
+          <p>This is for people who have been searching for more in life. You've tried meditation, yoga, therapy, and mindfulness. You've read the self-help books — and still, something is missing. You sense that what you are looking for exists at a level you haven't reached yet. You want to become a leader and live a more empowered life. If you feel there is more available to you than you are currently experiencing, this weekend is for you.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:0.1s">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do I need any prior experience?
+          <span class="faq-icon">✦</span>
+        </button>
+        <div class="faq-a">
+          <p>No prior experience is required. The only requirement is that you have received a Life Activation session before attending. Beyond that, all you need to bring is an open mind and a genuine willingness to grow.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:0.15s">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What is the prerequisite?
+          <span class="faq-icon">✦</span>
+        </button>
+        <div class="faq-a">
+          <p>A Life Activation session is required before attending Empower Thyself. If you have not yet received one, we can connect you with a certified practitioner in your area. A Full Spirit Activation is also recommended but not required.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:0.2s">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What should I bring?
+          <span class="faq-icon">✦</span>
+        </button>
+        <div class="faq-a">
+          <p>Please wear comfortable clothing you can sit and move in freely throughout the day. A notebook and pen. Water and any snacks you may need to stay nurtured throughout the day. Come well rested and ready to be fully present — both days run from 10:00 AM to 7:00 PM.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:0.25s">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is accommodation included?
+          <span class="faq-icon">✦</span>
+        </button>
+        <div class="faq-a">
+          <p>Accommodation is not included. Austin has a wide range of hotels and Airbnbs to suit every budget. Dr. Sean Carey will be in touch after your deposit is confirmed and can answer any questions about the area.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:0.3s">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How is this different from a workshop or seminar?
+          <span class="faq-icon">✦</span>
+        </button>
+        <div class="faq-a">
+          <p>A workshop gives you information. Initiation gives you a permanent energetic shift. What happens over these two days works at the level of the soul and spirit — it is a living transmission passed between teacher and student in the same room, in the same sacred space. The effects do not fade when you go home. They go with you.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:3rem;" class="reveal">
+      <p class="prose" style="font-size:0.9rem;color:var(--text-muted);">Still have questions?</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center;margin-top:1rem;">
+        <a class="btn-ghost" href="mailto:sean@polariscentre.london?subject=Question%20about%20Empower%20Thyself%20Austin" style="font-size:0.68rem;padding:0.75rem 1.5rem;">✦ sean@polariscentre.london</a>
+        <a class="btn-ghost" href="mailto:drseancarey@gmail.com?subject=Question%20about%20Empower%20Thyself%20Austin" style="font-size:0.68rem;padding:0.75rem 1.5rem;">✦ drseancarey@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Polaris Centre</div>
@@ -510,6 +614,14 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;ba
 </footer>
 
 <script>
+// FAQ toggle
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');});
+  if(!isOpen)item.classList.add('open');
+}
+
 // Starfield
 (function(){
   var c=document.getElementById('cosmos'),ctx=c.getContext('2d');
