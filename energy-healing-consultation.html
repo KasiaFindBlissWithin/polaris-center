@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Energy Healing with a Certified Practitioner | Book a Free Consultation — Polaris Centre</title>
+<meta name="description" content="Book a free, no-obligation consultation with a certified energy healer in the Modern Mystery School lineage. By phone or video. Polaris Centre, London &amp; Online." />
+
+<!-- ============================================================
+     SETUP NOTES FOR KASIA (delete before publishing if you like)
+     ------------------------------------------------------------
+     1. BOOKING: Replace the placeholder in the #booking section with
+        your Cal.com inline embed (Cal.com > Event Type > Embed > Inline).
+        Inside Cal.com, add these THREE booking questions:
+          - "How ready are you to begin?"  (radio: Just curious for now /
+             Open and exploring / Ready to begin)  [required]
+          - "What's bringing you to seek healing right now?" (long text) [required]
+          - "Have you experienced energy healing before?" (radio: Yes / No /
+             Not sure what it is) [required]
+        Turn ON confirmation + reminder emails to cut no-shows.
+     2. CONVERSION TRACKING: Fire your Google Ads conversion
+        (AW-18215793983) on the Cal.com "booking confirmed" event, OR set
+        Cal.com to redirect to a /thank-you page that holds the conversion tag.
+     3. PRIVACY: Replace href="/privacy" with your real Privacy Policy URL.
+        Required because you collect personal + health-adjacent data (UK GDPR)
+        and because Google Ads requires a privacy policy on lead pages.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --navy-900:#070c1f;
+    --navy-800:#0a1330;
+    --navy-700:#101c45;
+    --navy-600:#18254f;
+    --gold:#e3bd63;
+    --gold-bright:#f4d588;
+    --gold-soft:#c9a55a;
+    --gold-deep:#b8923f;
+    --ink:#eae6f5;
+    --ink-soft:#b9b6cf;
+    --ink-faint:#7d809b;
+    --line:rgba(227,189,99,.22);
+    --display:"Cormorant Garamond", Georgia, serif;
+    --script:"Great Vibes", cursive;
+    --body:"Jost", system-ui, sans-serif;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--navy-900);
+    color:var(--ink);
+    font-family:var(--body);
+    font-weight:300;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  #stars{position:fixed;inset:0;z-index:0;display:block}
+  .wrap{position:relative;z-index:1}
+  .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ---- top bar ---- */
+  header{padding:26px 0 0}
+  .brand{
+    font-family:var(--script);
+    font-size:34px;
+    color:var(--gold-bright);
+    text-align:center;
+    letter-spacing:.5px;
+    text-shadow:0 0 26px rgba(227,189,99,.35);
+  }
+  .brand small{
+    display:block;font-family:var(--body);font-size:11px;letter-spacing:5px;
+    text-transform:uppercase;color:var(--ink-faint);margin-top:2px;font-weight:400;
+  }
+
+  /* ---- hero ---- */
+  .hero{text-align:center;padding:62px 0 40px}
+  .eyebrow{
+    font-size:12.5px;letter-spacing:4px;text-transform:uppercase;
+    color:var(--gold);margin-bottom:26px;font-weight:400;
+  }
+  .eyebrow::before,.eyebrow::after{content:"✦";opacity:.55;margin:0 12px;font-size:10px}
+  h1{
+    font-family:var(--display);
+    font-weight:500;
+    font-size:clamp(2.5rem,6vw,4.4rem);
+    line-height:1.04;
+    letter-spacing:.5px;
+    color:#fff;
+    max-width:13ch;
+    margin:0 auto;
+  }
+  .tagline{
+    font-family:var(--script);
+    font-size:clamp(1.9rem,4.5vw,2.9rem);
+    color:var(--gold-bright);
+    margin-top:14px;
+    text-shadow:0 0 30px rgba(227,189,99,.3);
+  }
+  .hero p.lede{
+    max-width:50ch;margin:30px auto 0;font-size:clamp(1.02rem,2vw,1.18rem);
+    color:var(--ink-soft);line-height:1.7;
+  }
+  .cta{
+    display:inline-block;margin-top:38px;
+    font-family:var(--body);font-weight:500;font-size:15px;letter-spacing:1.5px;
+    text-transform:uppercase;text-decoration:none;
+    color:var(--navy-900);
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold-deep));
+    padding:17px 42px;border-radius:2px;
+    box-shadow:0 14px 40px -12px rgba(227,189,99,.55);
+    transition:transform .25s ease, box-shadow .25s ease;
+    border:none;cursor:pointer;
+  }
+  .cta:hover{transform:translateY(-3px);box-shadow:0 22px 52px -12px rgba(227,189,99,.7)}
+  .cta:focus-visible{outline:3px solid var(--gold-bright);outline-offset:4px}
+  .cta-note{margin-top:16px;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint)}
+
+  /* ---- trust strip ---- */
+  .trust{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    margin-top:54px;padding:22px 0;
+    display:flex;flex-wrap:wrap;justify-content:center;gap:14px 38px;
+  }
+  .trust span{font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink-soft)}
+  .trust span b{color:var(--gold);font-weight:500}
+
+  /* ---- sections ---- */
+  section{padding:84px 0}
+  .sec-eyebrow{
+    text-align:center;font-size:12px;letter-spacing:4px;text-transform:uppercase;
+    color:var(--gold);margin-bottom:14px;
+  }
+  h2{
+    font-family:var(--display);font-weight:500;
+    font-size:clamp(2rem,4.5vw,3.1rem);line-height:1.1;color:#fff;
+    text-align:center;max-width:18ch;margin:0 auto;
+  }
+
+  /* ---- steps (a real sequence — numbering earns its place) ---- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:58px}
+  .step{
+    position:relative;padding:36px 28px;
+    background:linear-gradient(180deg,rgba(24,37,79,.45),rgba(10,19,48,.25));
+    border:1px solid var(--line);border-radius:4px;
+  }
+  .step .n{
+    font-family:var(--display);font-size:2.4rem;font-style:italic;
+    color:var(--gold);line-height:1;display:block;margin-bottom:16px;
+  }
+  .step h3{font-family:var(--display);font-size:1.5rem;font-weight:600;color:#fff;margin-bottom:10px}
+  .step p{color:var(--ink-soft);font-size:.98rem}
+
+  /* ---- practitioner + testimonial ---- */
+  .guide{
+    display:grid;grid-template-columns:300px 1fr;gap:52px;align-items:center;
+    max-width:880px;margin:0 auto;
+  }
+  .portrait{
+    position:relative;width:100%;aspect-ratio:4/5;
+    border-radius:170px 170px 6px 6px;overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 24px 64px -26px rgba(0,0,0,.78), 0 0 0 7px rgba(227,189,99,.05);
+  }
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 16%;display:block}
+  .portrait::after{content:"";position:absolute;inset:0;
+    box-shadow:inset 0 -54px 64px -34px rgba(7,12,31,.85);pointer-events:none}
+  .guide-text .sec-eyebrow{text-align:left;margin-bottom:18px}
+  .intro{font-size:clamp(1.08rem,2.2vw,1.32rem);color:var(--ink);line-height:1.75;font-weight:300}
+  .intro .hl{color:var(--gold-bright)}
+  .proof{max-width:760px;margin:0 auto}
+  .quote{
+    margin-top:54px;padding:38px 34px;
+    border-left:2px solid var(--gold);
+    background:rgba(24,37,79,.3);
+    text-align:left;border-radius:0 4px 4px 0;
+  }
+  .quote .stars{color:var(--gold);letter-spacing:3px;font-size:13px;margin-bottom:14px}
+  .quote blockquote{font-family:var(--display);font-style:italic;font-size:1.4rem;line-height:1.5;color:#fff}
+  .quote cite{display:block;margin-top:16px;font-style:normal;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint)}
+
+  /* ---- message from Kasia ---- */
+  .message-wrap{background:linear-gradient(180deg,rgba(16,28,69,.32),transparent)}
+  .message{max-width:680px;margin:0 auto;text-align:center}
+  .star-divider{color:var(--gold);font-size:13px;letter-spacing:8px;margin-bottom:24px;opacity:.8}
+  .message .lead{
+    font-family:var(--display);font-style:italic;font-weight:500;
+    font-size:clamp(1.5rem,3.4vw,2.15rem);line-height:1.42;color:#fff;
+  }
+  .message p.body{
+    font-family:var(--display);font-weight:400;
+    font-size:clamp(1.12rem,2.3vw,1.4rem);line-height:1.7;color:var(--ink);margin-top:26px;
+  }
+  .message p.close{
+    font-family:var(--display);font-style:italic;
+    font-size:clamp(1.25rem,2.6vw,1.6rem);color:var(--gold-bright);margin-top:32px;
+  }
+  .sign{margin-top:30px}
+  .sign small{
+    display:block;font-family:var(--body);font-size:11px;letter-spacing:4px;
+    text-transform:uppercase;color:var(--ink-faint);margin-bottom:2px;font-weight:400;
+  }
+  .sign .name{
+    font-family:var(--script);font-size:2.5rem;color:var(--gold-bright);
+    text-shadow:0 0 26px rgba(227,189,99,.3);
+  }
+
+  /* ---- the path ---- */
+  .path-intro{max-width:54ch;margin:18px auto 0;text-align:center;color:var(--ink-soft);font-size:clamp(1rem,2vw,1.12rem);line-height:1.7}
+  .path{max-width:620px;margin:54px auto 0;position:relative}
+  .path::before{content:"";position:absolute;left:27px;top:12px;bottom:46px;width:1px;
+    background:linear-gradient(180deg,var(--gold),rgba(227,189,99,.12))}
+  .pstep{position:relative;padding:0 0 38px 74px}
+  .pstep:last-child{padding-bottom:0}
+  .pnode{position:absolute;left:10px;top:-2px;width:36px;height:36px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--navy-800);border:1px solid var(--gold);
+    color:var(--gold-bright);font-family:var(--display);font-style:italic;font-size:1.05rem;
+    box-shadow:0 0 0 5px rgba(7,12,31,.92), 0 0 18px rgba(227,189,99,.25);z-index:1}
+  .pstep h3{font-family:var(--display);font-size:1.5rem;font-weight:600;color:#fff;margin-bottom:7px;
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
+  .pstep h3 .meta{font-family:var(--body);font-size:.68rem;letter-spacing:2px;text-transform:uppercase;
+    color:var(--gold);font-weight:500}
+  .pstep p{color:var(--ink-soft);font-size:1rem;line-height:1.65}
+  .pstep .price{color:var(--ink-faint);font-size:.82rem;letter-spacing:.5px;margin-top:7px;display:block}
+  .path-close{max-width:50ch;margin:46px auto 0;text-align:center;font-family:var(--display);
+    font-style:italic;font-size:clamp(1.2rem,2.6vw,1.5rem);color:var(--gold-bright);line-height:1.5}
+
+  /* ---- booking ---- */
+  .booking{background:linear-gradient(180deg,transparent,rgba(16,28,69,.4))}
+  .price-note{
+    text-align:center;max-width:46ch;margin:18px auto 0;
+    color:var(--ink-faint);font-size:.95rem;letter-spacing:.3px;
+  }
+  .price-note b{color:var(--gold);font-weight:500}
+  .calbox{
+    margin:46px auto 0;max-width:720px;min-height:340px;
+    border:1px dashed var(--line);border-radius:6px;
+    background:rgba(7,12,31,.5);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:48px 28px;gap:18px;
+  }
+  .calbox .star{font-size:30px;color:var(--gold)}
+  .calbox p{color:var(--ink-soft);max-width:40ch}
+  .calbox code{color:var(--gold);font-family:ui-monospace,monospace;font-size:.85rem}
+  .cal-embed-wrap{
+    margin:46px auto 0;max-width:920px;border-radius:10px;overflow:hidden;
+    border:1px solid var(--line);background:rgba(7,12,31,.45);
+    box-shadow:0 24px 64px -30px rgba(0,0,0,.7);
+  }
+  .consent{
+    text-align:center;margin:24px auto 0;max-width:48ch;
+    font-size:12.5px;color:var(--ink-faint);line-height:1.6;
+  }
+  .consent a{color:var(--gold);text-decoration:underline}
+
+  /* ---- footer ---- */
+  footer{border-top:1px solid var(--line);padding:48px 0;text-align:center}
+  .foot-brand{font-family:var(--script);font-size:26px;color:var(--gold-bright);margin-bottom:14px}
+  .foot-info{font-size:13px;color:var(--ink-faint);line-height:2}
+  .foot-info a{color:var(--ink-soft);text-decoration:none}
+  .foot-info a:hover{color:var(--gold)}
+  .foot-legal{margin-top:18px;font-size:11.5px;letter-spacing:1px;color:var(--ink-faint)}
+  .foot-legal a{color:var(--gold);text-decoration:none}
+
+  @media (max-width:760px){
+    .steps{grid-template-columns:1fr;gap:18px}
+    section{padding:60px 0}
+    .hero{padding:44px 0 30px}
+    .quote blockquote{font-size:1.2rem}
+    .guide{grid-template-columns:1fr;gap:30px;max-width:360px;text-align:center}
+    .portrait{max-width:230px;margin:0 auto;aspect-ratio:3/4}
+    .guide-text .sec-eyebrow{text-align:center}
+    .intro{text-align:center}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    #stars{display:none}
+    body{background:radial-gradient(120% 90% at 50% 0%,var(--navy-700),var(--navy-900))}
+  }
+</style>
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<div class="wrap">
+  <header>
+    <div class="container">
+      <div class="brand">Polaris Centre<small>London &amp; Online</small></div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero container">
+    <p class="eyebrow">Certified Energy Healer</p>
+    <h1>Energy Healing with a Certified Practitioner</h1>
+    <p class="tagline">Because healing starts within.</p>
+    <p class="lede">A free, no-obligation 30-minute consultation by phone or video — a calm, honest conversation about where you are, what you'd like to heal, and whether this path is right for you.</p>
+    <a href="#booking" class="cta">Book Your Free Consultation</a>
+    <p class="cta-note">Phone or video · 30 minutes · No obligation</p>
+
+    <div class="trust">
+      <span>Certified <b>Healer, Teacher &amp; Guide</b></span>
+      <span><b>Modern Mystery School</b> Certified</span>
+      <span>Royal Lineage of <b>King Salomon</b></span>
+      <span><b>London</b> &amp; Online</span>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <div class="container">
+      <p class="sec-eyebrow">A gentle first step</p>
+      <h2>What to expect from your free call</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="n">I</span>
+          <h3>Book a time</h3>
+          <p>Choose a slot that suits you. We'll meet by phone or video — whichever feels easier — for thirty unhurried minutes.</p>
+        </div>
+        <div class="step">
+          <span class="n">II</span>
+          <h3>We talk</h3>
+          <p>An honest conversation about where you are and what you'd quietly like to shift. No pressure, no script, no jargon.</p>
+        </div>
+        <div class="step">
+          <span class="n">III</span>
+          <h3>You decide</h3>
+          <p>If it feels right, we'll find the session that meets you where you are. If not, you leave with clarity. Either way is welcome.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTITIONER + PROOF -->
+  <section>
+    <div class="container">
+      <div class="guide">
+        <figure class="portrait">
+          <img src="https://i.ibb.co/23b7pkGm/70bf9061-6bc1-4268-ad96-9c9d95f56fcf-2.jpg" alt="Kasia Mikolajczyk, certified healer, teacher and guide at Polaris Centre" loading="lazy" />
+        </figure>
+        <div class="guide-text">
+          <p class="sec-eyebrow">Your guide</p>
+          <p class="intro">I'm <span class="hl">Kasia</span> — a certified Healer, Teacher and Guide in the Modern Mystery School, the Royal Lineage of King Salomon. I work with people who sense there is <span class="hl">more to life</span> than the day-to-day, and who feel ready — even quietly — to come home to themselves.</p>
+        </div>
+      </div>
+      <div class="proof">
+        <div class="quote">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <blockquote>After Kasia's session, one week later I was in a completely different space. I couldn't believe such rapid change was possible — and I'm excited about the future again.</blockquote>
+          <cite>Ally I. · London</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A MESSAGE FROM KASIA -->
+  <section class="message-wrap">
+    <div class="container">
+      <div class="message">
+        <p class="sec-eyebrow">A message from Kasia</p>
+        <div class="star-divider" aria-hidden="true">✦ ✦ ✦</div>
+        <p class="lead">My deepest wish is that you come to see yourself through eyes of love — to recognise your divine essence, your strength, your beauty, and the unique gifts only you carry into this world.</p>
+        <p class="body">I wish for you a life rich with joy and fulfilment, vibrant health, and relationships that nourish your soul — the courage to step into your purpose, and the grace to receive the life you were always meant to live.</p>
+        <p class="body">You deserve every bit of it. And I believe, with my whole heart, that it is possible for you.</p>
+        <p class="body">If there's any part of your life where you're still hiding, still playing small, still waiting for permission to be fully yourself — know that you don't have to find your way alone.</p>
+        <p class="close">When you're ready, I'm here.</p>
+        <div class="sign"><small>With love,</small><span class="name">Kasia</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PATH -->
+  <section>
+    <div class="container">
+      <p class="sec-eyebrow">The Path of Self-Mastery</p>
+      <h2>Where your journey can lead</h2>
+      <p class="path-intro">Healing isn't a single moment — it's a gentle path home to yourself, walked entirely at your own pace. It begins softly, and unfolds only as far as you wish to go.</p>
+
+      <div class="path">
+        <div class="pstep">
+          <span class="pnode" aria-hidden="true">I</span>
+          <h3>Life Activation <span class="meta">The first step</span></h3>
+          <p>A private session to awaken your Spiritual DNA and reconnect you to your life purpose — turning on dormant potential and a deeper sense of clarity, connection, and belonging to who you truly are.</p>
+          <span class="price">Private session · from £250</span>
+        </div>
+        <div class="pstep">
+          <span class="pnode" aria-hidden="true">II</span>
+          <h3>Full Spirit Activation <span class="meta">Going deeper</span></h3>
+          <p>Building gently on your Life Activation, this session awakens your gifts and reconnects you to a renewed sense of purpose and possibility — a natural next step taken within a few months, when you feel ready.</p>
+          <span class="price">Private session · from £250</span>
+        </div>
+        <div class="pstep">
+          <span class="pnode" aria-hidden="true">III</span>
+          <h3>Empower Thyself <span class="meta">Initiation</span></h3>
+          <p>A two-day journey and your first true step on the path of initiation into the lineage of King Salomon. You'll learn to set and protect your space, keep your energy balanced, and work with the ancient tools that reveal life's deeper mysteries.</p>
+          <span class="price">Group programme · £1,250</span>
+        </div>
+        <div class="pstep">
+          <span class="pnode" aria-hidden="true">✦</span>
+          <h3>Free Meditations &amp; Support <span class="meta">Always</span></h3>
+          <p>Wherever you are on the path, you're never walking it alone — with live guided meditations and gentle, ongoing support to help you integrate and truly live what you receive.</p>
+          <span class="price">Always free · open to all</span>
+        </div>
+      </div>
+
+      <p class="path-close">Every path begins with a single, gentle step — a free conversation to see what's right for you.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking" id="booking">
+    <div class="container">
+      <p class="sec-eyebrow">Begin here</p>
+      <h2>Book your free consultation</h2>
+      <p class="price-note">Healing sessions begin at <b>£250</b>. Your consultation is always <b>free</b>, with no obligation — simply a conversation to see what's right for you.</p>
+
+      <!-- Cal.com inline booking embed -->
+      <div class="cal-embed-wrap">
+        <div id="my-cal-inline" style="width:100%;min-height:640px;overflow:hidden"></div>
+      </div>
+
+      <p class="consent">By booking, you agree to be contacted about your consultation and confirm you've read our <a href="/privacy">Privacy Policy</a>. Your information is kept private and never shared.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-brand">Polaris Centre</div>
+      <div class="foot-info">
+        London: 4 Celbridge Mews, W2 6EU &nbsp;·&nbsp; Online worldwide<br />
+        <a href="mailto:kasia@polariscentre.london">kasia@polariscentre.london</a>
+      </div>
+      <div class="foot-legal">
+        © 2026 Polaris Centre · <a href="/privacy">Privacy Policy</a> · All Rights Reserved
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+/* North-star field — subtle gold/white drift on navy. Respects reduced-motion. */
+(function(){
+  var c = document.getElementById('stars');
+  if(!c || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var x = c.getContext('2d'), w, h, stars, dpr;
+  function init(){
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = c.width = innerWidth * dpr;
+    h = c.height = innerHeight * dpr;
+    c.style.width = innerWidth + 'px';
+    c.style.height = innerHeight + 'px';
+    var count = Math.min(160, Math.floor(innerWidth * innerHeight / 9000));
+    stars = [];
+    for(var i=0;i<count;i++){
+      stars.push({
+        x:Math.random()*w, y:Math.random()*h,
+        r:(Math.random()*1.3+0.3)*dpr,
+        a:Math.random(), s:Math.random()*0.015+0.003,
+        gold: Math.random() < 0.32
+      });
+    }
+  }
+  function draw(){
+    x.clearRect(0,0,w,h);
+    for(var i=0;i<stars.length;i++){
+      var st = stars[i];
+      st.a += st.s;
+      var tw = 0.45 + Math.abs(Math.sin(st.a))*0.55;
+      x.beginPath();
+      x.arc(st.x, st.y, st.r, 0, Math.PI*2);
+      x.fillStyle = st.gold
+        ? 'rgba(244,213,136,'+tw+')'
+        : 'rgba(234,230,245,'+(tw*0.8)+')';
+      x.shadowBlur = st.gold ? 6*dpr : 0;
+      x.shadowColor = 'rgba(244,213,136,.6)';
+      x.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  init(); draw();
+  var t;
+  addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(init,200); });
+})();
+</script>
+
+<!-- Cal.com inline embed -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "free-consultation", {origin:"https://cal.com"});
+  Cal.ns["free-consultation"]("inline", {
+    elementOrSelector:"#my-cal-inline",
+    config: {"layout":"month_view","theme":"dark"},
+    calLink: "kasia-mikolajczyk-fhdron/free-consultation",
+  });
+  Cal.ns["free-consultation"]("ui", {
+    "theme":"dark",
+    "cssVarsPerTheme":{"dark":{
+      "cal-brand":"#e3bd63",
+      "cal-bg":"#0a1330",
+      "cal-bg-emphasis":"#18254f",
+      "cal-bg-subtle":"#101c45",
+      "cal-bg-muted":"#070c1f",
+      "cal-border":"#2a3a66",
+      "cal-border-emphasis":"#3a4a76",
+      "cal-border-subtle":"#1c2a52",
+      "cal-text":"#eae6f5",
+      "cal-text-emphasis":"#ffffff",
+      "cal-text-muted":"#b9b6cf"
+    }},
+    "hideEventTypeDetails":false,
+    "layout":"month_view"
+  });
+</script>
+</body>
+</html>
