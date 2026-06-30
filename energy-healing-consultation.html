@@ -345,6 +345,29 @@
     #stars{display:none}
     body{background:radial-gradient(120% 90% at 50% 0%,var(--navy-700),var(--navy-900))}
   }
+  /* ---- whatsapp floating button ---- */
+  .wa-fab{
+    position:fixed;right:22px;bottom:22px;z-index:50;
+    width:58px;height:58px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,#2bdc6e,#1aa851);
+    color:#fff;text-decoration:none;border:2px solid var(--gold);
+    box-shadow:0 0 0 4px rgba(227,189,99,.14), 0 10px 30px -8px rgba(37,211,102,.5), 0 4px 14px rgba(0,0,0,.4);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .wa-fab:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 0 0 4px rgba(227,189,99,.24), 0 16px 38px -10px rgba(37,211,102,.62), 0 4px 14px rgba(0,0,0,.45)}
+  .wa-fab:focus-visible{outline:3px solid var(--gold-bright);outline-offset:4px}
+  .wa-fab svg{width:33px;height:33px;display:block;transform:translateY(-0.5px)}
+  .wa-label{
+    position:fixed;right:90px;bottom:36px;z-index:50;
+    background:rgba(7,12,31,.92);border:1px solid var(--line);
+    color:var(--ink);font-size:13px;letter-spacing:.3px;
+    padding:8px 14px;border-radius:20px;white-space:nowrap;
+    box-shadow:0 6px 20px rgba(0,0,0,.4);pointer-events:none;
+    opacity:0;transform:translateX(8px);transition:opacity .25s ease, transform .25s ease;
+  }
+  .wa-fab:hover + .wa-label{opacity:1;transform:translateX(0)}
+  @media (max-width:600px){.wa-fab{right:16px;bottom:16px;width:54px;height:54px} .wa-label{display:none}}
 </style>
 </head>
 <body>
@@ -671,5 +694,11 @@
     "layout":"month_view"
   });
 </script>
+
+<!-- WhatsApp button — Kasia WhatsApp number set -->
+<a class="wa-fab" href="https://wa.me/447533653331?text=Hi%20Kasia%20%F0%9F%8C%9F%20I%27d%20love%20to%20book%20a%20free%20consultation.%0A%0AA%20little%20about%20me%3A%0A1%29%20What%27s%20bringing%20me%20to%20seek%20healing%20right%20now%3A%20%0A2%29%20How%20ready%20I%20feel%20%E2%80%94%20just%20curious%20for%20now%20/%20open%20%26%20exploring%20/%20ready%20to%20begin%3A%20%0A3%29%20What%20I%27d%20most%20love%20to%20feel%20different%20in%20my%20life%3A%20" target="_blank" rel="noopener" aria-label="Message Kasia on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.738-.979a9.9 9.9 0 002.24.272zm5.522-6.273c-.13-.043-.652-.32-1.144-.49-.49-.171-.847-.255-1.205.255-.357.51-1.367 1.36-1.45 1.44-.083.083-.166.094-.34.012-.992-.496-1.644-.886-2.297-2.011-.173-.298.173-.277.495-.922.055-.11.027-.205-.014-.287-.041-.083-.371-.894-.508-1.224-.134-.321-.27-.278-.371-.283l-.318-.006c-.11 0-.288.041-.439.205-.151.164-.576.563-.576 1.373s.59 1.594.672 1.704c.083.11 1.162 1.775 2.816 2.488.394.17.701.272.94.348.395.126.755.108 1.04.066.317-.047.972-.397 1.108-.78.137-.382.137-.71.096-.78-.041-.07-.149-.111-.314-.193z"/></svg>
+</a>
+<span class="wa-label">Message Kasia</span>
 </body>
 </html>
