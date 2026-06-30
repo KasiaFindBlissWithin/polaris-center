@@ -219,6 +219,32 @@
   }
 
   /* ---- the path ---- */
+  /* ---- reviews carousel ---- */
+  .reviews{max-width:760px;margin:0 auto;position:relative}
+  .reviews-viewport{overflow:hidden}
+  .reviews-track{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+  .review{
+    min-width:100%;box-sizing:border-box;
+    padding:38px 34px;border-left:2px solid var(--gold);
+    background:rgba(24,37,79,.3);border-radius:0 4px 4px 0;
+  }
+  .review .stars{color:var(--gold);letter-spacing:3px;font-size:13px;margin-bottom:16px}
+  .review blockquote{font-family:var(--display);font-style:italic;font-size:clamp(1.15rem,2.3vw,1.4rem);line-height:1.5;color:#fff}
+  .review cite{display:block;margin-top:18px;font-style:normal;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+  .reviews-nav{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:26px}
+  .rev-arrow{
+    width:42px;height:42px;border-radius:50%;cursor:pointer;
+    background:transparent;border:1px solid var(--line);color:var(--gold);
+    font-size:20px;line-height:1;display:flex;align-items:center;justify-content:center;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .rev-arrow:hover{border-color:var(--gold);background:rgba(227,189,99,.08)}
+  .rev-arrow:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+  .rev-dots{display:flex;gap:9px}
+  .rev-dot{width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;
+    background:rgba(227,189,99,.28);transition:background .2s ease, transform .2s ease}
+  .rev-dot.is-active{background:var(--gold);transform:scale(1.25)}
+  @media (prefers-reduced-motion:reduce){.reviews-track{transition:none}}
   .path-intro{max-width:54ch;margin:18px auto 0;text-align:center;color:var(--ink-soft);font-size:clamp(1rem,2vw,1.12rem);line-height:1.7}
   .path{max-width:620px;margin:54px auto 0;position:relative}
   .path::before{content:"";position:absolute;left:27px;top:12px;bottom:46px;width:1px;
@@ -234,8 +260,36 @@
     display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
   .pstep h3 .meta{font-family:var(--body);font-size:.68rem;letter-spacing:2px;text-transform:uppercase;
     color:var(--gold);font-weight:500}
-  .pstep p{color:var(--ink-soft);font-size:1rem;line-height:1.65}
+  .pstep{outline:none;border-radius:6px;transition:background .25s ease}
+  .pstep-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;position:relative}
+  .pstep-head h3{margin-bottom:0}
+  .pmore{display:none}
+  .pdesc{color:var(--ink-soft);font-size:1rem;line-height:1.65;margin-top:10px}
+  .pdesc p{margin:0}
+  .plist{list-style:none;margin:14px 0 16px;padding:0;display:grid;gap:9px}
+  .plist li{position:relative;padding-left:24px;color:var(--ink);font-size:1rem;line-height:1.45}
+  .plist li::before{content:"\2726";position:absolute;left:0;top:2px;color:var(--gold);font-size:11px}
+  /* Desktop / hover devices: collapse, reveal on hover or keyboard focus */
+  @media (hover:hover) and (pointer:fine){
+    .pdesc{max-height:0;opacity:0;margin-top:0;overflow:hidden;
+      transition:max-height .5s ease, opacity .4s ease, margin-top .5s ease}
+    .pstep:hover .pdesc, .pstep:focus .pdesc, .pstep:focus-within .pdesc{
+      max-height:720px;opacity:1;margin-top:12px}
+    .pstep{padding-bottom:10px;cursor:default}
+    .pstep:hover{background:rgba(24,37,79,.22)}
+    .pmore{display:inline-flex;align-items:center;justify-content:center;
+      width:22px;height:22px;border-radius:50%;border:1px solid var(--line);
+      color:var(--gold);font-size:15px;line-height:1;margin-left:auto;flex:none;
+      transition:transform .35s ease, opacity .3s ease, border-color .2s ease}
+    .pstep:hover .pmore, .pstep:focus .pmore, .pstep:focus-within .pmore{
+      transform:rotate(45deg);border-color:var(--gold);opacity:.55}
+  }
   .pstep .price{color:var(--ink-faint);font-size:.82rem;letter-spacing:.5px;margin-top:7px;display:block}
+  .package-line{max-width:62ch;margin:36px auto 0;text-align:center;
+    color:var(--ink-faint);font-size:1rem;line-height:1.75}
+  .package-line em{font-style:italic;color:var(--ink-soft)}
+  .package-line .pl-name{color:var(--gold);font-weight:500;letter-spacing:.2px}
+  .package-line .pl-price{color:var(--gold-bright);font-weight:500}
   .path-close{max-width:50ch;margin:46px auto 0;text-align:center;font-family:var(--display);
     font-style:italic;font-size:clamp(1.2rem,2.6vw,1.5rem);color:var(--gold-bright);line-height:1.5}
 
@@ -354,14 +408,35 @@
         </figure>
         <div class="guide-text">
           <p class="sec-eyebrow">Your guide</p>
-          <p class="intro">I'm <span class="hl">Kasia</span> — a certified Healer, Teacher and Guide in the Modern Mystery School, the Royal Lineage of King Salomon. I work with people who are quietly carrying something heavy — pain, struggle, or the ache of <span class="hl">feeling stuck</span> — yet sense, even faintly, that life is meant to hold more. Together we gently release what's been weighing you down, so you can step into a life that feels fully your own — empowered, alive, and rich with <span class="hl">joy and fulfilment</span>.</p>
+          <p class="intro">I'm <span class="hl">Kasia</span> — a certified Healer, Teacher and Guide in the Modern Mystery School, the Royal Lineage of King Salomon. I work with people who are quietly carrying something heavy — pain, struggle, or the ache of <span class="hl">feeling stuck</span> — yet know, deep within, that life is meant to hold more. Together we gently release what's weighing you down, so you can step into a life that feels fully your own — empowered, alive, and rich with <span class="hl">joy and fulfilment</span>.</p>
         </div>
       </div>
       <div class="proof">
-        <div class="quote">
-          <div class="stars" aria-hidden="true">★★★★★</div>
-          <blockquote>After Kasia's session, one week later I was in a completely different space. I couldn't believe such rapid change was possible — and I'm excited about the future again.</blockquote>
-          <cite>Ally I. · London</cite>
+        <div class="reviews" aria-roledescription="carousel" aria-label="Client reviews">
+          <div class="reviews-viewport">
+            <div class="reviews-track" id="revTrack">
+              <figure class="review">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <blockquote>After Kasia's session, one week later I was in a completely different space. I couldn't believe such rapid change was possible — and I'm excited about the future again.</blockquote>
+                <cite>Ally I. · London · Google Review</cite>
+              </figure>
+              <figure class="review">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <blockquote>A year ago I was very low and lost. Now so much has shifted — relationships transformed, and I've let go of so much from the past. Doors have opened. I feel more alive, more joyful. It works whether you believe it or not.</blockquote>
+                <cite>Taty T. · London, UK · Google Review</cite>
+              </figure>
+              <figure class="review">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <blockquote>I felt an immediate shift after Kasia's class — my head was so clear and light, like someone hit the &ldquo;declutter&rdquo; button on my brain. Kasia has such a beautiful, calming way of guiding the process. Highly recommend to anyone seeking clarity and real transformation.</blockquote>
+                <cite>Celia Pronto · London, UK · Google Review</cite>
+              </figure>
+            </div>
+          </div>
+          <div class="reviews-nav">
+            <button class="rev-arrow" id="revPrev" type="button" aria-label="Previous review">&lsaquo;</button>
+            <div class="rev-dots" id="revDots"></div>
+            <button class="rev-arrow" id="revNext" type="button" aria-label="Next review">&rsaquo;</button>
+          </div>
         </div>
       </div>
     </div>
@@ -388,34 +463,57 @@
     <div class="container">
       <p class="sec-eyebrow">The Path of Self-Mastery</p>
       <h2>Where your journey can lead</h2>
-      <p class="path-intro">Healing isn't a single moment — it's a gentle path home to yourself, walked entirely at your own pace. It begins softly, and unfolds only as far as you wish to go.</p>
+      <p class="path-intro">Healing isn't a single moment — it's a path, walked step by step, that brings you home to your true self. Each step releases a deeper layer: old pain, the weight of the past, and the limiting patterns that have quietly held you back. With every step you move closer to a life that feels fully your own — empowered, alive, and rich with joy and fulfilment.</p>
 
       <div class="path">
-        <div class="pstep">
+        <div class="pstep" tabindex="0">
           <span class="pnode" aria-hidden="true">I</span>
-          <h3>Life Activation <span class="meta">The first step</span></h3>
-          <p>A private session to awaken your Spiritual DNA and reconnect you to your life purpose — turning on dormant potential and a deeper sense of clarity, connection, and belonging to who you truly are.</p>
-          <span class="price">Private session · from £250</span>
+          <div class="pstep-head">
+            <h3>Life Activation <span class="meta">The first step</span></h3>
+            <span class="price">Private session · £250</span>
+            <span class="pmore" aria-hidden="true">+</span>
+          </div>
+          <p class="pdesc">The Life Activation is a sacred private session that awakens your Physical &amp; Spiritual DNA and reconnects you to your life purpose — switching on dormant potential and a deeper sense of clarity, connection, and belonging to who you truly are. It is the foundation every further step of healing and training is built upon. In the days and weeks that follow, many people describe a beautiful shift — more clarity and lightness, renewed energy, and a sense of expanded possibility.</p>
         </div>
-        <div class="pstep">
+        <div class="pstep" tabindex="0">
           <span class="pnode" aria-hidden="true">II</span>
-          <h3>Full Spirit Activation <span class="meta">Going deeper</span></h3>
-          <p>Building gently on your Life Activation, this session awakens your gifts and reconnects you to a renewed sense of purpose and possibility — a natural next step taken within a few months, when you feel ready.</p>
-          <span class="price">Private session · from £250</span>
+          <div class="pstep-head">
+            <h3>Full Spirit Activation <span class="meta">Going deeper</span></h3>
+            <span class="price">Private session · £250</span>
+            <span class="pmore" aria-hidden="true">+</span>
+          </div>
+          <p class="pdesc">Building gently on your Life Activation, this session awakens your gifts and reconnects you to a renewed sense of joy and possibility. A natural next step, taken when you feel ready — usually within one to twelve weeks of your Life Activation.</p>
         </div>
-        <div class="pstep">
+        <div class="pstep" tabindex="0">
           <span class="pnode" aria-hidden="true">III</span>
-          <h3>Empower Thyself <span class="meta">Initiation</span></h3>
-          <p>A two-day journey and your first true step on the path of initiation into the lineage of King Salomon. You'll learn to set and protect your space, keep your energy balanced, and work with the ancient tools that reveal life's deeper mysteries.</p>
-          <span class="price">Group programme · £1,250</span>
+          <div class="pstep-head">
+            <h3>Empower Thyself <span class="meta">2-Day Program &amp; Initiation</span></h3>
+            <span class="price">Group program · £1,250</span>
+            <span class="pmore" aria-hidden="true">+</span>
+          </div>
+          <div class="pdesc">
+            <p>A transformative two-day program and your first step on the path of Initiation. Over these two days, you'll learn how to:</p>
+            <ul class="plist">
+              <li>Set and protect your space</li>
+              <li>Keep your energy balanced and clear</li>
+              <li>Work with higher powers</li>
+              <li>Receive esoteric knowledge that reveals life's mysteries</li>
+            </ul>
+            <p>You'll also receive your formal initiation into the Royal Lineage of King Salomon — an ancient way of anchoring spiritual energy within the physical. This sacred step expands your energy structure to hold up to ten times more light, bringing greater clarity and accelerated movement along your path of self-mastery, strength, and abundance. Held as an intimate group class.</p>
+          </div>
         </div>
-        <div class="pstep">
+        <div class="pstep" tabindex="0">
           <span class="pnode" aria-hidden="true">✦</span>
-          <h3>Free Meditations &amp; Support <span class="meta">Always</span></h3>
-          <p>Wherever you are on the path, you're never walking it alone — with live guided meditations and gentle, ongoing support to help you integrate and truly live what you receive.</p>
-          <span class="price">Always free · open to all</span>
+          <div class="pstep-head">
+            <h3>Free Meditations &amp; Support <span class="meta">Always</span></h3>
+            <span class="price">Always free · open to all</span>
+            <span class="pmore" aria-hidden="true">+</span>
+          </div>
+          <p class="pdesc">Wherever you are on your path, you never walk it alone. Join live guided meditations and gentle, ongoing support that help you integrate and truly live what you receive.</p>
         </div>
       </div>
+
+      <p class="package-line">If your heart says <em>yes</em> to the whole journey, the <span class="pl-name">Yes to You Package</span> brings all three steps together with a complimentary £150 energy clearing session — <span class="pl-price">£1,650</span> in all, a saving of <span class="pl-price">£250</span>.</p>
 
       <p class="path-close">Every path begins with a single, gentle step — a free conversation to see what's right for you.</p>
     </div>
@@ -426,7 +524,7 @@
     <div class="container">
       <p class="sec-eyebrow">Begin here</p>
       <h2>Book your free consultation</h2>
-      <p class="price-note">Healing sessions begin at <b>£250</b>. Your consultation is always <b>free</b>, with no obligation — simply a conversation to see what's right for you.</p>
+      <p class="price-note">Simply a conversation to see what's right for you.</p>
 
       <!-- Cal.com inline booking embed -->
       <div class="cal-embed-wrap">
@@ -494,6 +592,54 @@
   init(); draw();
   var t;
   addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(init,200); });
+})();
+</script>
+
+<!-- Reviews carousel -->
+<script>
+(function(){
+  var track = document.getElementById('revTrack');
+  if(!track) return;
+  var slides = track.children;
+  var total = slides.length;
+  var dotsWrap = document.getElementById('revDots');
+  var i = 0, timer = null;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // build dots
+  for(var d=0; d<total; d++){
+    (function(d){
+      var b = document.createElement('button');
+      b.className = 'rev-dot' + (d===0?' is-active':'');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Go to review ' + (d+1));
+      b.addEventListener('click', function(){ go(d); restart(); });
+      dotsWrap.appendChild(b);
+    })(d);
+  }
+  var dots = dotsWrap.children;
+
+  function go(n){
+    i = (n + total) % total;
+    track.style.transform = 'translateX(' + (-i*100) + '%)';
+    for(var k=0;k<dots.length;k++){ dots[k].classList.toggle('is-active', k===i); }
+  }
+  function next(){ go(i+1); }
+  function prev(){ go(i-1); }
+  function start(){ if(!reduce){ timer = setInterval(next, 6500); } }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+  function restart(){ stop(); start(); }
+
+  document.getElementById('revNext').addEventListener('click', function(){ next(); restart(); });
+  document.getElementById('revPrev').addEventListener('click', function(){ prev(); restart(); });
+
+  var wrap = track.closest('.reviews');
+  wrap.addEventListener('mouseenter', stop);
+  wrap.addEventListener('mouseleave', start);
+  wrap.addEventListener('focusin', stop);
+  wrap.addEventListener('focusout', start);
+
+  start();
 })();
 </script>
 
