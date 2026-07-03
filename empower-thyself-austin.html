@@ -24,11 +24,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '427877461465371');
+fbq('init', '798525436589253');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=427877461465371&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=798525436589253&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Jost:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -308,7 +308,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;ba
 
   <div class="hero-btns">
     <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00">✦ Reserve with $400 Deposit</a>
-    <a class="btn-ghost" href="#about">Learn More</a>
+    <a class="btn-ghost" href="#discovery-call">Book a Discovery Call</a>
   </div>
 
   <div class="hero-scroll"><div class="scroll-track"></div></div>
@@ -431,6 +431,84 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;ba
   </div>
 </section>
 
+<!-- DISCOVERY CALL -->
+<section class="section dark" id="discovery-call">
+  <div class="container reveal">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span class="eyebrow" style="display:block;text-align:center;">Not Sure Yet?</span>
+      <h2 class="sec-title" style="text-align:center;">Book a Free Discovery Call<br><em>with Dr. Sean Carey</em></h2>
+      <div class="gold-line center"></div>
+      <p class="prose" style="text-align:center;max-width:600px;margin:0 auto 0.8rem;">If you're curious but have questions — about the path, the teachings, whether this is the right next step for you — book a free 30-minute call with Sean directly. He'll walk you through the journey and help you understand what's possible.</p>
+      <p class="prose" style="text-align:center;max-width:600px;margin:0 auto;font-style:italic;color:var(--gold-light);">No pressure. Just a real conversation about where you are and where you want to go.</p>
+    </div>
+
+    <!-- Cal.com inline embed -->
+    <div style="position:relative;border:1px solid var(--border-mid);background:rgba(6,13,30,0.8);overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold-grad);z-index:2;"></div>
+      <div id="cal-embed" style="min-height:680px;"></div>
+    </div>
+
+    <p style="text-align:center;margin-top:1.5rem;font-size:0.68rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;">Available Tuesdays · 30 minutes · Phone or Video Call</p>
+  </div>
+</section>
+
+<!-- Cal.com embed script -->
+<script type="text/javascript">
+(function(C, A, L) {
+  let p = function(a, ar) { a.q.push(ar); };
+  let d = C.document;
+  C.Cal = C.Cal || function() {
+    let cal = C.Cal;
+    let ar = arguments;
+    if (!cal.loaded) {
+      cal.ns = {};
+      cal.q = cal.q || [];
+      d.head.appendChild(d.createElement("script")).src = A;
+      cal.loaded = true;
+    }
+    if (ar[0] === L) {
+      const api = function() { p(api, arguments); };
+      const namespace = ar[1];
+      api.q = api.q || [];
+      if(typeof namespace === "string") {
+        cal.ns[namespace] = cal.ns[namespace] || api;
+        p(cal.ns[namespace], ar);
+        p(cal, ["initNamespace", namespace]);
+      } else p(cal, ar);
+      return;
+    }
+    p(cal, ar);
+  };
+})(window, "https://app.cal.com/embed/embed.js", "init");
+
+Cal("init", "discovery-call", {origin: "https://cal.com"});
+
+Cal.ns["discovery-call"]("inline", {
+  elementOrSelector: "#cal-embed",
+  calLink: "dr-sean-carey-polaris-centre/discovery-call-with-dr-sean",
+  layout: "month_view",
+  config: {
+    theme: "dark"
+  }
+});
+
+Cal.ns["discovery-call"]("ui", {
+  cssVarsPerTheme: {
+    dark: {
+      "cal-brand": "#C9A84C",
+      "cal-bg": "#060D1E",
+      "cal-bg-emphasis": "#0d2657",
+      "cal-text": "#EDE8D8",
+      "cal-text-emphasis": "#F5F0E8",
+      "cal-border": "rgba(201,168,76,0.2)",
+      "cal-border-emphasis": "rgba(201,168,76,0.4)"
+    }
+  },
+  hideEventTypeDetails: false,
+  layout: "month_view"
+});
+</script>
+
 <!-- PREREQUISITES -->
 <div class="prereq-band">
   <div style="text-align:center;margin-bottom:3rem;" class="reveal">
@@ -461,14 +539,14 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;ba
       <div class="price-badge">Early Registration</div>
       <span class="price-amount">$1,200</span>
       <div class="price-note">Full Program — Both Days</div>
-      <div class="price-deadline">$400 deposit by <strong>July 21st, 2026</strong> to secure this price.</div>
+      <div class="price-deadline">$400 deposit by <strong>August 12th, 2026</strong> to secure this price.</div>
       <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00">Register Now →</a>
     </div>
     <div class="price-card reveal" style="transition-delay:0.15s">
       <div class="price-badge" style="background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid var(--border-mid);">Standard Registration</div>
       <span class="price-amount">$1,500</span>
       <div class="price-note">Full Program — Both Days</div>
-      <div class="price-deadline">Registration after <strong>July 21st, 2026</strong>.</div>
+      <div class="price-deadline">Registration after <strong>August 12th, 2026</strong>.</div>
       <a class="btn-ghost" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00">Register →</a>
     </div>
   </div>
@@ -482,12 +560,12 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;ba
     <span style="width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block;box-shadow:0 0 8px 2px rgba(201,168,76,0.6);animation:breathe 2s ease-in-out infinite;flex-shrink:0;"></span>
     Only 10 Spots Available
   </div>
-  <div class="register-deadline">✦ Save $300 — Register with $400 deposit before July 21st ✦</div>
+  <div class="register-deadline">✦ Save $300 — Register with $400 deposit before August 12th ✦</div>
   <div class="register-btns">
     <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00" style="font-size:0.78rem;padding:1.2rem 3rem;">✦ Reserve with $400 Deposit</a>
     <a class="btn-ghost" href="mailto:kasia@polariscentre.london?subject=Empower%20Thyself%20Austin%20Question" style="font-size:0.78rem;padding:1.2rem 3rem;">Ask a Question</a>
   </div>
-  <p class="deposit-note">$400 deposit secures your place at the Early Bird rate of $1,200 · Balance due before the event<br>Full price $1,500 for registrations after July 21st, 2026</p>
+  <p class="deposit-note">$400 deposit secures your place at the Early Bird rate of $1,200 · Balance due before the event<br>Full price $1,500 for registrations after August 12th, 2026</p>
 </section>
 
 <!-- PRIVATE HEALING SESSIONS -->
