@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Know Thyself — The Path of Progression · Polaris Centre</title>
+<meta name="description" content="Passed down through the Mystery School Tradition for thousands of years in the Royal Lineage of King Salomon. Discover the sacred path of progression from Life Activation to Ritual Master.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23060D1E' rx='12'/><polygon points='50,12 51.5,47 62,38 52.5,49 78,50 52.5,51 62,62 51.5,53 50,88 48.5,53 38,62 47.5,51 22,50 47.5,49 38,38 48.5,47' fill='%23C9A84C'/><circle cx='50' cy='50' r='4' fill='%23F0E090'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Jost:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#C9A84C;--gold-light:#E8D5A0;--gold-pale:#f5ecd4;
+  --gold-grad:linear-gradient(135deg,#A07828 0%,#E8D080 45%,#C9A84C 65%,#F0E090 82%,#A07828 100%);
+  --deep-navy:#060D1E;--navy:#0d2657;--navy-mid:#1a3a7a;
+  --navy-card:rgba(10,30,75,0.92);--cream:#F5F0E8;
+  --text:#EDE8D8;--text-dim:#A89C78;--text-mid:#c8d0dc;--text-muted:#5A6878;
+  --border:rgba(201,168,76,0.18);--border-mid:rgba(201,168,76,0.35);--border-gold:rgba(201,168,76,0.55);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--deep-navy);color:var(--cream);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;line-height:1.6;}
+
+/* CANVAS */
+#cosmos{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 4rem;height:72px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:linear-gradient(to bottom,rgba(6,9,18,0.97),rgba(6,9,18,0));
+  backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.08);
+  transition:background 0.3s,border-color 0.3s;}
+nav.scrolled{background:rgba(6,9,18,0.97);border-bottom-color:rgba(201,168,76,0.2);}
+.nav-logo{display:flex;align-items:center;gap:0.8rem;text-decoration:none;}
+.nav-logo-name{font-family:'Great Vibes',cursive;font-size:1.55rem;color:var(--gold);line-height:1;}
+.nav-logo-sub{font-size:0.52rem;letter-spacing:0.35em;text-transform:uppercase;color:rgba(201,168,76,0.7);margin-top:0.15rem;}
+.nav-link{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;transition:color 0.3s;}
+.nav-link:hover{color:var(--gold);}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding:8rem 2rem 6rem;overflow:hidden;z-index:1;}
+.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:800px;height:800px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(201,168,76,0.12) 0%,rgba(201,168,76,0.04) 40%,transparent 70%);
+  animation:breathe 8s ease-in-out infinite;}
+@keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1);}50%{transform:translate(-50%,-50%) scale(1.1);}}
+.hero-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(0.85rem,1.5vw,1rem);
+  letter-spacing:0.25em;color:rgba(201,168,76,0.6);text-transform:uppercase;
+  margin-bottom:2rem;animation:fadeUp 1s ease 0.2s both;}
+.hero-quote-mark{font-size:2rem;color:rgba(201,168,76,0.3);vertical-align:middle;margin:0 0.3rem;}
+.hero-title{font-family:'Cinzel Decorative',serif;font-size:clamp(3rem,8vw,7.5rem);
+  font-weight:700;line-height:0.9;
+  background:linear-gradient(135deg,#f0e0b0 0%,#C9A84C 25%,#f5ecd4 48%,#C9A84C 72%,#7a5a10 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:0.3em;animation:fadeUp 1s ease 0.4s both;
+  filter:drop-shadow(0 0 60px rgba(201,168,76,0.3));}
+.hero-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.4rem);
+  letter-spacing:0.15em;color:var(--gold-light);font-weight:300;font-style:italic;
+  margin-bottom:2.5rem;animation:fadeUp 1s ease 0.6s both;}
+.hero-divider{display:flex;align-items:center;gap:1.5rem;justify-content:center;margin-bottom:2.5rem;animation:fadeUp 1s ease 0.7s both;}
+.h-line{width:80px;height:1px;background:linear-gradient(to right,transparent,var(--gold));}
+.h-line.r{background:linear-gradient(to left,transparent,var(--gold));}
+.hero-body{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.35rem);
+  line-height:1.9;color:var(--text-mid);max-width:680px;
+  margin:0 auto 3rem;animation:fadeUp 1s ease 0.8s both;}
+.hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:0.6rem;animation:fadeUp 1s ease 1.2s both;}
+.scroll-label{font-size:0.58rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--text-muted);}
+.scroll-track{width:1px;height:50px;background:linear-gradient(to bottom,var(--gold),transparent);
+  animation:scrollFlow 2s ease-in-out infinite;}
+@keyframes scrollFlow{0%{opacity:0;transform:scaleY(0);transform-origin:top;}50%{opacity:1;transform:scaleY(1);}100%{opacity:0;transform:scaleY(0);transform-origin:bottom;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+/* SECTIONS */
+.section{padding:6rem 2rem;position:relative;z-index:1;}
+.section.dark{background:rgba(5,15,40,0.55);}
+.container{max-width:1100px;margin:0 auto;}
+.container-sm{max-width:780px;margin:0 auto;}
+.eyebrow{font-size:0.62rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:block;}
+.sec-title{font-family:'Cinzel',serif;font-size:clamp(1.6rem,3.5vw,2.6rem);color:var(--cream);line-height:1.2;margin-bottom:1.3rem;}
+.sec-title em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
+  background:var(--gold-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.gold-line{width:50px;height:2px;background:var(--gold);margin-bottom:2rem;}
+.gold-line.center{margin-left:auto;margin-right:auto;}
+.prose{font-family:'Cormorant Garamond',serif;font-size:1.1rem;line-height:1.9;color:var(--text-mid);margin-bottom:1.2rem;}
+.prose strong{color:var(--cream);font-weight:600;}
+.prose em{color:var(--gold-light);}
+
+/* SOCRATES BAND */
+.socrates-band{position:relative;z-index:1;padding:5rem 2rem;
+  background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(10,20,60,0.4),rgba(201,168,76,0.05));
+  border-top:1px solid var(--border-mid);border-bottom:1px solid var(--border-mid);overflow:hidden;}
+.socrates-band::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(201,168,76,0.06),transparent 70%);}
+.socrates-inner{max-width:780px;margin:0 auto;text-align:center;position:relative;z-index:1;}
+.socrates-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3.5vw,2.4rem);
+  font-style:italic;font-weight:300;line-height:1.5;
+  background:var(--gold-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:1.2rem;}
+.socrates-attr{font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-muted);}
+
+/* VOID SECTION */
+.void-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.void-image{position:relative;overflow:hidden;}
+.void-image img{width:100%;display:block;filter:brightness(0.85);}
+.void-image::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(6,13,30,0.3),transparent);pointer-events:none;}
+.void-image-border{position:absolute;inset:0;border:1px solid var(--border-mid);pointer-events:none;}
+
+/* PATH STEPS */
+.path-intro{text-align:center;margin-bottom:4rem;}
+.steps-container{display:flex;flex-direction:column;gap:1px;}
+.step-block{display:grid;grid-template-columns:80px 1fr 380px;gap:0;
+  background:var(--navy-card);border:1px solid var(--border);
+  transition:border-color 0.3s;overflow:hidden;}
+.step-block:hover{border-color:var(--border-mid);}
+.step-block.featured{border-color:var(--border-gold);}
+.step-block.featured::before{content:'';display:block;position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-grad);}
+.step-number{background:rgba(201,168,76,0.06);border-right:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;padding:2.5rem 1rem;}
+.step-num-text{font-family:'Cinzel Decorative',serif;font-size:2rem;
+  background:var(--gold-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1;}
+.step-content{padding:2.5rem 2.5rem;}
+.step-tag{font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);background:rgba(201,168,76,0.1);border:1px solid var(--border-mid);
+  padding:0.25rem 0.8rem;display:inline-block;margin-bottom:1rem;}
+.step-title{font-family:'Cinzel',serif;font-size:1.3rem;color:var(--cream);margin-bottom:0.8rem;line-height:1.3;}
+.step-body{font-family:'Cormorant Garamond',serif;font-size:1rem;line-height:1.8;color:var(--text-dim);}
+.step-image{overflow:hidden;position:relative;}
+.step-image img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 0.6s ease;filter:brightness(0.8);}
+.step-block:hover .step-image img{transform:scale(1.04);}
+.step-image-overlay{position:absolute;inset:0;
+  background:linear-gradient(to right,rgba(10,20,60,0.6),transparent);pointer-events:none;}
+
+/* BUDDHA QUOTE */
+.buddha-section{text-align:center;padding:5rem 2rem;position:relative;z-index:1;
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.buddha-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.5vw,1.8rem);
+  font-style:italic;color:var(--text-mid);max-width:680px;margin:0 auto 1rem;line-height:1.7;}
+.buddha-attr{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-muted);}
+
+/* SERVICE SECTION */
+.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:3rem;}
+.service-card{background:var(--navy-card);border:1px solid var(--border);padding:3rem 2.5rem;
+  transition:border-color 0.3s;}
+.service-card:hover{border-color:var(--border-mid);}
+.service-icon{font-size:1.5rem;margin-bottom:1.2rem;display:block;}
+.service-title{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:0.08em;
+  color:var(--cream);margin-bottom:0.8rem;}
+.service-body{font-family:'Cormorant Garamond',serif;font-size:1rem;line-height:1.75;color:var(--text-dim);}
+
+/* CLOSING */
+.closing-section{text-align:center;padding:7rem 2rem;position:relative;z-index:1;overflow:hidden;}
+.closing-section::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,rgba(201,168,76,0.08),transparent 70%);pointer-events:none;}
+.closing-title{font-family:'Cinzel',serif;font-size:clamp(1.6rem,3.5vw,2.8rem);
+  color:var(--cream);margin-bottom:1rem;line-height:1.3;position:relative;z-index:1;}
+.closing-sub{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;
+  color:var(--text-dim);max-width:600px;margin:0 auto 3rem;line-height:1.7;position:relative;z-index:1;}
+.closing-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.5vw,1.9rem);
+  font-style:italic;color:var(--gold-light);max-width:700px;margin:0 auto 3rem;
+  line-height:1.6;position:relative;z-index:1;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;
+  background:rgba(7,18,35,0.6);position:relative;z-index:1;}
+.footer-logo{font-family:'Great Vibes',cursive;font-size:1.6rem;color:var(--gold);margin-bottom:0.5rem;}
+.footer-links{display:flex;gap:2.5rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap;}
+.footer-links a{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--text-muted);text-decoration:none;transition:color 0.3s;}
+.footer-links a:hover{color:var(--gold);}
+.footer-copy{font-size:0.68rem;color:var(--text-muted);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  nav{padding:0 1.5rem;}
+  .void-grid{grid-template-columns:1fr;}
+  .step-block{grid-template-columns:60px 1fr;grid-template-rows:auto auto;}
+  .step-image{grid-column:1/-1;height:220px;}
+  .service-grid{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  nav{padding:0 1.2rem;}
+  .hero-title{font-size:clamp(2.5rem,12vw,5rem);}
+  .step-block{grid-template-columns:1fr;}
+  .step-number{padding:1.5rem;border-right:none;border-bottom:1px solid var(--border);}
+}
+
+/* CONTACT FORM */
+.form-section{padding:6rem 2rem;position:relative;z-index:1;
+  background:linear-gradient(135deg,rgba(201,168,76,0.06),rgba(10,20,60,0.4),rgba(201,168,76,0.04));
+  border-top:1px solid var(--border-mid);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:1100px;margin:0 auto;}
+.form-field{margin-bottom:1.5rem;}
+.form-label{display:block;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.6rem;}
+.form-input,.form-select,.form-textarea{width:100%;background:rgba(6,13,30,0.8);
+  border:1px solid var(--border-mid);color:var(--cream);font-family:'Jost',sans-serif;
+  font-size:0.88rem;font-weight:300;padding:0.9rem 1.2rem;
+  transition:border-color 0.3s;outline:none;appearance:none;-webkit-appearance:none;}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold);}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--text-muted);}
+.form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A84C' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1.2rem center;padding-right:3rem;cursor:pointer;}
+.form-select option{background:var(--navy);color:var(--cream);}
+.form-textarea{min-height:140px;resize:vertical;line-height:1.6;}
+.form-submit{width:100%;padding:1.1rem;font-weight:500;
+  background:linear-gradient(135deg,#d4ae52,#a07820,#C9A84C);
+  color:var(--deep-navy);font-family:'Jost',sans-serif;font-size:0.75rem;
+  letter-spacing:0.25em;text-transform:uppercase;cursor:pointer;border:none;
+  clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);
+  transition:opacity 0.3s,transform 0.3s;margin-top:0.5rem;}
+.form-submit:hover{opacity:0.9;transform:translateY(-2px);}
+.form-note{font-size:0.68rem;color:var(--text-muted);letter-spacing:0.08em;
+  margin-top:1rem;text-align:center;line-height:1.6;}
+.contact-detail{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;}
+.contact-detail-icon{width:36px;height:36px;border:1px solid var(--border-mid);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.8rem;color:var(--gold);}
+.contact-detail-text{font-size:0.85rem;color:var(--text-dim);line-height:1.5;}
+.contact-detail-text strong{display:block;font-size:0.62rem;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:0.2rem;font-weight:400;}
+.contact-detail-text a{color:var(--text-dim);text-decoration:none;transition:color 0.3s;}
+.contact-detail-text a:hover{color:var(--gold-light);}
+@media(max-width:900px){.form-grid{grid-template-columns:1fr;gap:3rem;}}
+</style>
+</head>
+<body>
+
+<canvas id="cosmos"></canvas>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" href="https://polariscentre.london">
+    <div>
+      <div class="nav-logo-name">Polaris Centre</div>
+      <div class="nav-logo-sub">Ancient Wisdom · Modern Life</div>
+    </div>
+  </a>
+  <a class="nav-link" href="https://polariscentre.london/start-here">Begin Your Journey →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+
+  <div class="hero-quote">The Great Work</div>
+
+  <h1 class="hero-title">Know<br>Thyself</h1>
+
+  <div class="hero-subtitle">The Sacred Path of Progression</div>
+
+  <div class="hero-divider">
+    <div class="h-line"></div>
+    <svg width="18" height="18" viewBox="0 0 140 140" fill="none">
+      <polygon points="70,18 71.5,66.3 88.4,51.6 73.7,68.5 122,70 73.7,71.5 88.4,88.4 71.5,73.7 70,122 68.5,73.7 51.6,88.4 66.3,71.5 18,70 66.3,68.5 51.6,51.6 68.5,66.3" fill="#C9A84C"/>
+      <circle cx="70" cy="70" r="4" fill="#fff" opacity="0.9"/>
+    </svg>
+    <div class="h-line r"></div>
+  </div>
+
+  <p class="hero-body">The Path of Progression is an ancient map to the greatest treasure in the world — <em style="color:var(--gold-light);font-family:'Cormorant Garamond',serif;font-style:italic;">YOU.</em> Passed down through the Modern Mystery School Tradition for thousands of years in the Royal Lineage of King Salomon, it is an invitation to know yourself fully: your divine essence, your true purpose, your highest potential, and to live from that place of power, clarity, and Light.</p>
+
+  <div class="hero-scroll">
+    <span class="scroll-label">Explore</span>
+    <div class="scroll-track"></div>
+  </div>
+</section>
+
+<!-- SOCRATES BAND -->
+<div class="socrates-band">
+  <div class="socrates-inner">
+    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:1.5rem;">An Ancient Initiate of the Lineage</span>
+    <div class="socrates-quote">"Know Thyself."</div>
+    <div class="socrates-attr">— Socrates</div>
+    <div style="margin-top:2.5rem;max-width:660px;margin-left:auto;margin-right:auto;">
+      <p class="prose" style="text-align:center;color:var(--text-dim);">Socrates — himself an initiate of the Royal Lineage of King Salomon — pointed humanity toward its greatest work. To Know Thyself is to go beyond the pain, beyond limitation, beyond the searching we do outside ourselves to fill a void that lives within. It is to question: <em>Who am I?</em> — not as a philosophical exercise, but as the most sacred act a human being can undertake. For in that question lives the key to your greatness, your divine essence, and your freedom.</p>
+    </div>
+  </div>
+</div>
+
+<!-- THE LINEAGE SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="void-grid">
+      <div class="reveal">
+        <span class="eyebrow">There Is More</span>
+        <h2 class="sec-title">You Sense It.<br><em>You Have Been Searching.</em></h2>
+        <div class="gold-line"></div>
+        <p class="prose">You have achieved. You lead others. You have read the books, attended the seminars, done the work. And yet somewhere beneath the surface, a knowing persists — that there is more. More depth. More purpose. More of yourself waiting to be lived.</p>
+        <p class="prose">We often search outside ourselves — in new achievements, new relationships, new experiences — not realising that what we are looking for cannot be found out there. The void we are trying to fill lives within. And it can only be filled by the Light of your own divine essence, remembered and reclaimed.</p>
+        <p class="prose"><strong>The Mystery School Tradition has held the keys to this remembrance for thousands of years.</strong> Kept pure and alive through direct transmission from teacher to student in the Royal Lineage of King Salomon — serving kings, visionaries, healers, and leaders across every age and civilisation. This living lineage is available to you now.</p>
+        <p class="prose" style="font-style:italic;color:var(--gold-light);">Once hidden, available only to royalty and the chosen few — today open to all who sincerely seek.</p>
+      </div>
+      <div class="void-image reveal" style="transition-delay:0.2s">
+        <img src="https://static.wixstatic.com/media/cd00f3_e555431770cd470d80c7861bb1f4db7c~mv2.jpg/v1/crop/x_36,y_0,w_953,h_1024/fill/w_600,h_645,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/temples_edited.jpg" alt="Ancient temples — the lineage of wisdom">
+        <div class="void-image-border"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINEAGE QUOTE -->
+<div class="buddha-section">
+  <div class="buddha-quote">"The most important thing in life is to know thyself — for in that knowing, all else is revealed."</div>
+  <div class="buddha-attr">— Mystery School Tradition</div>
+</div>
+
+<!-- THE PATH STEPS -->
+<section class="section dark" id="path">
+  <div class="container">
+    <div class="path-intro reveal">
+      <span class="eyebrow" style="display:block;text-align:center;">The Sacred Map</span>
+      <h2 class="sec-title" style="text-align:center;">The Path of <em>Progression & Initiation</em></h2>
+      <div class="gold-line center"></div>
+      <p class="prose" style="text-align:center;max-width:720px;margin:0 auto;">This is the path walked by the greatest minds and leaders in human history — Einstein, Tesla, Da Vinci, Newton, Churchill. A sacred progression of initiation, healing, and self-mastery within the Royal Lineage of King Salomon — awakening your divine potential, clearing the negative ego, and connecting you to the guidance of your Higher Self. Each step builds upon the last. Each initiation opens a new level of Light.</p>
+    </div>
+
+    <div class="steps-container" style="margin-top:3rem;">
+
+      <!-- LIFE ACTIVATION -->
+      <div class="step-block reveal" style="position:relative;">
+        <div class="step-number">
+          <div class="step-num-text">I</div>
+        </div>
+        <div class="step-content">
+          <span class="step-tag">The Awakening</span>
+          <div class="step-title">Life Activation</div>
+          <p class="step-body">The journey begins here. The Life Activation is a powerful 1-on-1 healing session that awakens your physical and spiritual DNA, reconnecting you to your original divine blueprint and your life's true purpose. It restores and balances your whole energy system, amplifying your connection to your Higher Self and opening you to a greater flow of Light.<br><br>This is the essential first step on the Path of Progression in the Royal Lineage of King Salomon — the awakening that makes everything that follows possible.</p>
+        </div>
+        <div class="step-image">
+          <img src="https://static.wixstatic.com/media/cd00f3_8dd74306204c4cdf8ad3f453e1ead786~mv2.jpg/v1/crop/x_306,y_440,w_612,h_584/fill/w_600,h_580,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/create%20a%20magickal%20gold%20DNA%20in%20the%20blue%20heavenly%20background%20with%20lots%20of%20light%20around%20it%20_j.jpg" alt="Life Activation — awakening your spiritual DNA">
+          <div class="step-image-overlay"></div>
+        </div>
+      </div>
+
+      <!-- EMPOWER THYSELF -->
+      <div class="step-block featured reveal" style="position:relative;transition-delay:0.1s;">
+        <div class="step-number" style="background:rgba(201,168,76,0.1);">
+          <div class="step-num-text">II</div>
+        </div>
+        <div class="step-content">
+          <span class="step-tag">First Step of Initiation</span>
+          <div class="step-title">Empower Thyself</div>
+          <p class="step-body">Initiation is a sacred ceremony that has been passed from teacher to student in the Mystery School Tradition for over 3,000 years — a direct transmission of Light that permanently elevates your energetic reality and your capacity to live from your Higher Self.<br><br>The Empower Thyself 2-day program is your formal entry into the lineage. You receive ancient tools for working with your energy field, protecting yourself from negative influences, mastering the negative ego, and living with greater clarity, power, and purpose. You step into the Royal Lineage of King Salomon — joining a global family of initiates committed to the Great Work of serving the Light.<br><br>This is not a seminar. It is not a workshop. It is a sacred rite of passage that changes you at the level of the soul.</p>
+        </div>
+        <div class="step-image">
+          <img src="https://static.wixstatic.com/media/cd00f3_2383a0bf6d3d40c6a6fc725cc9f5fbb7~mv2.jpg/v1/fill/w_600,h_580,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/initation.jpg" alt="Empower Thyself — the path of initiation">
+          <div class="step-image-overlay"></div>
+        </div>
+      </div>
+
+      <!-- HEALERS ACADEMY -->
+      <div class="step-block reveal" style="position:relative;transition-delay:0.2s;">
+        <div class="step-number">
+          <div class="step-num-text">III</div>
+        </div>
+        <div class="step-content">
+          <span class="step-tag">2nd Step of Initiation</span>
+          <div class="step-title">Healers Academy</div>
+          <p class="step-body">Become a Healer — heal yourself and help others to heal too. When you have received the Light, it is natural to want to share it with others.<br><br>Here you learn how to work with your spiritual senses, further purifying and expanding your awareness and perception of self and the world around you. During this 5-day program, you will go through tremendous healing of yourself while being embraced in the highest healing energy — Agape Love.<br><br>As you heal at the core of your being, you learn how to administer the Life Activation, Full Energy Balancing, and Aura Healing, alongside mastering the art of guiding the transformative Max Meditation System.<br><br>After this Second Step Initiation, the deeper hermetic teachings of the lineage become available to you, should you wish to expand your knowledge and understanding.</p>
+        </div>
+        <div class="step-image">
+          <img src="healers-academy.jpg" alt="Healers Academy — serve in the Light">
+          <div class="step-image-overlay"></div>
+        </div>
+      </div>
+
+      <!-- RITUAL MASTER -->
+      <div class="step-block reveal" style="position:relative;transition-delay:0.3s;">
+        <div class="step-number">
+          <div class="step-num-text">IV</div>
+        </div>
+        <div class="step-content">
+          <span class="step-tag">3rd Step of Initiation</span>
+          <div class="step-title">Ritual Master</div>
+          <p class="step-body">Become a Ritual Master by overcoming the negative ego.<br><br>At this level, you begin your training as a warrior of light — sharpening the arts of discernment, protection, and magick that will help you overcome the negative ego and create a better life. You step fully into the Great Work, serving the Light and serving humanity with mastery, commitment, and love.<br><br>The Ritual Master path is considered one of the most challenging paths to walk, as it requires deep commitment, discipline, and the humility needed to continuously overcome the ego. It is not a destination — it is a way of life.<br><br>Those who walk this path are among the most dedicated servants of the Light in the world today.</p>
+        </div>
+        <div class="step-image">
+          <img src="https://static.wixstatic.com/media/cd00f3_62fcff49822146818ae069757503d21e~mv2.jpg/v1/fill/w_600,h_580,al_c,lg_1,q_80,enc_avif,quality_auto/ritual-master.jpg" alt="Ritual Master — warrior of light">
+          <div class="step-image-overlay"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- THE PURPOSE SECTION -->
+<section class="section">
+  <div class="container-sm reveal" style="text-align:center;">
+    <span class="eyebrow" style="display:block;text-align:center;">The Great Work</span>
+    <h2 class="sec-title" style="text-align:center;">Walking the Path of <em>Self-Mastery</em></h2>
+    <div class="gold-line center"></div>
+    <p class="prose" style="text-align:center;">All Mystery Schools across time agree: to achieve enlightenment and self-mastery, one must know oneself fully. Walking this sacred path, you explore deeper aspects of self — tapping into your full potential, reconnecting to your true divine expression, and transcending the challenges and obstacles of life with more ease and grace.</p>
+    <p class="prose" style="text-align:center;">As you let go of the illusion of the lower self, the negative ego, and the limitations of survival mode, you tap into your true strength, empowerment, and inner wisdom. You begin to live from your Higher Self — guided, purposeful, and free.</p>
+    <div style="margin:3rem auto;max-width:600px;border-left:2px solid var(--gold);padding:1.5rem 2rem;background:rgba(201,168,76,0.05);text-align:left;">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;line-height:1.8;color:var(--text-mid);">When we live in alignment with our life's true purpose, we experience a deep sense of inner peace, joy, and true freedom — living every day with pure joy, true freedom, inner peace, and abundance.</p>
+    </div>
+    <p class="prose" style="text-align:center;">In the Modern Mystery School tradition, to Know Thyself is not solely the inward journey of self-realisation and empowerment. It is most importantly the outward expression of love and service, compassion, and empowerment for all.</p>
+  </div>
+</section>
+
+<!-- SERVICE & RIPPLE -->
+<section class="section dark">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:1rem;" class="reveal">
+      <span class="eyebrow" style="display:block;text-align:center;">Serve the Light</span>
+      <h2 class="sec-title" style="text-align:center;">Your Healing <em>Heals the World</em></h2>
+      <div class="gold-line center"></div>
+      <p class="prose" style="text-align:center;max-width:680px;margin:0 auto 3rem;">If you are called to help others, know that your healing — each step you take toward your own enlightenment — can heal the world. Your transformation causes a ripple of great change in the world around you. This is the sacred purpose of the Mystery School Tradition: a humanity living in joy, unity, and remembrance of its true divine nature.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card reveal">
+        <span class="service-icon">✦</span>
+        <div class="service-title">Know Thyself</div>
+        <p class="service-body">Walking the Path of Progression, you explore deeper aspects of self — tapping into your full potential and reconnecting to your true divine expression, transcending life's challenges with more ease and grace.</p>
+      </div>
+      <div class="service-card reveal" style="transition-delay:0.1s;">
+        <span class="service-icon">◎</span>
+        <div class="service-title">Master the Negative Ego</div>
+        <p class="service-body">As you let go of the illusion of the lower self, the negative ego, and survival mechanisms, you tap into your true strength, empowerment, and inner wisdom — and begin to live from your Higher Self.</p>
+      </div>
+      <div class="service-card reveal" style="transition-delay:0.2s;">
+        <span class="service-icon">🌟</span>
+        <div class="service-title">Live Your Purpose</div>
+        <p class="service-body">When we live in alignment with our life's true purpose, we experience a deep sense of inner peace, joy, and true freedom — living every day with abundance, clarity, and alignment with the Light.</p>
+      </div>
+      <div class="service-card reveal" style="transition-delay:0.3s;">
+        <span class="service-icon">⚡</span>
+        <div class="service-title">Serve & Transform</div>
+        <p class="service-body">To Know Thyself is most importantly the outward expression of love and service. Your transformation causes a ripple of great change in the world — each initiate who walks this path adds their light to the Great Work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing-section">
+  <h2 class="closing-title reveal">You Were Born to Live<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic;background:var(--gold-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">in Your Full Potential.</em></h2>
+  <div class="closing-quote reveal" style="transition-delay:0.15s;">"When we live in alignment with our life's true purpose, we experience a deep sense of inner peace, joy, and true freedom — living every day with pure joy, true freedom, inner peace, and abundance."</div>
+  <p class="closing-sub reveal" style="transition-delay:0.3s;">The Path of Progression is your invitation to Know Thyself — to step into your greatness, your divine essence, and the fullness of who you truly are. The path begins with a single step.</p>
+  <div class="reveal" style="transition-delay:0.4s;">
+    <a href="https://polariscentre.london/start-here"
+       style="display:inline-block;padding:1.1rem 3rem;font-weight:500;
+       background:linear-gradient(135deg,#d4ae52,#a07820,#C9A84C);
+       color:var(--deep-navy);font-family:'Jost',sans-serif;font-size:0.75rem;letter-spacing:0.25em;
+       text-transform:uppercase;text-decoration:none;
+       clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);">
+      ✦ Begin Your Journey
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="form-section" id="consultation">
+  <div class="form-grid">
+    <div class="reveal">
+      <span class="eyebrow">Get in Touch</span>
+      <h2 class="sec-title">Begin With a<br><em>Free Consultation</em></h2>
+      <div class="gold-line"></div>
+      <p class="prose">Not sure where to start? Send us a message and we will guide you to the sessions and classes that are right for you right now. We aim to respond within 48 hours.</p>
+
+      <div style="margin-top:3rem;">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✦</div>
+          <div class="contact-detail-text">
+            <strong>London, UK</strong>
+            <a href="mailto:kasia@polariscentre.london">kasia@polariscentre.london</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✦</div>
+          <div class="contact-detail-text">
+            <strong>USA</strong>
+            <a href="mailto:sean@polariscentre.london">sean@polariscentre.london</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✦</div>
+          <div class="contact-detail-text">
+            <strong>Kasia · WhatsApp</strong>
+            <a href="https://wa.me/447533653331">+44 7533 653 331</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✦</div>
+          <div class="contact-detail-text">
+            <strong>Dr. Sean · WhatsApp</strong>
+            <a href="https://wa.me/12073189705">+1 207 318 9705</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="transition-delay:0.2s;">
+      <form name="know-thyself-enquiry" method="POST" data-netlify="true" 
+            netlify-honeypot="bot-field"
+            action="/thank-you-enquiry.html">
+        <input type="hidden" name="form-name" value="know-thyself-enquiry">
+        <input type="hidden" name="_to" value="kasia@polariscentre.london,sean@polariscentre.london">
+        <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+        <div class="form-field">
+          <label class="form-label" for="name">Your Name</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Full name" required>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="location">Your Location</label>
+          <input class="form-input" type="text" id="location" name="location" placeholder="City, Country" required>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="interest">I Am Interested In</label>
+          <select class="form-select" id="interest" name="interest" required>
+            <option value="" disabled selected>Please select...</option>
+            <option value="Life Activation">Life Activation — Start Here</option>
+            <option value="Full Spirit Activation">Full Spirit Activation</option>
+            <option value="Empower Thyself Program">Empower Thyself Program</option>
+            <option value="Becoming a Healer">Becoming a Healer</option>
+            <option value="Know More About the Path">I Want to Know More About the Path</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="message">Your Message</label>
+          <textarea class="form-textarea" id="message" name="message" 
+            placeholder="Tell us a little about where you are on your journey and what you are looking for..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">✦ Send Message</button>
+        <p class="form-note">We aim to respond within 48 hours · Your details are kept private and never shared</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Polaris Centre</div>
+  <div class="footer-links">
+    <a href="https://polariscentre.london">Home</a>
+    <a href="https://polariscentre.london/start-here">Start Here</a>
+    <a href="mailto:kasia@polariscentre.london">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 Polaris Centre · Ancient Wisdom for Modern Life</p>
+</footer>
+
+<script>
+// Starfield
+(function(){
+  var c=document.getElementById('cosmos'),ctx=c.getContext('2d');
+  var W,H,stars=[];
+  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight;}
+  function mkStars(){stars=[];var n=Math.floor(W*H/4200);
+    for(var i=0;i<n;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.2+0.2,a:Math.random()*0.5+0.1,spd:Math.random()*0.008+0.003,dir:Math.random()>.5?1:-1});}
+  function draw(){
+    c.width=W;
+    var bg=ctx.createLinearGradient(0,0,0,H);
+    bg.addColorStop(0,'#060F1F');bg.addColorStop(0.5,'#091525');bg.addColorStop(1,'#0C1C34');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+    for(var i=0;i<stars.length;i++){var s=stars[i];s.a+=s.spd*s.dir;if(s.a>0.9||s.a<0.08)s.dir*=-1;
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle='rgba(210,225,255,'+s.a+')';ctx.fill();}
+    requestAnimationFrame(draw);}
+  window.addEventListener('resize',function(){resize();mkStars();});
+  resize();mkStars();draw();
+})();
+
+// Nav scroll
+window.addEventListener('scroll',function(){
+  document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>60);
+});
+
+// Scroll reveal
+var revealEls=document.querySelectorAll('.reveal');
+var observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.1});
+revealEls.forEach(function(el){observer.observe(el);});
+</script>
+</body>
+</html>
