@@ -45,6 +45,11 @@ nav.scrolled{background:rgba(4,9,22,0.98);border-bottom-color:rgba(212,168,67,0.
   padding:0 0.85rem;transition:color 0.3s;cursor:pointer;background:none;border:none;
   font-family:'Jost',sans-serif;display:flex;align-items:center;height:72px;white-space:nowrap;}
 .nav-btn:hover{color:var(--gold);}
+.nav-dropdown{position:relative;}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:rgba(4,9,22,0.98);border:1px solid rgba(201,168,76,0.25);min-width:200px;z-index:300;padding:0.5rem 0;}
+.nav-dropdown:hover .nav-dropdown-menu{display:block;}
+.nav-dropdown-item{display:block;width:100%;padding:0.7rem 1.4rem;font-size:0.68rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--text-light);background:none;border:none;cursor:pointer;font-family:'Jost',sans-serif;text-align:left;transition:color 0.3s,background 0.3s;white-space:nowrap;}
+.nav-dropdown-item:hover{color:var(--gold);background:rgba(201,168,76,0.06);}
 .nav-cta{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--deep-navy);
   background:var(--gold);padding:0.65rem 1.6rem;transition:all 0.3s;cursor:pointer;border:none;
   font-family:'Jost',sans-serif;font-weight:500;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);}
@@ -323,7 +328,13 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
     <li><button class="nav-btn" onclick="location.href='/life-activation'">Life Activation</button></li>
     <li><button class="nav-btn" onclick="showPage('sacred-geometry')">Sacred Geometry</button></li>
     <li><button class="nav-btn" onclick="showPage('sessions')">Healing Sessions</button></li>
-    <li><button class="nav-btn" onclick="showPage('lineage')">Lineage</button></li>
+    <li class="nav-dropdown">
+      <button class="nav-btn">Path of Progression ▾</button>
+      <div class="nav-dropdown-menu">
+        <button class="nav-dropdown-item" onclick="showPage('lineage')">Lineage</button>
+        <button class="nav-dropdown-item" onclick="location.href='/know-thyself'">Know Thyself</button>
+      </div>
+    </li>
     <li><button class="nav-btn" onclick="scrollToSection('home','cal-anchor')">Calendar</button></li>
     <li><button class="nav-btn" onclick="scrollToSection('home','about-anchor')">About</button></li>
   </ul>
