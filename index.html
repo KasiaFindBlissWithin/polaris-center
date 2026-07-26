@@ -199,8 +199,17 @@ nav.scrolled{background:rgba(4,9,22,0.98);border-bottom-color:rgba(212,168,67,0.
 .c-submit:hover{opacity:0.88;transform:translateY(-2px);}
 
 /* FOOTER */
-footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);padding:3rem 4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
+footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);padding:2.5rem 4rem 3rem;display:flex;flex-direction:column;gap:1.5rem;}
+.foot-top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(201,168,76,0.1);}
+.foot-brand{grid-column:1;justify-self:start;display:flex;align-items:center;gap:0.7rem;}
+.foot-brand img{width:18px;height:18px;object-fit:contain;flex-shrink:0;}
 .foot-logo{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:0.3em;color:var(--gold);}
+.foot-cert-text{grid-column:2;justify-self:center;font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);text-decoration:none;white-space:nowrap;transition:color 0.3s;}
+.foot-cert-text:hover{color:var(--gold);}
+.foot-cert-logo{grid-column:3;justify-self:end;display:flex;align-items:center;}
+.foot-cert-logo img{height:18px;width:auto;object-fit:contain;flex-shrink:0;transition:opacity 0.3s;}
+.foot-cert-logo:hover img{opacity:0.8;}
+.foot-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
 .foot-copy{font-size:0.72rem;color:var(--text-light);}
 .foot-nav{display:flex;gap:2rem;}
 .foot-nav button{font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-light);background:none;border:none;cursor:pointer;font-family:'Jost',sans-serif;transition:color 0.3s;}
@@ -301,7 +310,11 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
   .sess-grid{grid-template-columns:1fr;}
   .benefits-grid,.next-steps,.pack-grid{grid-template-columns:1fr;}
   .cal-event{grid-template-columns:70px 1fr;}.cal-book{display:none;}
-  footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}
+  footer{padding:2rem 1.5rem;text-align:center;}
+  .foot-top{display:flex;flex-direction:column;}
+  .foot-bottom{flex-direction:column;text-align:center;}
+  .foot-brand,.foot-cert-logo{justify-content:center;}
+  .foot-cert-text{white-space:normal;}
   .foot-nav{justify-content:center;}
   .pillars{grid-template-columns:1fr;}
 }
@@ -577,9 +590,20 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
 </div>
 
 <footer>
-  <div class="foot-logo">✦ POLARIS CENTRE</div>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="/polaris-logo.png" alt="Polaris Centre logo" loading="lazy">
+      <span class="foot-logo">POLARIS CENTRE</span>
+    </div>
+    <a class="foot-cert-text" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">Certified Modern Mystery School Practitioners</a>
+    <a class="foot-cert-logo" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">
+      <img src="/mms-logo.png" alt="Modern Mystery School International logo" loading="lazy">
+    </a>
+  </div>
+  <div class="foot-bottom">
   <div class="foot-copy">© 2026 Polaris Centre · polariscentre.london · All Rights Reserved</div>
-  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="showPage('start')">Start Here</button><button onclick="showPage('sessions')">Sessions</button></div>
+  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="location.href='/life-activation'">Life Activation</button><button onclick="showPage('sessions');switchTab('empower')">Empower Thyself</button><button onclick="showPage('start')">Start Here</button></div>
+  </div>
 </footer>
 </div><!-- /home -->
 
@@ -662,9 +686,20 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
   </div>
 </div>
 <footer>
-  <div class="foot-logo">✦ POLARIS CENTRE</div>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="/polaris-logo.png" alt="Polaris Centre logo" loading="lazy">
+      <span class="foot-logo">POLARIS CENTRE</span>
+    </div>
+    <a class="foot-cert-text" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">Certified Modern Mystery School Practitioners</a>
+    <a class="foot-cert-logo" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">
+      <img src="/mms-logo.png" alt="Modern Mystery School International logo" loading="lazy">
+    </a>
+  </div>
+  <div class="foot-bottom">
   <div class="foot-copy">© 2026 Polaris Centre · polariscentre.london · All Rights Reserved</div>
-  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="showPage('start')">Start Here</button><button onclick="showPage('sessions')">Sessions</button></div>
+  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="location.href='/life-activation'">Life Activation</button><button onclick="showPage('sessions');switchTab('empower')">Empower Thyself</button><button onclick="showPage('start')">Start Here</button></div>
+  </div>
 </footer>
 </div><!-- /start -->
 
@@ -836,9 +871,20 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
 </div>
 
 <footer>
-  <div class="foot-logo">✦ POLARIS CENTRE</div>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="/polaris-logo.png" alt="Polaris Centre logo" loading="lazy">
+      <span class="foot-logo">POLARIS CENTRE</span>
+    </div>
+    <a class="foot-cert-text" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">Certified Modern Mystery School Practitioners</a>
+    <a class="foot-cert-logo" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">
+      <img src="/mms-logo.png" alt="Modern Mystery School International logo" loading="lazy">
+    </a>
+  </div>
+  <div class="foot-bottom">
   <div class="foot-copy">© 2026 Polaris Centre · polariscentre.london · All Rights Reserved</div>
-  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="showPage('start')">Start Here</button><button onclick="showPage('sessions')">Sessions</button></div>
+  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="location.href='/life-activation'">Life Activation</button><button onclick="showPage('sessions');switchTab('empower')">Empower Thyself</button><button onclick="showPage('start')">Start Here</button></div>
+  </div>
 </footer>
 </div><!-- /sessions -->
 
@@ -1193,9 +1239,20 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
 </div>
 
 <footer>
-  <div class="foot-logo">✦ POLARIS CENTRE</div>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="/polaris-logo.png" alt="Polaris Centre logo" loading="lazy">
+      <span class="foot-logo">POLARIS CENTRE</span>
+    </div>
+    <a class="foot-cert-text" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">Certified Modern Mystery School Practitioners</a>
+    <a class="foot-cert-logo" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">
+      <img src="/mms-logo.png" alt="Modern Mystery School International logo" loading="lazy">
+    </a>
+  </div>
+  <div class="foot-bottom">
   <div class="foot-copy">© 2026 Polaris Centre · polariscentre.london · All Rights Reserved</div>
-  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="showPage('start')">Start Here</button><button onclick="showPage('sessions')">Sessions</button><button onclick="showPage('lineage')">Lineage</button></div>
+  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="location.href='/life-activation'">Life Activation</button><button onclick="showPage('sessions');switchTab('empower')">Empower Thyself</button><button onclick="showPage('start')">Start Here</button></div>
+  </div>
 </footer>
 </div>
 </div><!-- /lineage -->
@@ -1255,9 +1312,20 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
   </div>
 </div>
 <footer>
-  <div class="foot-logo">✦ POLARIS CENTRE</div>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="/polaris-logo.png" alt="Polaris Centre logo" loading="lazy">
+      <span class="foot-logo">POLARIS CENTRE</span>
+    </div>
+    <a class="foot-cert-text" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">Certified Modern Mystery School Practitioners</a>
+    <a class="foot-cert-logo" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">
+      <img src="/mms-logo.png" alt="Modern Mystery School International logo" loading="lazy">
+    </a>
+  </div>
+  <div class="foot-bottom">
   <div class="foot-copy">© 2026 Polaris Centre · polariscentre.london · All Rights Reserved</div>
-  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="location.href='/life-activation'">Life Activation</button><button onclick="showPage('sacred-geometry')">Sacred Geometry</button><button onclick="showPage('sessions')">Sessions</button></div>
+  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="location.href='/life-activation'">Life Activation</button><button onclick="showPage('sessions');switchTab('empower')">Empower Thyself</button><button onclick="showPage('start')">Start Here</button></div>
+  </div>
 </footer>
 </div><!-- /sacred-geometry -->
 
