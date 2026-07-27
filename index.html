@@ -353,6 +353,7 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
         <button class="nav-dropdown-item" onclick="location.href='/know-thyself'">Know Thyself</button>
       </div>
     </li>
+    <li><button class="nav-btn" onclick="showPage('become-healer')">Become a Healer</button></li>
     <li><button class="nav-btn" onclick="scrollToSection('home','cal-anchor')">Calendar</button></li>
     <li><button class="nav-btn" onclick="scrollToSection('home','about-anchor')">About</button></li>
   </ul>
@@ -589,7 +590,7 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
       <p style="display:none;"><input name="bot-field"></p>
       <div><label class="c-label">Your Name</label><input class="c-input" id="cf-name" type="text" name="Full Name" placeholder="Full name" required></div>
       <div><label class="c-label">Email Address</label><input class="c-input" type="email" name="Email" placeholder="your@email.com" required></div>
-      <div><label class="c-label">I'm Interested In</label><select class="c-select c-input" id="cf-interest" name="Interest"><option>I would like to book</option><option>Life Activation — Start Here</option><option>Empower Thyself Program</option><option>Energy Healing Sessions</option><option>Sacred Geometry</option><option>Distance / Remote Healing</option><option>Corporate Programme</option><option>Not sure — please guide me</option></select></div>
+      <div><label class="c-label">I'm Interested In</label><select class="c-select c-input" id="cf-interest" name="Interest"><option>I would like to book</option><option>Life Activation — Start Here</option><option>Empower Thyself Program</option><option>Energy Healing Sessions</option><option>Sacred Geometry</option><option>Healers Academy — Becoming a Healer</option><option>Distance / Remote Healing</option><option>Corporate Programme</option><option>Not sure — please guide me</option></select></div>
       <div><label class="c-label">Your Message</label><textarea class="c-textarea" id="cf-message" name="Message" placeholder="Tell us a little about yourself..."></textarea></div>
       <button type="submit" class="c-submit">Send Message ✦</button>
     </form>
@@ -1336,13 +1337,231 @@ footer{background:rgba(0,0,10,0.6);border-top:1px solid rgba(201,168,76,0.15);pa
 </footer>
 </div><!-- /sacred-geometry -->
 
+<!-- ████ BECOME A HEALER ████ -->
+<div id="page-become-healer" class="page">
+
+<!-- HERO -->
+<div style="position:relative;min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10rem 2rem 5rem;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,0.18) 0%,rgba(53,51,205,0.12) 40%,transparent 70%);pointer-events:none;"></div>
+  <span class="eyebrow" style="display:block;">Where The Path Culminates</span>
+  <h1 style="font-family:'Cinzel Decorative',serif;font-size:clamp(2.6rem,7vw,5.5rem);font-weight:700;line-height:1;background:linear-gradient(135deg,#f0e0b0 0%,#C9A84C 25%,#f5ecd4 48%,#C9A84C 72%,#7a5a10 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem;filter:drop-shadow(0 0 40px rgba(201,168,76,0.3));">Become a Healer</h1>
+  <p style="font-family:'Great Vibes',cursive;font-size:clamp(1.6rem,3vw,2.3rem);color:var(--gold-light);margin-bottom:1.5rem;">Healers Academy — Level 1</p>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,2.2vw,1.4rem);font-style:italic;color:var(--text-mid);max-width:760px;line-height:1.75;margin-bottom:2.5rem;">A five-day certification held in the Modern Mystery School tradition — training you to carry Life Activation, Aura Healing, and the Max Meditation System out into the world.</p>
+  <div style="display:flex;align-items:center;gap:1rem;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.3);padding:0.9rem 1.8rem;margin-bottom:2rem;">
+    <span style="color:var(--gold);">✦</span>
+    <span style="font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.08em;color:var(--cream);">8–12 October 2026 · MMS UK &amp; EU HQ, London</span>
+  </div>
+  <button class="btn-gold" onclick="scrollToSection('become-healer','healer-contact')">Begin Your Path ✦</button>
+</div>
+
+<!-- BECOME A CERTIFIED PRACTITIONER -->
+<div class="inner">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+    <div>
+      <span class="eyebrow">A Five-Day Intensive</span>
+      <h2 class="sec-title">Become a Certified Practitioner</h2>
+      <div class="gold-line"></div>
+      <p class="prose">Healers Academy is where preparation becomes practice. Across five immersive days, you'll be trained to administer Life Activation, Aura Healing, and Full Energy Balancing sessions — and to guide others through the Max Meditation System with confidence and skill.</p>
+      <p class="prose">Whether you're called to build your own healing practice or deepen one you've already begun, this training gives you the techniques, the lineage, and the living support of a global community of practitioners behind you.</p>
+    </div>
+    <img src="/healers-academy.jpg" alt="Healers Academy training" loading="lazy" onerror="this.onerror=null;this.style.display='none';" style="width:100%;border:1px solid rgba(201,168,76,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+  </div>
+</div>
+
+<!-- WHY BECOME A HEALER -->
+<div style="background:rgba(0,0,18,0.55);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:6rem 4rem;">
+  <div style="max-width:900px;margin:0 auto;text-align:center;">
+    <span class="eyebrow" style="display:block;">The Deeper Reason</span>
+    <h2 class="sec-title" style="text-align:center;">Why Become a Healer?</h2>
+    <div class="gold-line center"></div>
+    <blockquote style="border-left:3px solid var(--gold);padding-left:1.5rem;text-align:left;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--text-mid);line-height:1.8;margin-bottom:2rem;">The most profound relationship you will ever heal is the one you have with yourself. Every healer's journey begins there — and Life Activation is a powerful first step, awakening what ancient wisdom recognises as the key to our greatness.</blockquote>
+    <p class="prose" style="text-align:left;">Life Activation works on what science calls "junk DNA" — the 98% of our DNA whose purpose modern research hasn't yet explained. Ancient wisdom tells a different story: that this dormant code holds the key to our greatness. Activating it, physically and spiritually, raises your vibration and opens the door to clarity, intuition, and a deeper sense of purpose — for you, and for every client you go on to serve.</p>
+    <p class="prose" style="text-align:left;">As you learn to hold space for another's awakening, you continue your own healing journey — the light that flows to your client flows through you first. Every session you facilitate becomes an opportunity to keep growing, keep expanding, and keep remembering who you truly are. When you shine brighter, you give others permission to do the same — a ripple of healing that moves through your life, your relationships, and the world around you.</p>
+    <blockquote style="border-left:3px solid var(--gold);padding-left:1.5rem;text-align:left;font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-style:italic;color:var(--text-mid);line-height:1.8;margin-top:2rem;">"Becoming a Life Activation Practitioner has been the most rewarding step on the path — helping others remember who they truly are, it is my greatest JOY. Serving and witnessing my clients' transformation, becoming more empowered, more fulfilled, more joyful and successful in life is truly a heart-warming gift."<br><span style="font-size:0.72rem;letter-spacing:0.12em;font-style:normal;color:var(--gold);font-family:'Jost',sans-serif;margin-top:0.5rem;display:block;">— Kasia Mikolajczyk, Life Activation Practitioner, Healer, Teacher &amp; Guide</span></blockquote>
+  </div>
+</div>
+
+<!-- WHAT YOU'LL GAIN -->
+<div class="inner">
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <span class="eyebrow" style="display:block;">What You'll Gain</span>
+    <h2 class="sec-title" style="text-align:center;">Your Certification Includes</h2>
+    <div class="gold-line center"></div>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit"><span class="benefit-icon">✦</span><h3>Certified Practitioner Status</h3><p>Graduate as a Certified Life Activation Practitioner with the Modern Mystery School International.</p></div>
+    <div class="benefit"><span class="benefit-icon">🌟</span><h3>Life Activation Technique</h3><p>Learn to safely and confidently administer the Life Activation session for others.</p></div>
+    <div class="benefit"><span class="benefit-icon">💠</span><h3>Aura &amp; Energy Balancing</h3><p>Master Aura Healing and Full Energy Balancing as part of your practitioner toolkit.</p></div>
+    <div class="benefit"><span class="benefit-icon">🧘</span><h3>Max Meditation System</h3><p>Learn to guide others through the transformative Max Meditation workshop.</p></div>
+    <div class="benefit"><span class="benefit-icon">🛡️</span><h3>A Code of Ethics</h3><p>Train to the Modern Mystery School's standard of professionalism and integrity in every session you hold.</p></div>
+    <div class="benefit"><span class="benefit-icon">🌙</span><h3>A Global Community</h3><p>Join a worldwide family of practitioners, teachers, and lineage holders who continue to support your growth.</p></div>
+  </div>
+</div>
+
+<!-- VIDEOS: FEATURED -->
+<div style="background:rgba(0,0,18,0.55);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:6rem 4rem;">
+  <div style="max-width:1260px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:4rem;">
+      <span class="eyebrow" style="display:block;">Before You Begin</span>
+      <h2 class="sec-title" style="text-align:center;">Healers Academy — Become a Certified Practitioner</h2>
+      <div class="gold-line center"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;">
+      <a href="https://www.youtube.com/live/TzaOsZHy1D0" target="_blank" rel="noopener" style="text-decoration:none;display:block;">
+        <div style="position:relative;overflow:hidden;border:1px solid rgba(201,168,76,0.25);cursor:pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.04)';this.querySelector('.play-btn5').style.background='rgba(201,168,76,0.9)'" onmouseout="this.querySelector('img').style.transform='scale(1)';this.querySelector('.play-btn5').style.background='rgba(0,0,0,0.7)'">
+          <img src="https://img.youtube.com/vi/TzaOsZHy1D0/maxresdefault.jpg" alt="Divina Liza Rossi on Healers Academy" style="width:100%;display:block;transition:transform 0.4s ease;" onerror="this.src='https://img.youtube.com/vi/TzaOsZHy1D0/hqdefault.jpg'">
+          <div style="position:absolute;inset:0;background:rgba(0,0,15,0.35);"></div>
+          <div class="play-btn5" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.3s;border:2px solid rgba(255,255,255,0.6);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(to top,rgba(0,0,20,0.95),transparent);">
+            <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.2rem;">Watch on YouTube</div>
+          </div>
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-muted);margin-top:0.8rem;font-style:italic;text-align:center;">Divina Liza Rossi — Why Healers Academy Supports Success in Life</p>
+      </a>
+      <a href="https://youtu.be/6ExvXGtInoc" target="_blank" rel="noopener" style="text-decoration:none;display:block;">
+        <div style="position:relative;overflow:hidden;border:1px solid rgba(201,168,76,0.25);cursor:pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.04)';this.querySelector('.play-btn6').style.background='rgba(201,168,76,0.9)'" onmouseout="this.querySelector('img').style.transform='scale(1)';this.querySelector('.play-btn6').style.background='rgba(0,0,0,0.7)'">
+          <img src="https://img.youtube.com/vi/6ExvXGtInoc/maxresdefault.jpg" alt="Divina Liza Rossi — Healers Academy" style="width:100%;display:block;transition:transform 0.4s ease;" onerror="this.src='https://img.youtube.com/vi/6ExvXGtInoc/hqdefault.jpg'">
+          <div style="position:absolute;inset:0;background:rgba(0,0,15,0.35);"></div>
+          <div class="play-btn6" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.3s;border:2px solid rgba(255,255,255,0.6);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(to top,rgba(0,0,20,0.95),transparent);">
+            <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.2rem;">Watch on YouTube</div>
+          </div>
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-muted);margin-top:0.8rem;font-style:italic;text-align:center;">Divina Liza Rossi — Healers Academy in Her Own Words</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- PREREQUISITES -->
+<div class="inner">
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <span class="eyebrow" style="display:block;">Your Preparation</span>
+    <h2 class="sec-title" style="text-align:center;">The Path That Leads Here</h2>
+    <div class="gold-line center"></div>
+    <p class="prose" style="max-width:800px;margin:0 auto;">Before stepping into Healers Academy, each of these classes helps you prepare to receive the sacred healing DNA activation — expanding your senses and building the empowerment tools you'll need to care for yourself and, in time, your clients.</p>
+  </div>
+  <div style="background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);padding:2.5rem;max-width:800px;margin:0 auto;">
+    <div style="display:flex;flex-direction:column;gap:1.4rem;">
+      <div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Cinzel',serif;font-size:1.1rem;color:rgba(201,168,76,0.5);min-width:1.6rem;">01</span><div style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--text-mid);">Life Activation</div></div>
+      <div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Cinzel',serif;font-size:1.1rem;color:rgba(201,168,76,0.5);min-width:1.6rem;">02</span><div style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--text-mid);">Full Spirit Activation <em style="color:var(--gold);font-style:italic;">(recommended)</em></div></div>
+      <div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Cinzel',serif;font-size:1.1rem;color:rgba(201,168,76,0.5);min-width:1.6rem;">03</span><div style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--text-mid);">Empower Thyself Program &amp; Initiation</div></div>
+      <div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Cinzel',serif;font-size:1.1rem;color:rgba(201,168,76,0.5);min-width:1.6rem;">04</span><div style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--text-mid);">Sacred Geometry Level 1</div></div>
+      <div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Cinzel',serif;font-size:1.1rem;color:rgba(201,168,76,0.5);min-width:1.6rem;">05</span><div style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--text-mid);">Astral Travel Level 1</div></div>
+      <div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Cinzel',serif;font-size:1.1rem;color:rgba(201,168,76,0.5);min-width:1.6rem;">06</span><div style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--text-mid);">Journeys of the Spirit</div></div>
+      <div style="display:flex;gap:1.2rem;align-items:flex-start;"><span style="font-family:'Cinzel',serif;font-size:1.1rem;color:rgba(201,168,76,0.5);min-width:1.6rem;">07</span><div style="font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--text-mid);">Magickal Beings of Earth</div></div>
+    </div>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-style:italic;color:var(--text-muted);margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid rgba(201,168,76,0.15);">Already completed some of these? Reach out for your own personalised path toward Healers Academy.</p>
+  </div>
+</div>
+
+<!-- COMPLETION -->
+<div style="background:rgba(0,0,18,0.55);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:6rem 4rem;text-align:center;">
+  <div style="max-width:760px;margin:0 auto;">
+    <span class="eyebrow" style="display:block;">Upon Completion</span>
+    <h2 class="sec-title" style="text-align:center;">Graduate as a Certified Practitioner</h2>
+    <div class="gold-line center"></div>
+    <p class="prose">Complete the program and you'll graduate a Certified Life Activation Practitioner with the Modern Mystery School International — trained not only in technique, but in the Code of Ethics that holds every practitioner to the highest standard of professionalism and integrity.</p>
+    <div style="display:inline-flex;align-items:center;gap:1rem;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.3);padding:0.9rem 1.8rem;margin:1.5rem 0 2rem;">
+      <span style="color:var(--gold);">✦</span>
+      <span style="font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.08em;color:var(--cream);">8–12 October 2026 · MMS UK &amp; EU HQ, London</span>
+    </div><br>
+    <button class="btn-gold" onclick="scrollToSection('become-healer','healer-contact')">Begin Your Path to Becoming a Healer ✦</button>
+  </div>
+</div>
+
+<!-- VIDEOS: REAL STORIES -->
+<div class="inner">
+  <div style="text-align:center;margin-bottom:3rem;">
+    <span class="eyebrow" style="display:block;">Why Life Activation? Why Become a Healer?</span>
+    <h2 class="sec-title" style="text-align:center;">Real Stories, In Their Own Words</h2>
+    <div class="gold-line center"></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1100px;margin:0 auto;">
+    <div>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,0.25);">
+        <iframe src="https://www.youtube.com/embed/CIqKpmiGtPc" title="Gelso — A Forensic DNA Analyst's Experience of Life Activation" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-muted);margin-top:0.8rem;font-style:italic;text-align:center;">Gelso — A Forensic DNA Analyst's Experience of Life Activation</p>
+    </div>
+    <div>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,0.25);">
+        <iframe src="https://www.youtube.com/embed/qAiPkrLz7j8" title="Dr Sean — A Chiropractor's Experience of Life Activation" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-muted);margin-top:0.8rem;font-style:italic;text-align:center;">Dr Sean — A Chiropractor's Experience of Life Activation</p>
+    </div>
+    <div>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,0.25);">
+        <iframe src="https://www.youtube.com/embed/AOTNDZQ1q74" title="Dr Erin — A Veterinary Oncologist's Experience of Life Activation" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-muted);margin-top:0.8rem;font-style:italic;text-align:center;">Dr Erin — A Veterinary Oncologist's Experience of Life Activation</p>
+    </div>
+    <div>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,0.25);">
+        <iframe src="https://www.youtube.com/embed/J1554JPV3KU" title="Stacie Nicole — The Life Activation" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--text-muted);margin-top:0.8rem;font-style:italic;text-align:center;">Stacie Nicole — The Life Activation</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="inner" id="healer-contact">
+  <div class="contact-grid">
+    <div>
+      <span class="eyebrow">Get in Touch</span>
+      <h2 class="contact-h">Begin With a Free Consultation</h2>
+      <div class="gold-line"></div>
+      <p class="contact-p">Not sure if you're ready for Healers Academy? Book a free consultation and we'll guide you to the right next step on your path.</p>
+      <div class="c-detail"><span class="c-ic">📍</span><span>London: 4 Celbridge Mews, W2 6EU</span></div>
+      <div class="c-detail"><span class="c-ic">📍</span><span>USA: Salisbury, Massachusetts</span></div>
+      <div class="c-detail"><span class="c-ic">📞</span><span>Kasia: <a href="tel:447533653331">+44 7533 653 331</a></span></div>
+      <div class="c-detail"><span class="c-ic">📞</span><span>Dr. Sean: <a href="tel:12073189705">+1 207 318 9705</a></span></div>
+      <div class="c-detail"><span class="c-ic">✉️</span><a href="mailto:kasia@polariscentre.london">kasia@polariscentre.london</a></div>
+      <div class="c-detail"><span class="c-ic">✉️</span><a href="mailto:sean@polariscentre.london">sean@polariscentre.london</a></div>
+    </div>
+    <form class="c-form" name="polaris-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="polaris-enquiry">
+      <input type="hidden" name="Source Page" value="Become a Healer">
+      <p style="display:none;"><input name="bot-field"></p>
+      <div><label class="c-label">Your Name</label><input class="c-input" type="text" name="Full Name" placeholder="Full name" required></div>
+      <div><label class="c-label">Email Address</label><input class="c-input" type="email" name="Email" placeholder="your@email.com" required></div>
+      <div><label class="c-label">I'm Interested In</label><select class="c-select c-input" name="Interest"><option selected>Healers Academy — Becoming a Healer</option><option>Life Activation — Start Here</option><option>Empower Thyself Program</option><option>Energy Healing Sessions</option><option>Sacred Geometry</option><option>Distance / Remote Healing</option><option>Corporate Programme</option><option>Not sure — please guide me</option></select></div>
+      <div><label class="c-label">Your Message</label><textarea class="c-textarea" name="Message" placeholder="Tell us a little about yourself...">I'd like to know more about becoming a certified Healer through the Healers Academy programme.</textarea></div>
+      <button type="submit" class="c-submit">Send Message ✦</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="/polaris-logo.png" alt="Polaris Centre logo" loading="lazy">
+      <span class="foot-logo">POLARIS CENTRE</span>
+    </div>
+    <a class="foot-cert-text" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">Certified Modern Mystery School Practitioners</a>
+    <a class="foot-cert-logo" href="https://modernmysteryschoolint.com/" target="_blank" rel="noopener">
+      <img src="/mms-logo.png" alt="Modern Mystery School International logo" loading="lazy">
+    </a>
+  </div>
+  <div class="foot-bottom">
+  <div class="foot-copy">© 2026 Polaris Centre · polariscentre.london · All Rights Reserved</div>
+  <div class="foot-nav"><button onclick="showPage('home')">Home</button><button onclick="location.href='/life-activation'">Life Activation</button><button onclick="showPage('sessions');switchTab('empower')">Empower Thyself</button><button onclick="showPage('start')">Start Here</button></div>
+  </div>
+</footer>
+</div><!-- /become-healer -->
+
 <script>
 /* PAGE NAV + URL ROUTER
    Each page now has a real, shareable, refresh-safe URL.
    Pairs with the _redirects file so direct visits don't 404 on Netlify. */
 var ROUTES={
   'home':'/','start':'/start-here',
-  'sacred-geometry':'/sacred-geometry','sessions':'/healing-sessions','lineage':'/lineage'
+  'sacred-geometry':'/sacred-geometry','sessions':'/healing-sessions','lineage':'/lineage','become-healer':'/become-a-healer'
 };
 var PATHS={};Object.keys(ROUTES).forEach(function(k){PATHS[ROUTES[k]]=k;});
 var TITLES={
@@ -1350,7 +1569,8 @@ var TITLES={
   'start':'Start Here | Polaris Centre',
   'sacred-geometry':'Sacred Geometry Classes | Polaris Centre',
   'sessions':'Healing Sessions & Classes | Polaris Centre',
-  'lineage':'The Lineage of King Salomon | Polaris Centre'
+  'lineage':'The Lineage of King Salomon | Polaris Centre',
+  'become-healer':'Become a Healer | Healers Academy | Polaris Centre'
 };
 var NAV_H=82; /* fixed nav (72px) + a little breathing room */
 function renderPage(id,noScroll){
