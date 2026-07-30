@@ -24,11 +24,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '798525436589253');
+fbq('init', '1379145167430542');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=798525436589253&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1379145167430542&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Jost:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -307,8 +307,8 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;ba
   </div>
 
   <div class="hero-btns">
-    <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00">✦ Reserve with $400 Deposit</a>
-    <a class="btn-ghost" href="#discovery-call">Book a Discovery Call</a>
+    <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00" onclick="fbq('track', 'InitiateCheckout');">✦ Reserve with $400 Deposit</a>
+    <a class="btn-ghost" href="#discovery-call" onclick="fbq('track', 'Lead');">Book a Discovery Call</a>
   </div>
 
   <div class="hero-scroll"><div class="scroll-track"></div></div>
@@ -426,7 +426,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;ba
     <p class="prose" style="text-align:center;"><strong>You are that person. And this weekend was made for you.</strong></p>
     <p class="prose" style="text-align:center;font-style:italic;color:var(--gold-light);">You don't have to be certain. You just have to be willing.</p>
     <div style="margin-top:2.5rem;">
-      <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00">Reserve Your Seat — 10 Spots Only</a>
+      <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00" onclick="fbq('track', 'InitiateCheckout');">Reserve Your Seat — 10 Spots Only</a>
     </div>
   </div>
 </section>
@@ -540,14 +540,14 @@ Cal.ns["discovery-call"]("ui", {
       <span class="price-amount">$1,200</span>
       <div class="price-note">Full Program — Both Days</div>
       <div class="price-deadline">$400 deposit by <strong>August 12th, 2026</strong> to secure this price.</div>
-      <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00">Register Now →</a>
+      <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00" onclick="fbq('track', 'InitiateCheckout');">Register Now →</a>
     </div>
     <div class="price-card reveal" style="transition-delay:0.15s">
       <div class="price-badge" style="background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid var(--border-mid);">Standard Registration</div>
       <span class="price-amount">$1,500</span>
       <div class="price-note">Full Program — Both Days</div>
       <div class="price-deadline">Registration after <strong>August 12th, 2026</strong>.</div>
-      <a class="btn-ghost" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00">Register →</a>
+      <a class="btn-ghost" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00" onclick="fbq('track', 'InitiateCheckout');">Register →</a>
     </div>
   </div>
 </div>
@@ -562,8 +562,8 @@ Cal.ns["discovery-call"]("ui", {
   </div>
   <div class="register-deadline">✦ Save $300 — Register with $400 deposit before August 12th ✦</div>
   <div class="register-btns">
-    <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00" style="font-size:0.78rem;padding:1.2rem 3rem;">✦ Reserve with $400 Deposit</a>
-    <a class="btn-ghost" href="mailto:sean@polariscentre.london?subject=Empower%20Thyself%20Austin%20Question" style="font-size:0.78rem;padding:1.2rem 3rem;">Ask a Question</a>
+    <a class="btn-gold" href="https://buy.stripe.com/bJefZj3v6dpk7WYbOE7ok00" style="font-size:0.78rem;padding:1.2rem 3rem;" onclick="fbq('track', 'InitiateCheckout');">✦ Reserve with $400 Deposit</a>
+    <a class="btn-ghost" href="mailto:sean@polariscentre.london?subject=Empower%20Thyself%20Austin%20Question" style="font-size:0.78rem;padding:1.2rem 3rem;" onclick="fbq('track', 'Contact');">Ask a Question</a>
   </div>
   <p class="deposit-note">$400 deposit secures your place at the Early Bird rate of $1,200 · Balance due before the event<br>Full price $1,500 for registrations after August 12th, 2026</p>
 </section>
@@ -759,6 +759,7 @@ revealEls.forEach(function(el){observer.observe(el);});
    style="position:fixed;bottom:2rem;right:2rem;z-index:999;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.3s,box-shadow 0.3s;"
    onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 28px rgba(37,211,102,0.6)'"
    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,211,102,0.4)'"
+   onclick="fbq('track', 'Lead');"
    aria-label="Chat with Dr. Sean on WhatsApp">
   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
